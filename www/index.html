@@ -1,0 +1,632 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flags</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap-flags.css">
+<link rel="stylesheet" href="css/bootstrap-flags2.css">
+<script src="js/index.js" type="text/javascript"></script>
+
+
+</head>
+
+<!-- +++ Gleichbleibende Seitenelemente -->
+<body class="bg-flags" onload="spracheSystem(); buttonActive(); spracheText(); Show_All_flags()">
+
+<!--; -->
+<!--menüleiste unten-->
+<nav class="navbar-default navbar-fixed-bottom fuss">
+  <div class="container-fluid"> 
+      <ul class="nav navbar-nav">
+	<a href="#"><img src="images/buttons/search_inaktiv.png" alt="Flgas" class="button_nav" id="button_flags" onClick="javascript:Show_All_flags ()"></a>
+	<a href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" class="button_nav" id="button_writing" onClick="javascript:Show_Writing ()"></a>
+	<a href="#"><img src="images/buttons/reading_inaktiv.png" alt="Reading" class="button_nav" id="button_reading" onClick="javascript:Show_Reading ()"></a>
+	<a href="#"><img src="images/buttons/info_inaktiv.png" alt="Info" class="button_nav" id="button_info" onClick="javascript:Show_About ()">  </a> 
+      </ul>
+  </div>
+</nav>
+
+
+<!-- +++++  Alle Flaggen +++++++-->
+<div class="all-flags" id="all-flags">
+
+<!--flaggen-->
+
+<div class="container-fluid ">
+
+
+<div class="row text-center distance">
+  
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>A&nbsp;&nbsp;Alfa</h3></div>
+	<div class="thumbnail"> <img src="images/A.png" alt="" class="img-responsive" onClick="javascript:insertHtml('0')">
+	</div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>B&nbsp;&nbsp;Bravo</h3></div>
+	<div class="thumbnail"> <img src="images/B.png" alt="" class="img-responsive" onClick="javascript:insertHtml('1')">
+	</div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>C&nbsp;&nbsp;Charlie</h3></div>
+      <div class="thumbnail"> <img src="images/C.png" alt="" class="img-responsive" onClick="javascript:insertHtml('2')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+   	<div class="caption"><h3>D&nbsp;&nbsp;Delta</h3></div>   
+        <div class="thumbnail"> <img src="images/D.png" alt="DELTA" class="img-responsive" onClick="javascript:insertHtml('3')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+     	<div class="caption"><h3>E&nbsp;&nbsp;Echo</h3></div> 
+        <div class="thumbnail"> <img src="images/E.png" alt="" class="img-responsive" onClick="javascript:insertHtml('4')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>F&nbsp;&nbsp;Foxtrot</h3></div>
+	<div class="thumbnail"> <img src="images/F.png" alt="" class="img-responsive" onClick="javascript:insertHtml('5')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>G&nbsp;&nbsp;Golf</h3></div>
+	<div class="thumbnail"> <img src="images/G.png" alt="" class="img-responsive" onClick="javascript:insertHtml('6')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>H&nbsp;&nbsp;Hotel</h3></div>
+	<div class="thumbnail"> <img src="images/H.png" alt="" class="img-responsive" onClick="javascript:insertHtml('7')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>I&nbsp;&nbsp;India</h3></div>
+	<div class="thumbnail"> <img src="images/I.png" alt="" class="img-responsive" onClick="javascript:insertHtml('8')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>J&nbsp;&nbsp;Juliet</h3></div>
+	<div class="thumbnail"> <img src="images/J.png" alt="" class="img-responsive" onClick="javascript:insertHtml('9')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>K&nbsp;&nbsp;Kilo</h3></div>
+	<div class="thumbnail"> <img src="images/K.png" alt="" class="img-responsive" onClick="javascript:insertHtml('10')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>L&nbsp;&nbsp;Lima</h3></div>
+	<div class="thumbnail"> <img src="images/L.png" alt="" class="img-responsive" onClick="javascript:insertHtml('11')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>M&nbsp;&nbsp;Mike</h3></div>
+	<div class="thumbnail"> <img src="images/M.png" alt="" class="img-responsive" onClick="javascript:insertHtml('12')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>N &nbsp; November</h3></div>
+	<div class="thumbnail"> <img src="images/N.png" alt="" class="img-responsive" onClick="javascript:insertHtml('13')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>O&nbsp;&nbsp;Oscar</h3></div>
+	<div class="thumbnail"> <img src="images/O.png" alt="" class="img-responsive" onClick="javascript:insertHtml('14')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>P&nbsp;&nbsp;PAPA</h3></div>
+	<div class="thumbnail"> <img src="images/P.png" alt="" class="img-responsive" onClick="javascript:insertHtml('15')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>Q&nbsp;&nbsp;Quebec</h3></div>
+	<div class="thumbnail"> <img src="images/Q.png" alt="" class="img-responsive" onClick="javascript:insertHtml('16')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>R&nbsp;&nbsp;Romeo</h3></div>
+	<div class="thumbnail"> <img src="images/R.png" alt="" class="img-responsive" onClick="javascript:insertHtml('17')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>S&nbsp;&nbsp;Sierra</h3></div>
+	<div class="thumbnail"> <img src="images/S.png" alt="" class="img-responsive" onClick="javascript:insertHtml('18')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>T&nbsp;&nbsp;Tango</h3></div>
+	<div class="thumbnail"> <img src="images/T.png" alt="" class="img-responsive" onClick="javascript:insertHtml('19')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>U&nbsp;&nbsp;Uniform</h3></div>
+	<div class="thumbnail"> <img src="images/U.png" alt="" class="img-responsive" onClick="javascript:insertHtml('20')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>V&nbsp;&nbsp;VICTOR</h3></div>
+	<div class="thumbnail"> <img src="images/V.png" alt="" class="img-responsive" onClick="javascript:insertHtml('21')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>W &nbsp;&nbsp;</h3></div>
+	<div class="thumbnail"> <img src="images/W.png" alt="" class="img-responsive" onClick="javascript:insertHtml('22')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>X&nbsp;&nbsp;Xray</h3></div>
+	<div class="thumbnail"> <img src="images/X.png" alt="" class="img-responsive" onClick="javascript:insertHtml('23')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>Y&nbsp;&nbsp;Yankee</h3></div>
+	<div class="thumbnail"> <img src="images/Y.png" alt="" class="img-responsive" onClick="javascript:insertHtml('24')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>Z&nbsp;&nbsp;Zulu</h3></div>
+	<div class="thumbnail"> <img src="images/Z.png" alt="" class="img-responsive" onClick="javascript:insertHtml('25')"></div>
+</div>
+
+</div>
+
+
+<!-- Ziffern -->
+<div class="row text-center">
+  
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>1&nbsp;&nbsp;Unaone</h3></div>
+	<div class="thumbnail"> <img src="images/1.png" alt="1" class="img-responsive" onClick="javascript:insertHtml('26')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>2&nbsp;&nbsp;Bissotwo</h3></div>
+      <div class="thumbnail"> <img src="images/2.png" alt="2" class="img-responsive" onClick="javascript:insertHtml('27')"></div>
+    </div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>3&nbsp;&nbsp;Terrathree</h3></div>
+      <div class="thumbnail"> <img src="images/3.png" alt="3" class="img-responsive" onClick="javascript:insertHtml('28')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+   	<div class="caption"><h3>4&nbsp;&nbsp;Kartefour</h3></div>   
+        <div class="thumbnail"> <img src="images/4.png" alt="4" class="img-responsive" onClick="javascript:insertHtml('29')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+     	<div class="caption"><h3>5&nbsp;&nbsp;Pentafive</h3></div> 
+        <div class="thumbnail"> <img src="images/5.png" alt="5" class="img-responsive" onClick="javascript:insertHtml('30')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>6&nbsp;&nbsp;Soxisix</h3></div>
+	<div class="thumbnail"> <img src="images/6.png" alt="6" class="img-responsive" onClick="javascript:insertHtml('31')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>7&nbsp;&nbsp;Settseven</h3></div>
+	<div class="thumbnail"> <img src="images/7.png" alt="7" class="img-responsive" onClick="javascript:insertHtml('32')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>8&nbsp;&nbsp;Oktoeight</h3></div>
+	<div class="thumbnail"> <img src="images/8.png" alt="8" class="img-responsive" onClick="javascript:insertHtml('33')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>9&nbsp;&nbsp;Novenine</h3></div>
+	<div class="thumbnail"> <img src="images/9.png" alt="9" class="img-responsive" onClick="javascript:insertHtml('34')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>0&nbsp;&nbsp;Nadazero</h3></div>
+	<div class="thumbnail"> <img src="images/0.png" alt="0" class="img-responsive" onClick="javascript:insertHtml('35')"></div>
+</div>
+
+
+</div>
+
+<!-- ++ Hilfsstander-->
+ <div class="row text-center">
+  
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>1st Substitude</h3></div>
+	<div class="thumbnail"> <img src="images/1st.png" alt="1st" class="img-responsive" onClick="javascript:insertHtml('36')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>2nd Substitude</h3></div>
+      <div class="thumbnail"> <img src="images/2nd.png" alt="2nd" class="img-responsive" onClick="javascript:insertHtml('37')"></div>
+    </div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+	<div class="caption"><h3>3rd Substitude</h3></div>
+      <div class="thumbnail"> <img src="images/3rd.png" alt="3rd" class="img-responsive" onClick="javascript:insertHtml('38')"></div>
+</div>
+<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+   	<div class="caption"><h3>4th Substitude</h3></div>   
+        <div class="thumbnail"> <img src="images/4th.png" alt="4th" class="img-responsive" onClick="javascript:insertHtml('39')"></div>
+</div>
+<div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
+	<div class="caption"><h3>ANSWER</h3></div>
+	<div class="thumbnail" style="margin-bottom:50px;"> <img src="images/Answer.png" alt="Answer" class="img-responsive" onClick="javascript:insertHtml('40')"></div>
+</div>
+</div>
+
+
+<div  id="anzeigen_sprache"  class="invisible" style="margin-bottom:50px;"> <!---->
+Sprache aktiv:&nbsp;&nbsp;&nbsp;&nbsp;<div id="sprache_aktiv" class="" style="display:inline"></div><br>
+Sprache gespeichert:&nbsp;&nbsp;&nbsp;&nbsp;<div id="sprache_speicher" class="" style="display:inline"></div><br>
+Systemsprache (Sprache_auto): &nbsp;&nbsp;&nbsp;<div id="sprache_auto" class="" style="display:inline">Sprache_auto</div>
+</div>
+</div>
+
+</div>
+<!-- +++++  Flaggeninfo +++++++-->
+<div class="flaginfo" id="flaginfo">
+
+<!--menüleiste oben-->
+
+<nav class="navbar-default navbar-fixed-top oben">
+  <div class="container-fluid"> 
+	<ul class="nav navbar-nav">
+<a href="#"><img src="images/buttons/back.png" class="button_nav button_nav_top" id="back" alt="" onclick="javascript:previousFlag()"></a> 
+<a href="#"><img src="images/buttons/vor.png" class="button_nav button_nav_top" id="vor" onClick="javascript:nextFlag()" alt="" ></a>
+<a href="#"><img src="images/buttons/ready.png" class="button_nav button_nav_top" onClick="javascript:Show_All_flags()" alt="" ></a>
+	</ul>
+  </div>
+</nav>
+
+
+<div class="container-fluid flaggeninfo">
+
+	<!-- veränderliche Inhalte-->
+
+<div class="row">
+
+<div class="flagtitle" id="flagtitle" >
+</div>
+
+<hr style="border:0px">
+
+<div class="col-xs-flagge col-sm-flagge" >
+	<div class="flagimage img-responsive" id="flagimage">
+	</div>
+	
+</div>
+
+<div class="col-xs-flaggentext col-sm-flaggentext" >
+<div id="morse"></div>
+	<hr id="hr1">
+<div id="flagnummer" class="h1"></div>
+<div id="flagtext"></div>         
+</div>    
+
+  </div>   
+<!--<div id="flagnummer"></div>
+-->
+<!-- Ende veränderliche Inhalte-->
+    
+</div>    
+
+</div>
+
+
+<!-- +++++  Schreiben +++++++-->
+<div class="writing" id="writing" >
+
+<!--menüleiste oben-->
+
+<nav class="navbar-default navbar-fixed-top oben">
+  <div class="container-fluid"> 
+	<ul class="nav navbar-nav">
+<output name="eingabe" id="textinput" class="form-control"></output>
+<a href="#"><img src="images/buttons/schreiben.png" class="button_nav" id="button_keyboard_schreiben" alt="" onclick="javascript:keyboard_einblenden ()"></a> 
+<a href="#"><img src="images/buttons/flaggendelete.png" class="button_nav" onClick="javascript:clean_flags ()" alt="" ></a>
+	</ul>
+  </div>
+</nav>
+
+<!--content-->
+
+<div class="col-md-6 col-sm-6 col-xs-4" id="flaggentext2" >
+    <img src="images/empty.png" alt="" name="flagge1"><br>
+	<img src="images/empty.png" alt="" name="flagge2"><br>
+	<img src="images/empty.png" alt="" name="flagge3"><br>
+	<img src="images/empty.png" alt="" name="flagge4"><br>
+	<img src="images/empty.png" alt="" name="flagge5">
+</div>
+
+
+
+ <!--Popup Keyboard-->
+<div class="col-md-6 col-sm-6 col-xs-8" id="keyboardpopup" style="padding: 0px; marign: 0px;" >
+<a><img src="images/buttons/button_close.png" alt="close"  class="button_close"  onclick="javascript:keyboard_ausblenden ()"></a>
+
+<div class="keyboard" id="keyboard" style="padding-left:5px; padding-top:15px;">	
+
+   
+	<div class="well_keyboard" onClick="javascript:flags('A')">A</div>
+	<div class="well_keyboard" onClick="javascript:flags('B')">B</div>
+	<div class="well_keyboard" onClick="javascript:flags('C')">C</div>
+	<div class="well_keyboard" onClick="javascript:flags('D')">D</div>
+	<div class="well_keyboard" onClick="javascript:flags('E')">E</div>
+	<div class="well_keyboard" onClick="javascript:flags('F')">F</div>
+	<div class="well_keyboard" onClick="javascript:flags('G')">G</div>
+	<div class="well_keyboard" onClick="javascript:flags('H')">H</div>
+	<div class="well_keyboard" onClick="javascript:flags('I')">I</div>
+	<div class="well_keyboard" onClick="javascript:flags('J')">J</div>
+    
+	<div class="well_keyboard" onClick="javascript:flags('K')">K</div>
+	<div class="well_keyboard" onClick="javascript:flags('L')">L</div>
+	<div class="well_keyboard" onClick="javascript:flags('M')">M</div>
+	<div class="well_keyboard" onClick="javascript:flags('N')">N</div>
+	<div class="well_keyboard" onClick="javascript:flags('O')">O</div>
+	<div class="well_keyboard" onClick="javascript:flags('P')">P</div>
+	<div class="well_keyboard" onClick="javascript:flags('Q')">Q</div>
+	<div class="well_keyboard" onClick="javascript:flags('R')">R</div>
+	<div class="well_keyboard" onClick="javascript:flags('S')">S</div>
+	<div class="well_keyboard" onClick="javascript:flags('T')">T</div>
+    
+	<div class="well_keyboard" onClick="javascript:flags('U')">U</div>
+	<div class="well_keyboard" onClick="javascript:flags('V')">V</div>
+	<div class="well_keyboard" onClick="javascript:flags('W')">W</div>
+	<div class="well_keyboard" onClick="javascript:flags('X')">X</div>
+	<div class="well_keyboard" onClick="javascript:flags('Y')">Y</div>
+	<div class="well_keyboard" onClick="javascript:flags('Z')">Z</div>
+    
+	<div class="well_keyboard well_keyboard_next" onClick="javascript:flags('1')">1</div>
+	<div class="well_keyboard" onClick="javascript:flags('2')">2</div>
+	<div class="well_keyboard" onClick="javascript:flags('3')">3</div>
+	<div class="well_keyboard" onClick="javascript:flags('4')">4</div>
+	<div class="well_keyboard" onClick="javascript:flags('5')">5</div>
+	<div class="well_keyboard" onClick="javascript:flags('6')">6</div>
+	<div class="well_keyboard" onClick="javascript:flags('7')">7</div>
+	<div class="well_keyboard" onClick="javascript:flags('8')">8</div>
+	<div class="well_keyboard" onClick="javascript:flags('9')">9</div>
+	<div class="well_keyboard" onClick="javascript:flags('0')">0</div>
+    
+	<div class="well_taste" onClick="javascript:clean_flags ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
+	<div class="well_taste" onClick="javascript:delete_flag ()"><img src="images/buttons/backspace.png" width="25" height="25" alt=""/></div>
+    
+
+</div>
+</div>
+
+
+</div>
+
+
+<!-- +++++  Lesen +++++++-->
+<div class="reading" id="reading" >
+
+<!--menüleiste oben-->
+
+<nav class="navbar-default navbar-fixed-top oben">
+  <div class="container-fluid"> 
+	<ul class="nav navbar-nav">
+	<a href="#"><img src="images/buttons/schreiben.png" class="button_nav" alt="" id="button_keyboard_reading" onclick="javascript:keyboard_flags_einblenden()"></a> 
+<a href="#"><img src="images/buttons/flaggendelete.png" class="button_nav" onClick="javascript:clean_reading ()" alt="" ></a>
+	</ul>
+  </div>
+</nav>
+
+<!--content-->
+<div row>
+<div class="lesen" id="lesen"></div>
+
+<div class="col-md-4 col-sm-4 col-xs-1" id="flaggentext" >
+    <img src="images/empty.png" alt="" name="lesen1"><br>
+	<img src="images/empty.png" alt="" name="lesen2"><br>
+	<img src="images/empty.png" alt="" name="lesen3"><br>
+	<img src="images/empty.png" alt="" name="lesen4"><br>
+	<img src="images/empty.png" alt="" name="lesen5"><br>
+	<img src="images/empty.png" alt="" name="lesen6"><br>
+	<img src="images/empty.png" alt="" name="lesen7"><br>
+	<img src="images/empty.png" alt="" name="lesen8"><br>
+	<img src="images/empty.png" alt="" name="lesen9"><br>
+	<img src="images/empty.png" alt="" name="lesen10"><br>
+	<img src="images/empty.png" alt="" name="lesen11"><br>
+	<img src="images/empty.png" alt="" name="lesen12"><br>
+    <br><br>
+</div>
+
+
+
+ <!--Popup Keyboard- Flaggen -->
+<div class="col-md-8 col-sm-8 col-xs-9" id="flagskeyboard-popup">
+<a><img src="images/buttons/button_close.png" alt="close"  class="button_close close_lesen"  onclick="javascript:keyboard_flags_ausblenden ()"></a>
+
+<div class="flagskeyboard" id="flagskeyboard">	
+
+   
+	<img src="images/A.png" class="flagstaste" alt="" onClick="javascript:reading('A')">
+	<img src="images/B.png" class="flagstaste" alt="" onClick="javascript:reading('B')">
+	<img src="images/C.png" class="flagstaste" alt="" onClick="javascript:reading('C')">
+	<img src="images/D.png" class="flagstaste" alt="" onClick="javascript:reading('D')">
+	<img src="images/E.png" class="flagstaste" alt="" onClick="javascript:reading('E')">
+	<img src="images/F.png" class="flagstaste" alt="" onClick="javascript:reading('F')">
+	<img src="images/G.png" class="flagstaste" alt="" onClick="javascript:reading('G')">
+	<img src="images/H.png" class="flagstaste" alt="" onClick="javascript:reading('H')">
+	<img src="images/I.png" class="flagstaste" alt="" onClick="javascript:reading('I')">
+	<img src="images/J.png" class="flagstaste" alt="" onClick="javascript:reading('J')">
+    
+	<img src="images/K.png" class="flagstaste" alt="" onClick="javascript:reading('K')">
+	<img src="images/L.png" class="flagstaste" alt="" onClick="javascript:reading('L')">
+	<img src="images/M.png" class="flagstaste" alt="" onClick="javascript:reading('M')">
+	<img src="images/N.png" class="flagstaste" alt="" onClick="javascript:reading('N')">
+	<img src="images/O.png" class="flagstaste" alt="" onClick="javascript:reading('O')">
+	<img src="images/P.png" class="flagstaste" alt="" onClick="javascript:reading('P')">
+	<img src="images/Q.png" class="flagstaste" alt="" onClick="javascript:reading('Q')">
+	<img src="images/R.png" class="flagstaste" alt="" onClick="javascript:reading('R')">
+	<img src="images/S.png" class="flagstaste" alt="" onClick="javascript:reading('S')">
+	<img src="images/T.png" class="flagstaste" alt="" onClick="javascript:reading('T')">
+    
+	<img src="images/U.png" class="flagstaste" alt="" onClick="javascript:reading('U')">
+	<img src="images/V.png" class="flagstaste" alt="" onClick="javascript:reading('V')">
+	<img src="images/W.png" class="flagstaste" alt="" onClick="javascript:reading('W')">
+	<img src="images/X.png" class="flagstaste" alt="" onClick="javascript:reading('X')">
+	<img src="images/Y.png" class="flagstaste" alt="" onClick="javascript:reading('Y')">
+	<img src="images/Z.png" class="flagstaste" alt="" onClick="javascript:reading('Z')">
+	
+    <img src="images/1st.png" class="flagstaste well_keyboard_next" alt="" onClick="javascript:reading('1st')">
+	<img src="images/2nd.png" class="flagstaste" alt="" onClick="javascript:reading('2nd')">
+	<img src="images/3rd.png" class="flagstaste" alt="" onClick="javascript:reading('3rd')">
+	<img src="images/4th.png" class="flagstaste" alt="" onClick="javascript:reading('4th')">
+
+	<img src="images/1.png" class="flagstaste_ziffer well_keyboard_next" alt="" onClick="javascript:reading('1')">
+	<img src="images/2.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('2')">
+	<img src="images/3.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('3')">
+	<img src="images/4.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('4')">
+	<img src="images/5.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('5')">
+	<img src="images/6.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('6')">
+	<img src="images/7.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('7')">
+	<img src="images/8.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('8')">
+	<img src="images/9.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('9')">
+	<img src="images/0.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('0')">
+    
+	<div class="well_taste" onClick="javascript:clean_reading ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
+	<div class="well_taste" onClick="javascript:delete_reading ()"><img src="images/buttons/backspace.png" width="25" height="25" alt=""/></div>
+    
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- +++++  About +++++++-->
+
+<div class="about-page" id="about-page">
+
+<!--content-->
+<div class="container about-page-container">
+<h1 class="titel">Signal Flags</h1>
+</div>
+    <!-- - About-->
+<div class="container about-page-container">
+	<div class="col-xs-3 col-md-1 col-sm-2" style="padding-left:0px;" >
+	<img src="images/2K-Yachting-Flaggen-RGB.png"  class="img-responsive"  alt=""/>
+	</div>
+
+	<div class="col-60-ohne">
+	<p>&copy; 2015 by 2K Yachting, Düsseldorf, Germany</p>
+	<p>Version 1.0<br>
+	All rights reserved</p>
+	<p><a href="http://www.2k-yachting.de/apps" target="_blank">www.2k-yachting.de/apps</a><br>
+	<a href="mailto:support@2k-yachting.de">support@2k-yachting.de</a></p><br>
+	</div>
+</div>
+
+<br>
+<div class="container about-page-container">
+	<p><strong>Idea and Concept:</strong> Helmut&nbsp;Kraus, Almute&nbsp;Kraus<br>
+	<strong>Development:</strong> Almute Kraus<br>
+	<strong>Design: </strong>Helmut Kraus, <a href="http://www.exclam.de" target="_blank">www.exclam.de</a></p>
+</div>
+
+<br>
+<div class="container about-page-container">
+<p class="text-impressum">No part of the material protected by this copyright notice may be reproduced in any form without written permission of the copyright owner. While reasonable care has been exercised in the preparation of this publication, the author assumes no responsibility for errors or omissions, or for damages resulting from the use of the information contained herein.</p>
+<hr>
+</div>
+
+
+<section>  <!-- Einstellungen und Hilfe -->
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-3 col-sm-4 col-xs-4">  <!--1. Bereich Sprache-->
+<h4 id="Sprachauswahl_Titel"></h4>
+<div class="radio"><label><input type="radio" name="optradio" id="auto" onClick="javascript:button_auto()">Auto</label></div>
+<div class="radio"><label><input type="radio" name="optradio" id="deutsch" onClick="javascript:button_de()">Deutsch</label></div>
+<div class="radio"><label><input type="radio" name="optradio" id="englisch" onClick="javascript:button_en()">English</label></div>
+<br><br>
+</div>
+
+<div class="col-md-4 col-sm-5 col-xs-5">  <!--2. Bereich Hilfe-->
+<h4 id="Help_Titel"></h4>
+
+<a onClick="javascript:help_anzeigen(); javascript:help_Flaggen()" href="#"><img src="images/buttons/search_inaktiv.png" alt="Info" class="button_help" ><label id="help_info"></label></a> <br>
+<a onClick="javascript:help_anzeigen(); javascript:help_Writing()" href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" class="button_help" ><label id="help_schreiben"></label></a><br>
+<a onClick="javascript:help_anzeigen(); javascript:help_Reading ()" href="#"><img src="images/buttons/reading_inaktiv.png" alt="Reading" class="button_help" ><label id="help_lesen"></label></a><br>
+<br><br><br>
+</div>
+</div>  <!--Ende row-->
+</div>   <!--Ende container-->
+</section>
+
+</div>
+
+
+<!-- +++++  Help +++++++-->
+
+<div class="help-page" id="help-page">
+
+<!--menüleiste help oben-->
+
+<nav class="navbar-default navbar-fixed-top oben">
+  <div class="container-fluid"> 
+	<ul class="nav navbar-nav">
+<a href="#"><img src="images/buttons/search_inaktiv.png" alt="Flgas" class="button_nav" id="" onClick="javascript:help_Flaggen()"></a>
+<a href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" class="button_nav" id="" onClick="javascript:help_Writing()"></a>
+<a href="#"><img src="images/buttons/reading_inaktiv.png" alt="Reading" class="button_nav" id="" onClick="javascript:help_Reading()"></a>	
+<a><img src="images/buttons/button_close.png" alt="close"  class="button_nav"  onclick="javascript:slide_Quit()"></a>
+<a><img src="images/buttons/flaggendelete.png" class="button_nav" id="slide_restart" alt="" onclick="javascript:slide_Restart()" ></a>
+	</ul>
+  </div>
+</nav>
+
+<!--content-->
+<div class="container about-page-container">
+<!--content-->
+
+ <!-- Flaggeninfo -->
+<div id="HelpCarousel0" class="carousel" data-wrap="false" >
+  <div class="carousel-inner" role="listbox" id="carousel-flaggen">
+    <div class="item active">
+      <img src="images/help/help_flags1.png" alt="Help1">
+    </div>
+    <div class="item">
+      <img src="images/help/help_flags2.png" alt="Help2">
+    </div>
+	<div class="item">
+      <img src="images/help/help_flags3.png" alt="Help3">
+    </div>
+	<div class="item">
+      <img src="images/help/help_flags4.png" alt="Help4">
+    </div>	
+    <div class="item">
+      <img src="images/help/help_flags5.png" alt="Help5">
+    </div>
+  </div>
+   </div>
+ 
+ <!-- Schreiben -->
+<div id="HelpCarousel1" class="carousel" data-wrap="false" >
+  <div class="carousel-inner" role="listbox" id="carousel-writing">
+    <div class="item active">
+      <img src="images/help/help_writing1.png" alt="Help">
+    </div>
+    <div class="item">
+      <img src="images/help/help_writing2.png" alt="Help">
+    </div>
+	<div class="item">
+      <img src="images/help/help_writing3.png" alt="Help">
+    </div>
+	<div class="item">
+      <img src="images/help/help_writing4.png" alt="Help">
+    </div>	
+    <div class="item">
+      <img src="images/help/help_writing5.png" alt="Help">
+    </div>
+  </div>
+  </div>
+
+ <!-- Lesen -->
+<div id="HelpCarousel2" class="carousel" data-wrap="false" >
+  <div class="carousel-inner" role="listbox" id="carousel-reading">
+    <div class="item active">
+      <img src="images/help/help_writing1.png" alt="Help">
+    </div>
+    <div class="item">
+      <img src="images/help/help_writing2.png" alt="Help">
+    </div>
+	<div class="item">
+      <img src="images/help/help_writing3.png" alt="Help">
+    </div>
+	<div class="item">
+      <img src="images/help/help_writing4.png" alt="Help">
+    </div>	
+    <div class="item">
+      <img src="images/help/help_writing5.png" alt="Help">
+    </div>
+  </div>
+   </div>
+ 
+  </div>
+<!--Ende content-->
+</div>
+
+<!-- +++++  Auflistung der Scripts +++++++-->
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/flags_basics.js" type="text/javascript"></script>
+<script src="js/flags.js" type="text/javascript"></script>
+<script src="js/schreiben2.js" type="text/javascript"></script>
+
+</body>
+
+</html>
