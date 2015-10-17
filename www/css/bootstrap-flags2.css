@@ -373,7 +373,7 @@ a:focus {
 	padding-top: 15px;
 	height: 27px;
 	font-family: SourceSans;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.05em;
 }
 
 /*  Flaggenbild*/	
@@ -438,7 +438,6 @@ a:focus {
 @media (max-width: 360px) {
  #flagtitle{
 	font-size: 18px;
-	letter-spacing:0.05em;
 
 }
 }
@@ -559,7 +558,7 @@ a:focus {
 	background-color: rgba(147,147,147,1.00);
 	-webkit-box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
 	box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
-	margin-top: 130px;
+	margin-top: 140px;
  } 
 	
 .flagstaste, .flagstaste_ziffer {
@@ -587,8 +586,9 @@ a:focus {
 	background-image: url(../images/backgrounds/flaggenleine.png);
 	background-repeat: no-repeat;
 	background-size: auto 730px;
-	height: 750px;
-	padding-top: 45px;
+	height: 800px;
+	margin-top: 110px;
+	padding-top:30px;
 	background-position: 20px 5px;
 }
 
@@ -618,6 +618,12 @@ a:focus {
 
 @media (max-width: 359px) {
 	
+#flaggentext {
+	background-size: auto 780px;
+	height: 950px;
+
+}
+
 #flagskeyboard-popup {
 	width: 220px;
 
@@ -636,9 +642,16 @@ a:focus {
 }
 
 @media (min-width: 700px) {
+.lesen, #lesen {
+	margin-left: 50px;
+}
+
+
 #flaggentext {
 	background-size: auto 880px;
-	height: 1000px;
+	height: 900px;
+	margin-top:90px;
+	padding-top:40px;
 }
 	
 #flaggentext img{
@@ -674,6 +687,9 @@ a:focus {
 .close_lesen {
 	left: 295px;}
 }
+
+
+
 
 hr {
   margin-top: 20px;
