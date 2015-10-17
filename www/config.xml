@@ -7,17 +7,16 @@
         versionCode = "10" >
 
         <!-- versionCode is optional and Android only -->
+	<name>SignalFlags</name>
 
+	<description>SignalFlags mit PhoneGap.</description>
 
-        <name>SignalFlags</name>
-
-        <description>
-        SignalFlags mit PhoneGap. 
-        </description>
-
-        <author href="http://2k-yachting.de" email="info@2k-yachting.de">
+	<author href="http://2k-yachting.de" email="info@2k-yachting.de">
         2K Yachting
-        </author>
+	</author>
+	
+
+
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
@@ -25,13 +24,35 @@
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
     <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
-    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
-    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
+<!--<icon src="xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />
+<icon src="fr-xxhdpi.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />-->
+
+
+<!-- iPhone 6 / 6+ -->
+<!--<icon src="icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+-->
+<!-- iPhone / iPod Touch  -->
+<!--<icon src="icon-60.png" gap:platform="ios" width="60" height="60" />
+<icon src="icon-60@2x.png" gap:platform="ios" width="120" height="120" />-->
+
+<!-- iPad -->
+<!--<icon src="icon-76.png" gap:platform="ios" width="76" height="76" />
+<icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />-->
+
+<!-- Settings Icon -->
+<!--<icon src="icon-small.png" gap:platform="ios" width="29" height="29" />
+<icon src="icon-small@2x.png" gap:platform="ios" width="58" height="58" />-->
+
+<!-- Spotlight Icon -->
+<!--<icon src="icon-40.png" gap:platform="ios" width="40" height="40" />
+<icon src="icon-40@2x.png" gap:platform="ios" width="80" height="80" />-->
+
+    <!-- iOS alte Größen -->
     <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
     <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
     <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
     <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
-    <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
+
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
 
@@ -40,13 +61,25 @@
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
-    <gap:splash src="res/screen/blackberry/screen-225.png"              gap:platform="blackberry" />
+	
+	<!-- iPhone and iPod touch -->
     <gap:splash src="res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
     <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
-    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
+    <!-- iPhone 5 / iPod Touch (5th Generation) -->
+	<gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
+   <!-- iPad -->
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
-    <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
+    <!-- Retina iPad -->
+	<gap:splash src="res/screen/ios/screen-ipad-portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
+	<gap:splash src="res/screen/ios/screen-ipad-landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
+	
+	<!-- iPhone 6 -->
+<!--<gap:splash src="Default-667h@2x.png" gap:platform="ios" width="750" height="1334" />
+<gap:splash src="Default-Portrait-736h@3x.png" gap:platform="ios" width="1242" height="2208" />
+<gap:splash src="Default-Landscape-736h@3x.png" gap:platform="ios" width="2208" height="1242" />
+-->
+	<gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 
 
 </widget>
