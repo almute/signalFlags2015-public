@@ -386,7 +386,7 @@ var titleDE = [
 
 // Morsecode
 var morsecode = [
-    "  <object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object>",
+    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object>",
     "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
     "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object>",
     "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
@@ -399,7 +399,7 @@ var morsecode = [
     "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object>",
     "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
     "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dah-startpng\"></object><object data=\"images/morse/dit.png\"></object>",
+    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object>",
     "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
     "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object>",
     "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object>",

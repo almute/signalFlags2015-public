@@ -12,6 +12,8 @@ body {
 	color: #333;
 	background-color: #fff;
 	letter-spacing: 0.03em;
+	padding-top:auto;
+	padding-bottom:auto;
 }
 /*Seitendefinitionen*/
 
@@ -231,7 +233,7 @@ a:focus {
 
 
 
-/* +++++++ Flaggenanzeige und Keyboard an kleine -Größen anpassen ++++++++*/
+/* +++++++ Flaggenanzeige und Keyboard an kleine Größen anpassen ++++++++*/
 
 /*iPhone 4, 5*/
 @media (max-width: 359px) {
@@ -329,11 +331,9 @@ a:focus {
 }
 }
 
-/* ++ Spalten für All Flags  und Flaggeninfo +++*/
+/* ********* Spalten  Flaggeninfo *************/
 
-.col-xs-alpha, .col-xs-ziffer, .col-xs-flagge, .col-xs-flaggentext,
-.col-sm-alpha, .col-sm-ziffer,.col-sm-flagge, .col-sm-flaggentext, 
-.col-md-ziffer, .col-md-alpha {
+.col-xs-flagge, .col-xs-flaggentext,.col-sm-flagge, .col-sm-flaggentext {
   position: relative;
   min-height: 10px;
   padding-right: 15px;
@@ -341,57 +341,19 @@ a:focus {
   float: left;
 }
 
-.col-xs-alpha {
-  width: 43%;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.col-xs-ziffer {
-  width: 90%;
-}
 .col-xs-flagge {
 	width: 90%;
   padding-left: 10px;
+  padding-right: 15px;
 }
 .col-xs-flaggentext {
     width: 90%;
   padding-left: 10px;
+  padding-right: 15px;
 }
 
 
 
-@media (min-width: 700px) {
-
-  .col-sm-alpha {
-    width: 28%;
-  }
-  .col-sm-ziffer {
-    width: 80%;
-}
-  .col-sm-flagge {
-    width:55%;
-  padding-left: 10px;
-}
-  .col-sm-flaggentext {
-    width: 38%;
-	float: right;
-  padding-right: 10px;
-}
-}
-
-@media (min-width: 992px) {
-
-.col-md-alpha {
-    width: 30%;
-}
-  .col-md-ziffer {
-    width: 90%;
-  }
-  
-}
-
-
-/* ++++++++ Flaggeninfo ++++++++*/
 
 /* Inhalte im Fenster */
 .flaggeninfo {
@@ -414,14 +376,6 @@ a:focus {
 	letter-spacing: 0.03em;
 }
 
-@media (max-width: 360px) {
- #flagtitle{
-	font-size: 18px;
-	letter-spacing:0.05em;
-
-}
-
-}
 /*  Flaggenbild*/	
 
 #flagimage { 
@@ -481,6 +435,112 @@ a:focus {
 	display:none
 }
 
+@media (max-width: 360px) {
+ #flagtitle{
+	font-size: 18px;
+	letter-spacing:0.05em;
+
+}
+}
+
+@media (min-width: 700px) {
+
+  .col-sm-flagge {
+    width:55%;
+  padding-left: 10px;
+}
+  .col-sm-flaggentext {
+    width: 38%;
+	float: right;
+  padding-right: 10px;
+}
+}
+
+
+
+
+/* ********* Spalten für All Flags  *************/
+
+.col-xs-alpha, .col-xs-ziffer, .col-sm-alpha, .col-sm-ziffer, .col-md-ziffer, .col-md-alpha {
+  position: relative;
+  min-height: 10px;
+  padding-right: 2%;
+  padding-left: 2%;
+  float: left;
+}
+/*  3 Flaggen pro Zeile - 1 Ziffer*/
+.col-xs-alpha {
+  width: 29%;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+
+.col-xs-ziffer {
+  width: 80%;
+  padding-left: 2%;
+}
+
+/*Überschrift über Flaggen kleiner*/
+@media (max-width: 630px) {
+.col-xs-alpha h3, .col-xm-alpha h3 {
+  font-size:13px;
+  margin-bottom: 3px;
+}
+
+.col-xs-ziffer h3, .col-xm-ziffer h3 {
+  font-size:13px;
+  margin-bottom:3px;
+}
+
+}
+
+@media (min-width: 631px)and (max-width: 799px) {
+.col-xs-alpha h3, .col-xm-alpha h3 {
+  font-size:15px;
+  margin-bottom: 4px;
+}
+
+.col-xs-ziffer h3, .col-xm-ziffer h3{
+  font-size:15px;
+  margin-bottom:4px;
+}
+
+}
+/*  4 Flaggen pro Zeile/ 1 Ziffer */
+@media (min-width: 414px) and (max-width: 991px) {
+
+.col-sm-alpha {
+	width: 21%;
+  	 padding-right: 2%;
+ 	 padding-left: 2%;
+}
+
+.col-sm-ziffer {
+    width: 58%;
+  	 padding-right: 1%;
+ 	 padding-left: 2%;}
+
+}
+
+/*  5 Flaggen pro Zeile/ 2 Ziffern */
+@media (min-width: 992px) {
+
+.col-md-alpha {
+	width: 18%;
+  	 padding-right: 1%;
+ 	 padding-left: 1%;
+}
+  .col-md-ziffer {
+    width: 48%;
+   	 padding-right: 1%;
+ 	 padding-left: 1%; }
+  
+}
+
+
+
+
 
 /* ++++++++++ Flaggen lesen ++++++++++++*/
 
@@ -499,7 +559,7 @@ a:focus {
 	background-color: rgba(147,147,147,1.00);
 	-webkit-box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
 	box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
-	margin-top: 30px;
+	margin-top: 130px;
  } 
 	
 .flagstaste, .flagstaste_ziffer {
@@ -544,11 +604,12 @@ a:focus {
 	font-size: 21pt;
 	height: 42px;
 	width: 270px;
-	margin-top: 90px;
+	margin-top: 80px;
 	margin-left: 15px;
 	border-radius: 10px;
 	padding-left: 15px;
 	letter-spacing: 0.05em;
+	position:fixed;
 }
 
 .close_lesen {
