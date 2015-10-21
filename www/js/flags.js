@@ -537,6 +537,7 @@ var flagtextDE = [
 // Bild und Morsecode - unabhängig von Sprache
     document.getElementById("flagimage").innerHTML = "<object data=\"images/" + image[flag] + ".png\"></object>";
     document.getElementById("morse").innerHTML = morsecode[flag];
+	document.getElementById("licht").innerHTML = "<object type=\"text/html\" width=\"80\" height=\"50\" data-dw-widget=\"Edge\" data=\"edgeanimate_assets/" + image[flag] + ".html\"></object>";
    
 // deutsch manuell gewählt oder Systemsprache deutsch
     if (sprache_aktiv === "de1" || sprache_aktiv === "de") 
@@ -586,3 +587,17 @@ function previousFlag() {
         }
 }  // ++++++  Ende function previousFlag
 
+
+// swipe nach links
+function() {
+	'use strict';
+	$("flaginfo").on("swipeleft", previousFlag);
+	
+}
+
+// swipe nach rechts
+function() {
+	'use strict';
+	$("flaginfo").on("swiperight", nextFlag);
+	
+}

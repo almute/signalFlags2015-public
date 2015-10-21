@@ -394,10 +394,17 @@ a:focus {
 #morse {
 	padding-top: 12px;
 	padding-left: 0px;
+	float:left;
 }
 
 #morse object{
 		height:12px;
+}
+
+#licht {
+}
+
+#licht object{
 }
 
 /* Text zur Flage */
