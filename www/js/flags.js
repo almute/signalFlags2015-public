@@ -587,7 +587,7 @@ function previousFlag() {
         }
 }  // ++++++  Ende function previousFlag
 
-
+/*
 // swipe nach links
 function() {
 	'use strict';
@@ -600,4 +600,4 @@ function() {
 	'use strict';
 	$("flaginfo").on("swiperight", nextFlag);
 	
-}
+}*/
