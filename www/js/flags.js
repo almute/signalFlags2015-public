@@ -587,17 +587,15 @@ function previousFlag() {
         }
 }  // ++++++  Ende function previousFlag
 
-/*
+
 // swipe nach links
-function() {
-	'use strict';
-	$("flaginfo").on("swipeleft", previousFlag);
+
+$("flaginfo").on("swipeleft", function(){
+	previousFlag();	
+	});
 	
-}
 
 // swipe nach rechts
-function() {
-	'use strict';
-	$("flaginfo").on("swiperight", nextFlag);
-	
-}*/
+$("flaginfo").on("swiperight", function(){
+	nextFlag();	
+	});
