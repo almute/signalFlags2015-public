@@ -592,11 +592,13 @@ function previousFlag() {
 
 $(document).on("pagecreate","#flaginfo",function(){
 	$("#flaginfo").on("swipeleft", function(){
-	previousFlag();	
+	nextFlag();	
 	});
 });
 
 // swipe nach rechts
+$(document).on("pagecreate","#flaginfo",function(){
 $("#flaginfo").on("swiperight", function(){
-	nextFlag();	
+	previousFlag();	
 	});
+});
