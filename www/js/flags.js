@@ -592,7 +592,7 @@ function previousFlag() {
 
 $(function(){
     // Bind the swiperightHandler callback function to the swipe event on div.box
-  $( "div.flaginfo" ).on( "swipeleft", nextFlag);
+  $( "flaginfo" ).on( "swipeleft", nextFlag);
  });
 
   // Callback function references the event target and adds the 'swiperight' class to it
@@ -611,7 +611,7 @@ $(function(){
 
 $(function(){
     // Bind the swiperightHandler callback function to the swipe event on div.box
-  $( "div.flaginfo" ).on( "swiperight", previousFlag);
+  $( "flaginfo" ).on( "swiperight", previousFlag);
  });
  
  
