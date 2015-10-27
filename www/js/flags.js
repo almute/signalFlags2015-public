@@ -590,34 +590,7 @@ function previousFlag() {
 
 // swipe nach links
 
-$(function(){
-    // Bind the swiperightHandler callback function to the swipe event on div.box
-  $( "flaginfo" ).on( "swipeleft", nextFlag);
- });
-
-  // Callback function references the event target and adds the 'swiperight' class to it
- // function previousFlagSwipe( event ){
-//   previousFlag();
-//  }
-
-//$(document).on("pagecreate","#flaginfo",function(){
- //   'use strict';
-//	$("#flaginfo").on("swipeleft", "#flaginfo", function(){
-	//nextFlag();	
-//	});
-//});
 
 // swipe nach rechts
 
-$(function(){
-    // Bind the swiperightHandler callback function to the swipe event on div.box
-  $( "flaginfo" ).on( "swiperight", previousFlag);
- });
- 
- 
-//$(document).on("pagecreate","#flaginfo",function(){
-  //  'use strict';
-//$("#flaginfo").on("swiperight", "#flaginfo", function(){
-//	previousFlag();	
-	//});
-//});
+
