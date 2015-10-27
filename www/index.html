@@ -244,7 +244,7 @@
 
 <div class="container-fluid flaggeninfo">
 
-<script> 
+<!--<script> 
 $(document).on("swiperight", "#flaginfo", function(event){     
     previousFlag();
 });
@@ -253,6 +253,13 @@ $(document).on("swiperight", "#flaginfo", function(event){
 $(document).on("swipeleft", "#flaginfo", function(event){     
     nextFlag();
 });
+</script>-->
+
+<script> 
+$("#flaginfo").on("swiperight", previousFlag);
+</script>
+<script> 
+$("#flaginfo").on("swipeleft", nextFlag);
 </script>
 	<!-- veränderliche Inhalte-->
 
