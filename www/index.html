@@ -245,12 +245,12 @@
 <div class="container-fluid flaggeninfo">
 
 <script> 
-$("#flaginfo").swiperight(function() {
+$(document).on("swiperight", "#flaginfo", function(event){     
     previousFlag();
 });
 </script>
 <script> 
-$("#flaginfo").swipeleft(function() {
+$(document).on("swipeleft", "#flaginfo", function(event){     
     nextFlag();
 });
 </script>
