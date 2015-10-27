@@ -333,27 +333,66 @@ a:focus {
 
 /* ********* Spalten  Flaggeninfo *************/
 
-.col-xs-flagge, .col-xs-flaggentext,.col-sm-flagge, .col-sm-flaggentext {
-  position: relative;
-  min-height: 10px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
+.col-xs-flagge, .col-xs-flaggentext, .col-sm-flagge, .col-sm-flaggentext {
+	position: relative;
+	min-height: 10px;
+	float: left;
 }
 
 .col-xs-flagge {
-	width: 90%;
-  padding-left: 10px;
-  padding-right: 15px;
+	width: 80%;
+	padding-right: 10px;
+	margin-left: 30px;
 }
 .col-xs-flaggentext {
-    width: 90%;
-  padding-left: 10px;
-  padding-right: 15px;
+ 	width: 90%;
+	padding-left: 10px;
+	padding-right: 15px;
 }
 
+.button_close_flaginfo {
+	float: right;
+	width: auto;	
+	padding-right: 1%;
+	padding-top: 0px;
+}
+.button_close_flaginfo img {
+	height: 30px;
+	width: 30px;
+}
 
+.scrollleft, .scrollright {
+	padding-left: 0px;
+	width: 20px;
+	height: 230px;
+	padding-right: 0px;
+	position: absolute;
+	top: 90px;
+	background-repeat: no-repeat;
+	background-position: 0% 20px;
+	background-size: 20px 36px;
+}
 
+.scrollleft {
+ 	float:left;
+	left: 1%;
+	background-image:url(../images/buttons/pfeil_links.png);
+}
+
+.scrollright {
+	float: right;
+	right: 0%;
+	padding-left: 0px;	
+	background-image: url(../images/buttons/pfeil_rechts.png);
+	background-origin: padding-box;
+}
+
+.scrollleft img, .scrollright img {
+	width: 20px;
+	padding-top: 30px;
+	vertical-align:middle;
+ 	height: 100px;
+}
 
 /* Inhalte im Fenster */
 .flaggeninfo {
@@ -361,15 +400,16 @@ a:focus {
 	height: auto;
 	max-width: 850px;
 	font-family: SourceSansPro;
-	margin-top: 70px;
+	margin-top: 30px;
 }
 	
 /*  Titel zur Flagge */	
+
+
 #flagtitle {
 	font-size: 22px;
 	font-weight: bold;
 	color: #FFFFFF;
-	padding-left: 10px;
 	padding-top: 15px;
 	height: 27px;
 	font-family: SourceSans;
@@ -378,9 +418,9 @@ a:focus {
 
 /*  Flaggenbild*/	
 
-#flagimage { 
-	width:auto;
-	margin-bottom:20px;
+#flagimage {
+	width: auto;
+	margin-bottom: 20px;
 }
 
 #flagimage html, #flagimage object{
@@ -390,6 +430,7 @@ a:focus {
  }
 		
 
+
 /* Morsecode */
 #morse {
 	padding-top: 8px;
@@ -398,7 +439,7 @@ a:focus {
 }
 
 #morse object{
-		height:12px;
+   height: 8px;
 }
 
 #licht {
@@ -443,31 +484,55 @@ a:focus {
 }
 
 @media (max-width: 360px) {
- #flagtitle{
+ #flagtitle {
+	font-size: 16px;
+	padding-left:15px;
+}
+}
+
+@media (min-width: 360px) and (max-width: 400px) {
+ #flagtitle {
 	font-size: 18px;
-
+	padding-left:15px;
+}
+.scrollright {
 }
 }
 
-@media (min-width: 700px) {
-
-  .col-sm-flagge {
-    width:55%;
-  padding-left: 10px;
+@media (min-width: 700px) {  /*ab dieser Breite zweispaltig*/
+.flaggeninfo {
+	width: 80%;
+	height: auto;
+	max-width: 850px;
+	padding: 0px;
 }
-  .col-sm-flaggentext {
-    width: 38%;
+.flagtitle, #flagtitle {
+	width:100%;
+	padding-left: 0px;
+	margin-left: 0px;
+}
+.col-sm-flagge {
+    width:50%;
+	padding-left:0px;
+	margin-left:0px;
+}
+.col-sm-flaggentext {
+    width: 40%;
 	float: right;
-  padding-right: 10px;
 }
+.scrollleft, .scrollright {
+	width: 40px;
+	height: 350px;
 }
 
-
+/*.scrollright {
+	}*/
+}
 
 
 /* ********* Spalten für All Flags  *************/
 
-.col-xs-alpha, .col-xs-ziffer, .col-sm-alpha, .col-sm-ziffer, .col-md-ziffer, .col-md-alpha {
+.col-xs-alpha, .col-xs-subs, .col-xs-ziffer, .col-sm-alpha, .col-sm-ziffer, .col-md-ziffer, .col-md-alpha {
   position: relative;
   min-height: 10px;
   padding-right: 2%;
@@ -481,15 +546,28 @@ a:focus {
   padding-left: 2%;
 }
 
-
 .col-xs-ziffer {
   width: 80%;
   padding-left: 2%;
 }
 
+.col-xs-ziffer h3{
+   text-align:left;
+   padding-left:3%;
+}
+
+/*Hilfsstander wie normale Flaggen*/
+.col-xs-subs {
+   width: 29%;
+   padding-right: 2%;
+  padding-left: 2%;
+}
+
+
+
 /*Überschrift über Flaggen kleiner*/
 @media (max-width: 630px) {
-.col-xs-alpha h3, .col-xm-alpha h3 {
+.col-xs-alpha h3, .col-xm-alpha, .col-xs-subs h3 {
   font-size:13px;
   margin-bottom: 3px;
 }
@@ -498,7 +576,9 @@ a:focus {
   font-size:13px;
   margin-bottom:3px;
 }
-
+.col-xs-subs h3{
+   width: 80%;
+}
 }
 
 @media (min-width: 631px)and (max-width: 799px) {
@@ -525,8 +605,10 @@ a:focus {
 .col-sm-ziffer {
     width: 58%;
   	 padding-right: 1%;
- 	 padding-left: 2%;}
-
+   }
+.col-sm-ziffer h3{
+   text-align:left;
+}
 }
 
 /*  5 Flaggen pro Zeile/ 2 Ziffern */

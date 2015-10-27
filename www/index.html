@@ -10,12 +10,14 @@
 <link rel="stylesheet" href="css/bootstrap-flags.css">
 <link rel="stylesheet" href="css/bootstrap-flags2.css">
 <script src="js/index.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/flags_basics.js" type="text/javascript"></script>
 
 
 </head>
 
 <!-- +++ Gleichbleibende Seitenelemente -->
-<body class="bg-flags" onload="spracheSystem(); buttonActive(); spracheText(); Show_All_flags()">
+<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText()">
 
 <!--; -->
 <!--menüleiste unten-->
@@ -36,7 +38,7 @@
 
 <!--flaggen-->
 
-<div class="container-fluid ">
+<div class="container-fluid" style="marign-bottom:100px;">
 
 
 <div class="row text-center distance">
@@ -201,19 +203,19 @@
 <!-- ++ Hilfsstander-->
  <div class="row text-center">
   
-<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+<div class="col-sm-alpha col-md-alpha col-xs-subs">
 	<div class="caption"><h3>1st Substitude</h3></div>
 	<div class="thumbnail"> <img src="images/1st.png" alt="1st" class="img-responsive" onClick="javascript:insertHtml('36')"></div>
 </div>
-<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+<div class="col-sm-alpha col-md-alpha col-xs-subs">
 	<div class="caption"><h3>2nd Substitude</h3></div>
       <div class="thumbnail"> <img src="images/2nd.png" alt="2nd" class="img-responsive" onClick="javascript:insertHtml('37')"></div>
     </div>
-<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+<div class="col-sm-alpha col-md-alpha col-xs-subs">
 	<div class="caption"><h3>3rd Substitude</h3></div>
       <div class="thumbnail"> <img src="images/3rd.png" alt="3rd" class="img-responsive" onClick="javascript:insertHtml('38')"></div>
 </div>
-<div class="col-sm-alpha col-md-alpha col-xs-alpha">
+<div class="col-sm-alpha col-md-alpha col-xs-subs">
    	<div class="caption"><h3>4th Substitude</h3></div>   
         <div class="thumbnail"> <img src="images/4th.png" alt="4th" class="img-responsive" onClick="javascript:insertHtml('39')"></div>
 </div>
@@ -224,58 +226,47 @@
 </div>
 
 
-<div  id="anzeigen_sprache"  class="invisible" style="margin-bottom:50px;"> <!---->
-Sprache aktiv:&nbsp;&nbsp;&nbsp;&nbsp;<div id="sprache_aktiv" class="" style="display:inline"></div><br>
-Sprache gespeichert:&nbsp;&nbsp;&nbsp;&nbsp;<div id="sprache_speicher" class="" style="display:inline"></div><br>
-Systemsprache (Sprache_auto): &nbsp;&nbsp;&nbsp;<div id="sprache_auto" class="" style="display:inline">Sprache_auto</div>
+<div  id="anzeigen_sprache"  class="invisible"  >
+	Sprache aktiv:&nbsp;&nbsp;&nbsp;&nbsp;<div id="sprache_aktiv" class="invisible" style="display:inline"></div>
+	Sprache gespeichert:&nbsp;&nbsp;&nbsp;&nbsp;<div id="sprache_speicher" class="invisible" style="display:inline"></div>
+	Systemsprache (Sprache_auto): &nbsp;&nbsp;&nbsp;<div id="sprache_auto" class="invisible" style="display:inline">Sprache_auto</div>
 </div>
-</div>
+</div>  <!--ende container fluid-->
 
-</div>
+</div>  <!--ende all flags -->
+
 <!-- +++++  Flaggeninfo +++++++-->
 <div class="flaginfo" id="flaginfo" data-role="page">
 
-<!--menüleiste oben-->
-
-<nav class="navbar-default navbar-fixed-top oben">
-  <div class="container-fluid"> 
-	<ul class="nav navbar-nav">
-<a href="#"><img src="images/buttons/back.png" class="button_nav button_nav_top" id="back" alt="" onclick="javascript:previousFlag()"></a> 
-<a href="#"><img src="images/buttons/vor.png" class="button_nav button_nav_top" id="vor" onClick="javascript:nextFlag()" alt="" ></a>
-<a href="#"><img src="images/buttons/ready.png" class="button_nav button_nav_top" onClick="javascript:Show_All_flags()" alt="" ></a>
-	</ul>
-  </div>
-</nav>
-
+<div class="button_close_flaginfo"><a href="#"><img src="images/buttons/button_close.png" onClick="javascript:Show_All_flags()" alt="" ></a></div>
+<div class="scrollleft" id="back" onclick="javascript:previousFlag()"></div>
+<div class="scrollright" id="vor" onClick="javascript:nextFlag()"> </div>
 
 <div class="container-fluid flaggeninfo">
+
+
 
 	<!-- veränderliche Inhalte-->
 
 <div class="row">
+<div class="flagtitle" id="flagtitle" ></div>
 
-<div class="flagtitle" id="flagtitle" >
-</div>
 
 <hr style="border:0px">
 
 <div class="col-xs-flagge col-sm-flagge" >
-	<div class="flagimage img-responsive" id="flagimage">
-	</div>
-	
+	<div class="flagimage img-responsive" id="flagimage"></div>
 </div>
 
 <div class="col-xs-flaggentext col-sm-flaggentext" >
-<div id="morse"></div>
-<div id="licht"></div>
+	<div id="morse"></div>
+	<div id="licht"></div>
 	<hr id="hr1" style="margin-top: 0px;">
-<div id="flagnummer" class="h1"></div>
-<div id="flagtext"></div>         
+	<div id="flagnummer"></div>
+	<div id="flagtext"></div>         
 </div>    
 
-  </div>   
-<!--<div id="flagnummer"></div>
--->
+</div>   <!--Ende row-->
 <!-- Ende veränderliche Inhalte-->
     
 </div>    
@@ -626,11 +617,8 @@ Systemsprache (Sprache_auto): &nbsp;&nbsp;&nbsp;<div id="sprache_auto" class=""
 <!-- +++++  Auflistung der Scripts +++++++-->
 <script src="js/jquery-1.11.2.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>
-<script src="js/flags_basics.js" type="text/javascript"></script>
 <script src="js/flags.js" type="text/javascript"></script>
 <script src="js/schreiben2.js" type="text/javascript"></script>
-<script src="js/jquery.mobile-1.4.5.min.js"></script>
-
 </body>
 
 </html>
