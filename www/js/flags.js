@@ -589,16 +589,17 @@ function previousFlag() {
 
 
 // swipe nach links
-
-$(document).on("pagecreate","#flaginfo",function(){
-	$("#flaginfo").on("swipeleft", function(){
+//$(document).on("pagecreate","#flaginfo",function(){
+ //   'use strict';
+	$("#flaginfo").on("swipeleft", "#flaginfo", function(){
 	nextFlag();	
 	});
-});
+//});
 
 // swipe nach rechts
-$(document).on("pagecreate","#flaginfo",function(){
-$("#flaginfo").on("swiperight", function(){
+//$(document).on("pagecreate","#flaginfo",function(){
+  //  'use strict';
+$("#flaginfo").on("swiperight", "#flaginfo", function(){
 	previousFlag();	
 	});
-});
+//});

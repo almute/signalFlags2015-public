@@ -3,12 +3,12 @@
 
 function Show_All_flags () {
 "use strict";
-	$("#all-flags").show();
 	$("#flaginfo").hide();
 	$("#writing").hide();
 	$("#reading").hide();
 	$("#about-page").hide();
 	$("#help-page").hide();
+	$("#all-flags").show();
 document.getElementById("button_flags").style.opacity = "1";
 document.getElementById("button_writing").style.opacity = "0.5";
 document.getElementById("button_reading").style.opacity = "0.5";
