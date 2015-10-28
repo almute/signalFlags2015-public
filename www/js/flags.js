@@ -604,7 +604,7 @@ $("#flaginfo").on("swiperight", function(){
 });
 */
 
-$(".flaginfo").on('swipeleft',  function(){ alert ("left")})
+$(document).on('swipeleft',  function(){ alert ("left")})
               .on('swiperight', function(){ alert ("right") })
 //              .on('swipeup',    function(){ /*...*/ })
 //              .on('swipedown',  function(){ /*...*/ });
