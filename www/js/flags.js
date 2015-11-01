@@ -592,7 +592,7 @@ function previousFlag() {
         }
 }  // ++++++  Ende function previousFlag
 
-// swipe nach links/rechts
+/*// swipe nach links/rechts
 function activateSwipe () {
     'use strict';
 $(".flaginfo").on("swipeleft", function()
@@ -612,4 +612,21 @@ $(".flaginfo").on("swipedown", function()
 {	$.detectSwipe.preventDefault= false;
 });
 
+}
+*/
+function activateSwipe () {
+var myElement = document.getElementById('flaginfo');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// listen to events...
+mc.on("swipeleft", function(ev) {
+    nextFlag();
+});
+
+mc.on("swiperight", function(ev) {
+    previousFlag();
+});
 }
