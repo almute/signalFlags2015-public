@@ -596,10 +596,20 @@ function previousFlag() {
 function activateSwipe () {
     'use strict';
 $(".flaginfo").on("swipeleft", function()
-{	previousFlag(); 
+{	nextFlag(); 
 });
 
 $(".flaginfo").on("swiperight", function()
-{	nextFlag(); 
+{	previousFlag(); 
 });
+
+    //nach oben und unten normales Verhalten
+$(".flaginfo").on("swipeup", function()
+{	$.detectSwipe.preventDefault = false;
+});
+
+$(".flaginfo").on("swipedown", function()
+{	$.detectSwipe.preventDefault= false;
+});
+
 }

@@ -93,14 +93,13 @@ a:focus {
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-	height: 72px;
-	padding-top: 30px;
+	height: 42px;
 	background-image: -webkit-linear-gradient(270deg,rgba(234,234,234,1.00) 0%,rgba(0,0,0,1.00) 100%);
 	background-image: linear-gradient(180deg,rgba(234,234,234,1.00) 0%,rgba(0,0,0,1.00) 100%);
 }
 
 .distance{
-	padding-top: 30px;
+	padding-top: 0px;
 	}
 
 /* Infotext zur Flagge */
@@ -166,11 +165,11 @@ a:focus {
 .well_keyboard {
 	color: rgba(0,0,0,1.00);
 	margin-bottom: 10px;
-	background-color: #f5f5f5;
-	border: 1px solid #e3e3e3;
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
 	border-radius: 3px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 	font-family: SourceSans;
 	font-weight: bold;
 	text-align: center;
@@ -189,11 +188,11 @@ a:focus {
 .well_taste {
 	color: rgba(255,255,255,1.00);
 	margin-bottom: 10px;
-	background-color: #454545;
-	border: 1px solid #545454;
+	background-color: rgba(172,179,189,1.00);
+	border: 1px solid #ACB3BD;
 	border-radius: 3px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 	font-family: SourceSans;
 	font-weight: bold;
 	text-align: center;
@@ -216,10 +215,10 @@ a:focus {
 	marign: 0px;
 	width: 220px;
 	top: 70px;
-	background-color: rgba(147,147,147,1.00);
+	background-color: rgba(210,213,220,1.00);
 	-webkit-box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
 	box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
-	margin-top: 30px;
+	margin-top: 0px;
  }
 	
 /* Schließbutton Keyboard */
@@ -541,7 +540,7 @@ a:focus {
 
 /* ********* Spalten für All Flags  *************/
 
-.col-xs-alpha, .col-xs-subs, .col-xs-ziffer, .col-sm-alpha, .col-sm-ziffer, .col-md-ziffer, .col-md-alpha {
+.col-xs-alpha, .col-xs-subs, .col-xs-ziffer, .col-sm-alpha, .col-sm-ziffer, .col-md-ziffer, .col-md-alpha, .col-sm-subs, .col-md-subs {
   position: relative;
   min-height: 10px;
   padding-right: 2%;
@@ -565,13 +564,16 @@ a:focus {
    padding-left:3%;
 }
 
-/*Hilfsstander wie normale Flaggen*/
+/*Hilfsstander größer als normale Flaggen*/
 .col-xs-subs {
-   width: 29%;
+   width: 36%;
    padding-right: 2%;
   padding-left: 2%;
 }
-
+.col-xs-subs h3{
+   text-align:left;
+   padding-left:3%;
+}
 
 
 /*Überschrift über Flaggen kleiner*/
@@ -585,9 +587,7 @@ a:focus {
   font-size:13px;
   margin-bottom:3px;
 }
-.col-xs-subs h3{
-   width: 80%;
-}
+
 }
 
 @media (min-width: 631px)and (max-width: 799px) {
@@ -596,7 +596,7 @@ a:focus {
   margin-bottom: 4px;
 }
 
-.col-xs-ziffer h3, .col-xm-ziffer h3{
+.col-xs-ziffer h3, .col-xm-ziffer h3, .col-xs-subs h3 {
   font-size:15px;
   margin-bottom:4px;
 }
@@ -615,9 +615,10 @@ a:focus {
     width: 58%;
   	 padding-right: 1%;
    }
-.col-sm-ziffer h3{
-   text-align:left;
-}
+.col-sm-subs {
+    width: 26.4%;
+  	 padding-right: 1%;
+   }
 }
 
 /*  5 Flaggen pro Zeile/ 2 Ziffern */
@@ -632,7 +633,11 @@ a:focus {
     width: 48%;
    	 padding-right: 1%;
  	 padding-left: 1%; }
-  
+
+  .col-md-subs {
+    width: 22.5%;
+   	 padding-right: 1%;
+ 	 padding-left: 1%; }  
 }
 
 
@@ -653,13 +658,14 @@ a:focus {
 	padding: 0px;
 	marign: 0px;
 	width: 262px;
-	background-color: rgba(147,147,147,1.00);
+	/*background-color: rgba(147,147,147,1.00);*/
+	background-color: rgba(210,213,220,1.00);
 	-webkit-box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
 	box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
-	margin-top: 140px;
+	margin-top: 110px;
  } 
 	
-.flagstaste, .flagstaste_ziffer {
+.flagstaste, .flagstaste_ziffer, .flagtaste_hilfs {
 	margin-bottom: 10px;
 	margin-left: 2px;
 	margin-right: 3px;
@@ -667,9 +673,15 @@ a:focus {
 	height: 36px;
 	float: left;
 }
+
 .well_keyboard_next{
 	clear: left;
-	}
+}
+
+.flagtaste_hilfs {
+	height: 43px;
+	width: 55px;
+}
 
 .flagstaste_ziffer {
 	width:123px;
@@ -697,17 +709,22 @@ a:focus {
 }
 	
 .lesen, #lesen {
-	background-color: rgba(1,1,1,1.00);
-	color: rgba(248,248,248,1.00);
+	color: rgb(240,240,240);
+	-webkit-box-shadow: inset 2px 2px 4px #000;
+	box-shadow: inset 2px 2px 4px #000;
+	background-color: rgb(102,102,102);
+	border: 0px solid rgb(153,153,153);
+	/*background-color: rgba(1,1,1,1.00);
+	color: rgba(248,248,248,1.00);*/
 	font-size: 21pt;
 	height: 42px;
 	width: 270px;
-	margin-top: 80px;
+	margin-top: 50px;
 	margin-left: 15px;
 	border-radius: 10px;
 	padding-left: 15px;
 	letter-spacing: 0.05em;
-	position:fixed;
+	position: fixed;
 }
 
 .close_lesen {
@@ -734,6 +751,11 @@ a:focus {
 
 .flagstaste_ziffer {
 	width:123px;
+}
+
+.flagtaste_hilfs {
+	height: 43px;
+	width: 55px;
 }
 .close_lesen {
 	left: 205px;}
@@ -782,6 +804,12 @@ a:focus {
 	height: 43px;
 	width:148px;
 }
+
+.flagtaste_hilfs {
+	height: 52px;
+	width: 65px;
+}
+
 .close_lesen {
 	left: 295px;}
 }
@@ -817,7 +845,7 @@ hr {
 	font-weight: bold;
 	padding-bottom: 30px;
 	padding-left: 20px;
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 .col-60-ohne {

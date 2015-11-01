@@ -64,8 +64,9 @@
 
   $.event.special.swipe = { setup: setup };
 
+  $.each(['left', 'right'], function () {
   $.each(['left', 'up', 'down', 'right'], function () {
-    $.event.special['swipe' + this] = { setup: function(){
+//    $.event.special['swipe' + this] = { setup: function(){
       $(this).on('swipe', $.noop);
     } };
   });

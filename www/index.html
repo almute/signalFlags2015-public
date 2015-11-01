@@ -15,7 +15,6 @@
 <script src="js/flags_basics.js" type="text/javascript"></script>
 <script src="js/flags.js" type="text/javascript"></script>
 <script src="js/jquery.detect_swipe.js"></script>
-
 </head>
 
 <!-- +++ Gleichbleibende Seitenelemente -->
@@ -204,19 +203,19 @@
 <!-- ++ Hilfsstander-->
  <div class="row text-center">
   
-<div class="col-sm-alpha col-md-alpha col-xs-subs">
+<div class="col-sm-subs col-md-subs col-xs-subs">
 	<div class="caption"><h3>1st Substitude</h3></div>
 	<div class="thumbnail"> <img src="images/1st.png" alt="1st" class="img-responsive" onClick="javascript:insertHtml('36')"></div>
 </div>
-<div class="col-sm-alpha col-md-alpha col-xs-subs">
+<div class="col-sm-subs col-md-subs col-xs-subs">
 	<div class="caption"><h3>2nd Substitude</h3></div>
       <div class="thumbnail"> <img src="images/2nd.png" alt="2nd" class="img-responsive" onClick="javascript:insertHtml('37')"></div>
     </div>
-<div class="col-sm-alpha col-md-alpha col-xs-subs">
+<div class="col-sm-subs col-md-subs col-xs-subs">
 	<div class="caption"><h3>3rd Substitude</h3></div>
       <div class="thumbnail"> <img src="images/3rd.png" alt="3rd" class="img-responsive" onClick="javascript:insertHtml('38')"></div>
 </div>
-<div class="col-sm-alpha col-md-alpha col-xs-subs">
+<div class="col-sm-subs col-md-subs col-xs-subs">
    	<div class="caption"><h3>4th Substitude</h3></div>   
         <div class="thumbnail"> <img src="images/4th.png" alt="4th" class="img-responsive" onClick="javascript:insertHtml('39')"></div>
 </div>
@@ -348,8 +347,9 @@
 	<div class="well_keyboard" onClick="javascript:flags('9')">9</div>
 	<div class="well_keyboard" onClick="javascript:flags('0')">0</div>
     
-	<div class="well_taste" onClick="javascript:clean_flags ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
-	<div class="well_taste" onClick="javascript:delete_flag ()"><img src="images/buttons/backspace.png" width="25" height="25" alt=""/></div>
+<!--	<div class="well_taste" onClick="javascript:clean_flags ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
+-->	
+<div class="well_taste" onClick="javascript:delete_flag ()"><img src="images/buttons/backspace.png" width="25" height="25" alt=""/></div>
     
 
 </div>
@@ -430,10 +430,10 @@
 	<img src="images/Y.png" class="flagstaste" alt="" onClick="javascript:reading('Y')">
 	<img src="images/Z.png" class="flagstaste" alt="" onClick="javascript:reading('Z')">
 	
-    <img src="images/1st.png" class="flagstaste well_keyboard_next" alt="" onClick="javascript:reading('1st')">
-	<img src="images/2nd.png" class="flagstaste" alt="" onClick="javascript:reading('2nd')">
-	<img src="images/3rd.png" class="flagstaste" alt="" onClick="javascript:reading('3rd')">
-	<img src="images/4th.png" class="flagstaste" alt="" onClick="javascript:reading('4th')">
+    <img src="images/1st.png" class="flagtaste_hilfs well_keyboard_next" alt="" onClick="javascript:reading('1st')">
+	<img src="images/2nd.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('2nd')">
+	<img src="images/3rd.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('3rd')">
+	<img src="images/4th.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('4th')">
 
 	<img src="images/1.png" class="flagstaste_ziffer well_keyboard_next" alt="" onClick="javascript:reading('1')">
 	<img src="images/2.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('2')">
@@ -446,8 +446,8 @@
 	<img src="images/9.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('9')">
 	<img src="images/0.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('0')">
     
-	<div class="well_taste" onClick="javascript:clean_reading ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
-	<div class="well_taste" onClick="javascript:delete_reading ()"><img src="images/buttons/backspace.png" width="25" height="25" alt=""/></div>
+<!--	<div class="well_taste" onClick="javascript:clean_reading ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
+-->	<div class="well_taste" onClick="javascript:delete_reading ()"><img src="images/buttons/backspace.png" width="25" height="25" alt=""/></div>
     
 
 </div>
