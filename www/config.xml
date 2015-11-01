@@ -16,7 +16,7 @@
 	</author>
 	
 	<preference name="Fullscreen" value="true" />
-<!--	<preference name="DisallowOverscroll" value="true"/>-->
+<preference name="DisallowOverscroll" value="true"/>
 
 
     <!-- Define app icon for each platform. -->
