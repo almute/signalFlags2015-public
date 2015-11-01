@@ -452,7 +452,7 @@ var flagtext = [
     "<ul><li>I have a pilot on board.</li><br><br><br></ul>",
     "<ul><li>I am altering my course to port.</li></ul><hr><strong>IT</strong><object data=\"images/I.png\"></object><object data=\"images/T.png\"></object><br>I am on fire.<br><br><br><br>",
     "<ul><li>I am on fire and have dangerous cargo on board:<br> keep well clear of me.</li><li> I am leaking dangerous cargo.</li></ul><hr><strong>JL</strong><object data=\"images/J.png\"></object><object data=\"images/L.png\"></object><br> You are running the risk of going aground.<br><hr><strong> JW </strong><object data=\"images/J.png\"></object><object data=\"images/W.png\"></object><br> I have sprung a leak. <br><br><br><br>",
-    "<ul><li>I wish to communicate with you.</li><li> With one numeral:<br> I wish to communicate with you by <br>1 - Morse signalling by hand-flags or arms; <br>2 - Loud hailer (megaphone); <br>3 - Morse signalling lamp; <br>4 - Sound signals.<br><br><object data=\"images/K.png\"></object></object><object data=\"images/4.png\"></object><br><span>(I wish to communicate with you by sound signals.)</span></li><br><br><br></ul>",
+    "<ul><li>I wish to communicate with you.</li><li> With one numeral:<br> I wish to communicate with you by <br>1 - Morse signalling by hand-flags or arms; <br>2 - Loud hailer (megaphone); <br>3 - Morse signalling lamp; <br>4 - Sound signals.<br><br><object data=\"images/K.png\"></object></object><object data=\"images/3.png\"></object><br><span>(I wish to communicate with you by morse signalling lamp.)</span></li><br><br><br></ul>",
     "<ul><li>You should stop your vessel instantly.</li><li> In harbour:<br> The ship is quarantined.</li><li> With four numerals:<br> latitude<br><br><object data=\"images/L.png\"></object></object><object data=\"images/5.png\"></object><object data=\"images/4.png\"></object><object data=\"images/1.png\"></object><object data=\"images/0.png\"></object><br><span>(Latitude 54 degrees 10 minutes)<s/pan></li><br><br><br></ul>",
     "<ul><li>My vessel is stopped and making no way through the water.</li></ul><hr><strong>MAA</strong><object data=\"images/M.png\"></object><object data=\"images/A.png\"></object><object data=\"images/2nd.png\"></object><br>I request urgent medical advice.<br><hr><strong>MAB</strong><object data=\"images/M.png\"></object><object data=\"images/A.png\"></object><object data=\"images/B.png\"></object><br>I request you to make rendezvous in position indicated.<br><br><br><br>",
     "<ul><li>Negative.</li><li>Want to pass the bridge.</li></ul><hr><strong>NC </strong><object data=\"images/N.png\"></object><object data=\"images/C.png\"></object><br>I am in distress and require immediate assistance.<br><br><br><br>",
@@ -496,7 +496,7 @@ var flagtextDE = [
      "<ul><li>Ich habe einen Lotsen an Bord.</li><br><br><br></ul>",
      "<ul><li>Ich ändere meinen Kurs nach Backbord.</li></ul><hr><strong>IT</strong><object data=\"images/I.png\"></object><object data=\"images/T.png\"></object><br>Ich brenne.<br><br><br><br>",
      "<ul><li>Ich habe Feuer im Schiff und gefährliche Ladung an Bord; halten Sie gut frei von mir.</li><li> Gefährliche Ladung tritt aus.</li></ul><hr><strong>JL</strong><object data=\"images/J.png\"></object><object data=\"images/L.png\"></object><br> Sie laufen Gefahr, auf Grund zu laufen.<br><hr><strong> JW </strong><object data=\"images/J.png\"></object><object data=\"images/W.png\"></object><br> Ich habe ein Leck. <br><br><br><br>",
-     "<ul><li>Ich möchte mit Ihnen Verbindung aufnehmen.</li><li> Mit einem Ziffernwimpel:<br> Ich möchte mit Ihnen kommunizieren über <br>1 - Flaggensignale (Semaphoren); <br>2 - Megaphon oder Lautsprecher; <br>3 - Morse-Zeichen mit Lampe; <br>4 - Schallsignale.<br><br><object data=\"images/K.png\"></object></object><object data=\"images/4.png\"></object><br><span>(Ich möchte mit Ihnen über Schallsignale Verbindung aufnehmen.)</span></li><br><br><br></ul>",
+     "<ul><li>Ich möchte mit Ihnen Verbindung aufnehmen.</li><li> Mit einem Ziffernwimpel:<br> Ich möchte mit Ihnen kommunizieren über <br>1 - Flaggensignale (Semaphoren); <br>2 - Megaphon oder Lautsprecher; <br>3 - Morse-Zeichen mit Lampe; <br>4 - Schallsignale.<br><br><object data=\"images/K.png\"></object></object><object data=\"images/3.png\"></object><br><span>(Ich möchte mit Ihnen über Morse-Zeichen mit Lampe Verbindung aufnehmen.)</span></li><br><br><br></ul>",
      "<ul><li>Bringen Sie Ihr Fahrzeug sofort zum Stehen.</li><li> Im Hafen:<br> Schiff ist unter Quarantäne.</li><li> Mit vier Ziffernwimpeln:<br> geografische Breite<br><br><object data=\"images/L.png\"></object></object><object data=\"images/5.png\"></object><object data=\"images/4.png\"></object><object data=\"images/1.png\"></object><object data=\"images/0.png\"></object><br><span>(Geografische Breite 54 Grad 10 Minuten)</span></li><br><br><br></ul>",
      "<ul><li>Meine Maschine ist gestoppt und ich mache keine Fahrt durchs Wasser.</li></ul><hr><strong>MAA</strong><object data=\"images/M.png\"></object><object data=\"images/A.png\"></object><object data=\"images/2nd.png\"></object><br>Ich bitte dringend um ärztlichen Rat.<br><hr><strong>MAB</strong><object data=\"images/M.png\"></object><object data=\"images/A.png\"></object><object data=\"images/B.png\"></object><br>Ich ersuche Sie um ein Rendezvous an der angegebenen Position.<br><br><br><br>",
      "<ul><li>Nein.</li><li>Ich möchte die Brücke passieren.</li></ul><hr><strong>NC </strong><object data=\"images/N.png\"></object><object data=\"images/C.png\"></object><br>Ich bin in Not und benötige sofortige Hilfe.<br><br><br><br>",
@@ -536,9 +536,14 @@ var flagtextDE = [
     
 // Bild und Morsecode - unabhängig von Sprache
     document.getElementById("flagimage").innerHTML = "<object data=\"images/" + image[flag] + ".png\"></object>";
-    document.getElementById("morse").innerHTML = morsecode[flag];
-	document.getElementById("licht").innerHTML = "<object type=\"text/html\" width=\"80\" height=\"50\" data-dw-widget=\"Edge\" data=\"edgeanimate_assets/" + image[flag] + ".html\"></object>";
+//    document.getElementById("morse").innerHTML = morsecode[flag];
+	document.getElementById("licht").innerHTML = "<object type=\"text/html\" width=\"140\" height=\"80\" data-dw-widget=\"Edge\" data=\"edgeanimate_assets/" + image[flag] + ".html\"></object>";
    
+   
+//   <object id="EdgeID36" type="text/html" width="140" height="80" data-dw-widget="Edge" data="edgeanimate_assets/A/Assets/A.html">
+//</object>
+
+
 // deutsch manuell gewählt oder Systemsprache deutsch
     if (sprache_aktiv === "de1" || sprache_aktiv === "de") 
         {document.getElementById("flagtitle").innerHTML = titleDE[flag];
@@ -555,7 +560,7 @@ var flagtextDE = [
     document.getElementById("flagnummer").innerHTML = flag;
    
 // Kein Strich wenn kein Morsecode
-    if 	(document.getElementById("morse").innerHTML=== "" ||document.getElementById("flagtext").innerHTML=== ""  )
+    if 	(document.getElementById("licht").innerHTML=== "" ||document.getElementById("flagtext").innerHTML=== "" || flag === "40" )
         {	$("#hr1").hide();	
         }
     else 
@@ -587,24 +592,14 @@ function previousFlag() {
         }
 }  // ++++++  Ende function previousFlag
 
-
-// swipe nach links
-
-/*$(document).on("pagecreate","#flaginfo",function(){
-	$("#flaginfo").on("swipeleft", function(){
-	nextFlag();	
-	});
-});*/
-
-// swipe nach rechts
-/*$(document).on("pagecreate","#flaginfo",function(){
-$("#flaginfo").on("swiperight", function(){
-	previousFlag();	
-	});
+// swipe nach links/rechts
+function activateSwipe () {
+    'use strict';
+$(".flaginfo").on("swipeleft", function()
+{	previousFlag(); 
 });
-*/
 
-$(document).on('swipeleft',  function(){ alert ("left")})
-              .on('swiperight', function(){ alert ("right") })
-//              .on('swipeup',    function(){ /*...*/ })
-//              .on('swipedown',  function(){ /*...*/ });
+$(".flaginfo").on("swiperight", function()
+{	nextFlag(); 
+});
+}

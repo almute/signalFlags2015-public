@@ -9,16 +9,18 @@
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap-flags.css">
 <link rel="stylesheet" href="css/bootstrap-flags2.css">
+<script src="js/bootstrap.min.js"></script>
 <script src="js/index.js" type="text/javascript"></script>
-<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/jquery-1.11.2.min.js"></script> 
 <script src="js/flags_basics.js" type="text/javascript"></script>
+<script src="js/flags.js" type="text/javascript"></script>
+<script src="js/jquery.detect_swipe.js"></script>
 
 </head>
 
 <!-- +++ Gleichbleibende Seitenelemente -->
-<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText()">
+<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText(); activateSwipe ()">
 
-<!--; -->
 <!--menüleiste unten-->
 <nav class="navbar-default navbar-fixed-bottom fuss">
   <div class="container-fluid"> 
@@ -105,7 +107,7 @@
 	<div class="thumbnail"> <img src="images/O.png" alt="" class="img-responsive" onClick="javascript:insertHtml('14')"></div>
 </div>
 <div class="col-sm-alpha col-md-alpha col-xs-alpha">
-	<div class="caption"><h3>P&nbsp;&nbsp;PAPA</h3></div>
+	<div class="caption"><h3>P&nbsp;&nbsp;Papa</h3></div>
 	<div class="thumbnail"> <img src="images/P.png" alt="" class="img-responsive" onClick="javascript:insertHtml('15')"></div>
 </div>
 <div class="col-sm-alpha col-md-alpha col-xs-alpha">
@@ -236,7 +238,7 @@
 
 <!-- +++++  Flaggeninfo +++++++-->
 <div class="flaginfo" id="flaginfo">
-
+    
 <div class="button_close_flaginfo"><a href="#"><img src="images/buttons/button_close.png" onClick="javascript:Show_All_flags()" alt="" ></a></div>
 <div class="scrollleft" id="back" onclick="javascript:previousFlag()"></div>
 <div class="scrollright" id="vor" onClick="javascript:nextFlag()"> </div>
@@ -256,7 +258,8 @@
 </div>
 
 <div class="col-xs-flaggentext col-sm-flaggentext" >
-	<div id="morse"></div>
+<!--	<div id="morse"></div>
+-->	
 	<div id="licht"></div>
 	<hr id="hr1" style="margin-top: 0px;">
 	<div id="flagnummer"></div>
@@ -528,7 +531,7 @@
 
 <!--menüleiste help oben-->
 
-<nav class="navbar-default navbar-fixed-top oben">
+<nav class="navbar-default navbar-fixed-top oben" id="nav-help">
   <div class="container-fluid"> 
 	<ul class="nav navbar-nav">
 <a href="#"><img src="images/buttons/search_inaktiv.png" alt="Flgas" class="button_nav" id="" onClick="javascript:help_Flaggen()"></a>
@@ -611,12 +614,8 @@
 <!--Ende content-->
 </div>
 
-<!-- +++++  Auflistung der Scripts +++++++-->
-<script src="js/jquery-1.11.2.min.js"></script> 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/flags.js" type="text/javascript"></script>
-<script src="js/jquery.detect_swipe.js"></script>
-
+<!-- +
+++++  Auflistung der Scripts +++++++-->
 <script src="js/schreiben2.js" type="text/javascript"></script>
 </body>
 

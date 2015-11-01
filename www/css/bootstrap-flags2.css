@@ -21,8 +21,10 @@ body {
 .flaginfo,
 .writing,
 .reading,
-.about-page 
-.help-page {
+.about-page,
+.help-page,
+#nav-help
+{
 	display:none;
 }
 
@@ -443,6 +445,9 @@ a:focus {
 }
 
 #licht {
+	margin-bottom: 0px;
+	height: 65px;
+	width: auto;
 }
 
 #licht object{
@@ -523,6 +528,10 @@ a:focus {
 .scrollleft, .scrollright {
 	width: 40px;
 	height: 350px;
+}
+.button_close_flaginfo img {
+	height: 40px;
+	width: 40px;
 }
 
 /*.scrollright {

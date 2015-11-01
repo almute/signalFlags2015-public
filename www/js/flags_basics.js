@@ -3,6 +3,7 @@
 
 function Show_All_flags () {
 "use strict";
+	$("#nav-help").hide();
 	$("#help-page").hide();
 	$("#flaginfo").hide();
 	$("#writing").hide();
