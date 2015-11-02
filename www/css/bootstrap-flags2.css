@@ -117,31 +117,8 @@ a:focus {
 }	
 
 
-/* Textfeld Schreiben */
 
-
-#textinput, #textinput2 {
-	text-align: center;
-	height: 20px;
-	border-radius: 10px;
-	letter-spacing: 1px;
-	width: 70px;
-	vertical-align: middle;
-	font-size: 16px;
-	color: rgb(240,240,240);
-	display: inline-block;
-	-webkit-box-shadow: inset 2px 2px 4px #000;
-	box-shadow: inset 2px 2px 4px #000;
-	background-color: rgb(102,102,102);
-	border: 0px solid rgb(153,153,153);
-	margin-right: 20px;
-}
-
-
-/* Flaggen schreiben */
-
-
-#flaggentext2 {
+.flaggentext2 {
 	padding-left: 20px;
 	background-image: url(../images/backgrounds/flaggenleine.png);
 	background-repeat: no-repeat;
@@ -152,13 +129,69 @@ a:focus {
 	background-position: 20px 5px;
 }
 
-#flaggentext2 img{
+.flaggentext2 img{
 	padding-top: 7px;
 	padding-bottom: 10px;
 	height: 100px;
 }
 
+.flaggentext2_hilfsstander{
+	height: 120px !important;
+}
+
 /* +++++++ Keyboard ++++++++*/
+
+/* Textfeld Schreiben */
+
+/* Größe für Keyboard */
+
+.keyboardpopup {
+	width: 220px;
+	top: 80px;
+	background-color: rgba(210,213,220,1.00);
+	-webkit-box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
+	box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
+	margin: 0px;
+	margin-bottom: 0px;
+	padding-left: 4px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+ }
+	
+	
+/*.keyboard {
+	margin-left:10px;
+ }
+ */
+#textinput {
+	width: inherit;
+	color: rgba(0,0,0,1.00);
+	text-align: center;
+	height: 36px;
+	letter-spacing: 1px;
+	vertical-align: middle;
+	font-size: 18pt;
+	display: inline-block;
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	background-color: rgba(209,212,219,1.00);
+	margin-left: -4px;
+	padding-left:4px;
+	position: fixed;
+	top: 42px;
+
+}
+
+.hr3 {
+	margin-top: 15px;
+	margin-bottom: 0px;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	border-top: 1px solid #D1D4DB;
+}
+/* Flaggen schreiben */
 
 /* Tasten auf Keyboard*/
 
@@ -173,8 +206,8 @@ a:focus {
 	font-family: SourceSans;
 	font-weight: bold;
 	text-align: center;
-	margin-left: 2px;
-	margin-right: 2px;
+	margin-left: 4px;
+	margin-right: 0px;
 	width: 36px;
 	height: 36px;
 	font-size: 18pt;
@@ -196,31 +229,18 @@ a:focus {
 	font-family: SourceSans;
 	font-weight: bold;
 	text-align: center;
-	margin-left: 4px;
+	margin-left: 5px;
 	margin-right: 6px;
-	width: 46px;
+	width: 36px;
 	height: 36px;
 	font-size: 18pt;
 	float: right;
 	vertical-align: middle;
 	padding-bottom: 2px;
-	padding-right: 1px;
 	clear: left;
 }
 	
-/* Größe für Keyboard */
 
-#keyboardpopup {
-	padding: 0px;
-	marign: 0px;
-	width: 220px;
-	top: 70px;
-	background-color: rgba(210,213,220,1.00);
-	-webkit-box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
-	box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
-	margin-top: 0px;
- }
-	
 /* Schließbutton Keyboard */
 	
 .button_close {
@@ -238,7 +258,7 @@ a:focus {
 
 /*iPhone 4, 5*/
 @media (max-width: 359px) {
-/*#flaggentext2 {
+/*.flaggentext2 {
 	height: auto;
 }*/
 .fuss {
@@ -246,12 +266,16 @@ a:focus {
 	maring-right:-5px;
 }
 
- #flaggentext2 img{
+ .flaggentext2 img{
 	height: 64px;
 	padding-top: 5px;
 	padding-bottm: 5px;
 }
-#keyboardpopup {
+.flaggentext2_hilfsstander{
+	height: 77px !important;
+}
+
+.keyboardpopup {
 	width: 146px;
 }
 
@@ -284,12 +308,12 @@ a:focus {
 
 /*iPhone 6*/
 @media (min-width: 360px) and (max-width: 413px) {
- #flaggentext2 img{
+ .flaggentext2 img{
 	height: 80px;
 	padding-top: 5px;
 	padding-bottm: 5px;
 }
-#keyboardpopup {
+.keyboardpopup {
 	width: 178px;
 }
 .button_close {
@@ -298,21 +322,28 @@ a:focus {
 	left: 159px; 
 	top: -18px;
 }
-
+.flaggentext2_hilfsstander{
+	height: 96px !important;
+}
 }
 
 
 
 /*iPhone 6 plus*/
 @media (min-width: 414px) and (max-width: 767px) {
- #flaggentext2 img{
+ .flaggentext2 img{
 	height: 80px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-#keyboardpopup {
+.keyboardpopup {
 	width: 219px;
 }
+
+.flaggentext2_hilfsstander{
+	height: 96px !important;
+}
+
 .button_close {
 	height: 36px;
 	width: 36px;
@@ -323,7 +354,7 @@ a:focus {
 
 @media (min-width: 420px) and (max-width: 767px) {
 
-#keyboardpopup {
+.keyboardpopup {
 	width: 220px;
 }
 
@@ -644,32 +675,57 @@ a:focus {
 
 
 
-/* ++++++++++ Flaggen lesen ++++++++++++*/
-
-/* ++ Flaggenkeyboard ++ */
-
-.flagskeyboard {
-	padding-left:5px;
-	padding-top:15px;
-}
+/* +++++++++++++++++++++++++++++++++++++++ Flaggen lesen +++++++++++++++++++++++++++++++++++*/
 
 
-#flagskeyboard-popup {
-	padding: 0px;
-	marign: 0px;
+
+
+/* +++++++ Flaggenkeyboard +++++++ */
+
+
+.flagskeyboard-popup {
+	top: 82px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-left: 10px;
 	width: 262px;
-	/*background-color: rgba(147,147,147,1.00);*/
 	background-color: rgba(210,213,220,1.00);
 	-webkit-box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
 	box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
-	margin-top: 110px;
  } 
 	
+.lesen {
+	width: inherit;
+	color: rgba(0,0,0,1.00);
+	font-size: 18pt;
+	line-height: 36pt;
+	top: 42px;
+	height: 42px;
+	letter-spacing: 0.05em;
+	padding-left: 10px;
+	margin-left:-10px;
+	position: fixed;
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	background-color: rgba(209,212,219,1.00);
+}
+/*.flagskeyboard {
+	margin-top: 200px;
+	display: none;
+}*/
+
+
+.close_lesen {
+	height: 40px;
+	width: 40px;
+}
+
+
 .flagstaste, .flagstaste_ziffer, .flagtaste_hilfs {
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	margin-left: 2px;
-	margin-right: 3px;
-	width: 45px;
+	margin-right: 8px;
+	width: 42px;
 	height: 36px;
 	float: left;
 }
@@ -680,142 +736,14 @@ a:focus {
 
 .flagtaste_hilfs {
 	height: 43px;
-	width: 55px;
+	width: 52px;
+	margin-right: 10px;
 }
 
 .flagstaste_ziffer {
-	width:123px;
+	width:119px;
+	margin-right: 10px;
 }
-
-/*  Reading: geschrieben mit Flaggen */
-
-/* Reading: Flaggen schreiben */
-
-#flaggentext {
-	padding-left: 20px;
-	background-image: url(../images/backgrounds/flaggenleine.png);
-	background-repeat: no-repeat;
-	background-size: auto 730px;
-	height: 800px;
-	margin-top: 110px;
-	padding-top:30px;
-	background-position: 20px 5px;
-}
-
-#flaggentext img{
-	padding-top: 0px;
-	padding-bottom: 8px;
-	height: 48px;
-}
-	
-.lesen, #lesen {
-	color: rgb(240,240,240);
-	-webkit-box-shadow: inset 2px 2px 4px #000;
-	box-shadow: inset 2px 2px 4px #000;
-	background-color: rgb(102,102,102);
-	border: 0px solid rgb(153,153,153);
-	/*background-color: rgba(1,1,1,1.00);
-	color: rgba(248,248,248,1.00);*/
-	font-size: 21pt;
-	height: 42px;
-	width: 270px;
-	margin-top: 50px;
-	margin-left: 15px;
-	border-radius: 10px;
-	padding-left: 15px;
-	letter-spacing: 0.05em;
-	position: fixed;
-}
-
-.close_lesen {
-	left: 242px;
-}
-
-@media (max-width: 359px) {
-	
-#flaggentext {
-	background-size: auto 780px;
-	height: 950px;
-
-}
-
-#flagskeyboard-popup {
-	width: 220px;
-
- }
-.flagstaste {
-	width: 45px;
-	height: 36px;
-	float: left;
-}
-
-.flagstaste_ziffer {
-	width:123px;
-}
-
-.flagtaste_hilfs {
-	height: 43px;
-	width: 55px;
-}
-.close_lesen {
-	left: 205px;}
-}
-
-@media (min-width: 700px) {
-.lesen, #lesen {
-	margin-left: 50px;
-}
-
-
-#flaggentext {
-	background-size: auto 880px;
-	height: 900px;
-	margin-top:90px;
-	padding-top:40px;
-}
-	
-#flaggentext img{
-	padding-top: 0px;
-	padding-bottom: 8px;
-	height: 60px;
-}
-
-}
-
-@media (min-width: 900px) {
-	
-
-#flagskeyboard-popup {
-	width: 314px;
- }
- 
- .flagskeyboard {
-	padding-top:20px;
-}
-
-.flagstaste {
-	width: 54px;
-	height: 43px;
-	float: left;
-	margin-right: 5px;
-}
-
-.flagstaste_ziffer {
-	height: 43px;
-	width:148px;
-}
-
-.flagtaste_hilfs {
-	height: 52px;
-	width: 65px;
-}
-
-.close_lesen {
-	left: 295px;}
-}
-
-
-
 
 hr {
   margin-top: 20px;
@@ -823,6 +751,154 @@ hr {
   border: 0;
   border-top: 1px solid #eee;
 }
+
+.hr2 {
+	margin-top: 20px;
+	margin-bottom: 0px;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	border-top: 1px solid #D1D4DB;
+}
+
+	
+
+/* ++++ Spalte für Flaggen  ++++*/
+
+.flaggentext {
+	padding-left: 20px;
+	background-image: url(../images/backgrounds/flaggenleine.png);
+	background-repeat: no-repeat;
+	background-size: auto 730px;
+	height: 780px;
+	padding-top: 50px;
+	background-position: 20px 5px;
+	margin-top: 40px;
+}
+
+.flaggentext img{
+	padding-top: 0px;
+	padding-bottom: 8px;
+	height: 48px;
+}
+
+.flaggentext_hilfsstander img{
+	height: 58px !important;
+}
+
+
+
+
+@media (max-width: 359px) {
+	
+.flaggentext {
+	background-size: auto 780px;
+	height: 1080px;
+}
+
+.flagskeyboard-popup {
+	width: 220px;
+}
+
+.lesen {
+	width: 220px;
+	font-size: 18px;
+	line-height: 42px;
+}
+.flagstaste {
+	width: 42px;
+	height: 36px;
+	float: left;
+}
+
+.flagstaste_ziffer {
+	width:119px;
+}
+
+.flagtaste_hilfs {
+	height: 43px;
+	width: 52px;
+}
+.close_lesen {
+	}
+}
+
+@media (min-width: 480px) and (max-width: 666px){
+
+.flaggentext {
+	width:150px;
+	}	
+}
+
+
+@media (min-width: 667px) {
+
+
+.flaggentext {
+	width:200px;
+	background-size: auto 880px;
+	height: 900px;
+	margin-top: 60px;
+	padding-top: 40px;
+}
+	
+.flaggentext img{
+	padding-top: 0px;
+	padding-bottom: 8px;
+	height: 60px;
+}
+
+.flaggentext_hilfsstander {
+	height: 72px !important;
+}
+
+.flaggentext_hilfsstander img{
+	height: 72px !important;
+}
+
+}
+
+@media (min-width: 900px) {
+	
+.flaggentext {
+	width:250px;
+}
+
+.flagskeyboard-popup, .lesen {
+	width: 490px;
+ }
+
+ .flagskeyboard {
+	padding-top:20px;
+}
+
+.flagstaste {
+	width: 52px;
+	height: 43px;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 18px;
+}
+
+.flagstaste_ziffer {
+	height: 43px;
+	width:141px;
+	margin-right: 15px;
+	margin-bottom: 18px;
+}
+
+.flagtaste_hilfs {
+	height: 52px;
+	width: 63px;
+	margin-right: 20px;
+	margin-top:5px;
+	margin-bottom: 18px;
+}
+
+.close_lesen {
+	}
+}
+
 
 .ausgrauen {
 	opacity: 0.3;
@@ -832,7 +908,7 @@ hr {
 	opacity: 1;
 }
 
-/*About-Seite*/
+/*++++++++++++++++++++++++++++++++++++++   About-Seite+++++++++++++++++++++++++++++++++++++++*/
 
 .about-page-container {
  padding-right:5px;

@@ -25,6 +25,7 @@ function Show_Reading () {
 	$("#about-page").hide();
 	$("#help-page").hide();
 	clean_reading ();
+	keyboard_flags_start ();
 document.getElementById("button_flags").style.opacity = "0.5";
 document.getElementById("button_writing").style.opacity = "0.5";
 document.getElementById("button_reading").style.opacity = "1";
@@ -63,30 +64,15 @@ var textlaenge = text.length;
 
 
 //Flagge auslesen
-if (textlaenge === 0) {
-	document.images.lesen1.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 1) {
-	document.images.lesen2.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 2) {
-	document.images.lesen3.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 3) {
-	document.images.lesen4.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 4) {
-	document.images.lesen5.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 5) {
-	document.images.lesen6.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 6) {
-	document.images.lesen7.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 7) {
-	document.images.lesen8.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 8) {
-	document.images.lesen9.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 9) {
-	document.images.lesen10.src = "images/" + flagLetter +".png";}							
-else if (textlaenge === 10) {
-	document.images.lesen11.src = "images/" + flagLetter +".png";}
-else if (textlaenge === 11) {
-	document.images.lesen12.src = "images/" + flagLetter +".png";}
+
+for (var i=0; i<=textlaenge; i++ ) 
+	{if (textlaenge === i) {
+	var zeile = (i+1);
+	{document.images.namedItem("lesen"+ zeile).src= "images/" + flagLetter +".png"; 
+	if (zeichentyp !== 1) {
+		document.images.namedItem("lesen"+ zeile).classList.add ("flaggentext_hilfsstander");}
+	}
+	}}
 
 
 
@@ -98,21 +84,24 @@ if (textlaenge < 12)
 		document.getElementById("lesen").innerHTML = text + flagLetter;
 		}
 	else   // Hilfsstander umsetzen
-		{           
+		{ 
+
 		//Erste Zeichen auslesen
 		var flag1 = text.charAt(0);
 		var flag2 = text.charAt(1);
 		var flag3 = text.charAt(2);
 		var flag4 = text.charAt(3);
 	
-		 if (flagLetter === "1st") {
+		 if (flagLetter === "1st" && flag1 !== "") {
 		 document.getElementById("lesen").innerHTML = text + flag1;}
-		 else if (flagLetter === "2nd") {
+		 else if (flagLetter === "2nd" && flag2 !== "" ) {
 		 document.getElementById("lesen").innerHTML = text + flag2;}
-		 if (flagLetter === "3rd") {
+		 else if (flagLetter === "3rd" && flag3 !== "") {
 		 document.getElementById("lesen").innerHTML = text + flag3;}
-		 if (flagLetter === "4th") {
+		 else if (flagLetter === "4th" && flag4 !== "") {
 		 document.getElementById("lesen").innerHTML = text + flag4;}
+		 else {
+		 document.getElementById("lesen").innerHTML = text + "?";}
 		}	// Ende else	
 	}  //Ende wenn Text nicht zu lang
 
@@ -120,25 +109,17 @@ if (textlaenge < 12)
 
 
 
-
 // ************Alle Flaggen und Zeichen löschen ***************
 
 function clean_reading () {
 	"use strict";
-	document.images.lesen1.src = "images/empty.png";
-	document.images.lesen2.src = "images/empty.png";
-	document.images.lesen3.src = "images/empty.png";
-	document.images.lesen4.src = "images/empty.png";
-	document.images.lesen5.src = "images/empty.png";
-	document.images.lesen6.src = "images/empty.png";
-	document.images.lesen7.src = "images/empty.png";
-	document.images.lesen8.src = "images/empty.png";
-	document.images.lesen9.src = "images/empty.png";
-	document.images.lesen10.src = "images/empty.png";
-	document.images.lesen11.src = "images/empty.png";
-	document.images.lesen12.src = "images/empty.png";
 	document.getElementById("lesen").innerHTML = "";
-}
+	for (var i=1; i<=12; i++ ) {
+		document.images.namedItem("lesen"+ i).src= "images/empty.png"; 
+		document.images.namedItem("lesen"+ i).classList.remove("flaggentext_hilfsstander");
+	}
+}		
+
 
 // ************Letzte Flaggen und letztes Zeichen löschen ***************
 
@@ -147,48 +128,58 @@ function delete_reading () {
 	
 var text = document.getElementById("lesen").innerHTML;
 var str = text;
-	var i = (text.length);
-	if (i===12)
-	{document.images.lesen12.src = "images/empty.png";}
-	if (i===11)
-	{document.images.lesen11.src = "images/empty.png";}
-	if (i===10)
-	{document.images.lesen10.src = "images/empty.png";}
-	if (i===9)
-	{document.images.lesen9.src = "images/empty.png";}
-	if (i===8)
-	{document.images.lesen8.src = "images/empty.png";}
-	if (i===7)
-	{document.images.lesen7.src = "images/empty.png";}
-	if (i===6)
-	{document.images.lesen6.src = "images/empty.png";}
-	if (i===5)
-	{document.images.lesen5.src = "images/empty.png";}
-	if (i===4)
-	{document.images.lesen4.src = "images/empty.png";}
-	if (i===3)
-	{document.images.lesen3.src = "images/empty.png";}
-	if (i===2)
-	{document.images.lesen2.src = "images/empty.png";}
-	if (i===1)
-	{document.images.lesen1.src = "images/empty.png";}
+	var laenge = (text.length);
+	
+for (var i=1; i<=12; i++ ) {
+	if (laenge ===i)
+		{document.images.namedItem("lesen"+ i).src= "images/empty.png"; 
+		document.images.namedItem("lesen"+ i).classList.remove("flaggentext_hilfsstander");
+		}
+	}
 	str = str.substring(0,str.length-1);
 	document.getElementById("lesen").innerHTML = str;
-}
+	}
 
+//************
 
-function keyboard_flags_ausblenden () {
+function delete_flag () {
 "use strict";
-	document.getElementById("flagskeyboard-popup").style.display='none';
-	document.getElementById("button_keyboard_reading").style.opacity = "1";
+
+var textinput = document.getElementById("textinput").innerHTML; 
+var str = textinput;
+var laenge = (textinput.length);
+for (var i=1; i<=5; i++ ) {
+	if (laenge ===i) {
+		document.images.namedItem("flagge"+ i).src= "images/empty.png"; 
+		document.images.namedItem("flagge"+ i).classList.remove("flaggentext2_hilfsstander");
+		}
+	}
+	str = str.substring(0,str.length-1);
+	textinput = str;
+	document.getElementById("textinput").innerHTML = textinput;
 }
+
+
+//********* Tastatur aus und einblenden
+
 
 function keyboard_flags_einblenden () {
 "use strict";
-	document.getElementById("flagskeyboard-popup").style.display='inline';
-	document.getElementById("button_keyboard_reading").style.opacity = "0.5";
+if ( document.getElementById("flagskeyboard").style.display == 'inline')
+	{
+	document.getElementById("flagskeyboard").style.display='none';
+	document.getElementById("lesen").style.display='inline';
+	}
+else {
+	document.getElementById("flagskeyboard").style.display='inline';
+}
 }
 
+
+function keyboard_flags_start () {
+"use strict";
+	document.getElementById("flagskeyboard").style.display='inline';
+}
 // ********************** Hilfe anzeigen ***********************
 
 function help_Flaggen () {}

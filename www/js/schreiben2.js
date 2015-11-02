@@ -20,6 +20,7 @@ function Show_Writing () {
 	$("#reading").hide();
 	$("#about-page").hide();
 	 clean_flags ();
+	keyboard_start ();
 document.getElementById("button_flags").style.opacity = "0.5";
 document.getElementById("button_writing").style.opacity = "1";
 document.getElementById("button_reading").style.opacity = "0.5";
@@ -31,12 +32,12 @@ document.getElementById("button_keyboard_schreiben").style.opacity = "0.5";
 
 function flags (flagLetter) {
 "use strict";
-var textinput = document.getElementById("textinput").value; 
+var textinput = document.getElementById("textinput").innerHTML; 
 if (textinput.length < 5)
 	{textinput = textinput + flagLetter;}
 	
 	var textFolge = textinput;
-	document.getElementById("textinput").value = textinput;
+	document.getElementById("textinput").innerHTML = textFolge;
 
 //Alle Zeichen auslesen
 var flag1 = textFolge.charAt(0);
@@ -56,7 +57,8 @@ else if (textFolge.length === 2) {
 var flag2Korr = flag2;
 	if (flag2 === flag1 ){
 		flag2Korr = "1st";
-	}
+	document.images.flagge2.classList.add("flaggentext2_hilfsstander");	
+}
 
 document.images.flagge2.src = "images/" + flag2Korr +".png";
 }  // Ende Flagge 2
@@ -75,6 +77,9 @@ var flag3Korr = flag3;
 	{ flag3Korr = "2nd";}
 	
 document.images.flagge3.src = "images/" + flag3Korr +".png";
+if (flag3Korr.length > 1) {
+document.images.flagge3.classList.add("flaggentext2_hilfsstander");}	
+
 }  // Ende Flagge 3
 
 
@@ -99,6 +104,8 @@ var flag4Korr = flag4;
 	
 
 document.images.flagge4.src = "images/" + flag4Korr +".png";
+if (flag4Korr.length > 1) {
+document.images.flagge4.classList.add("flaggentext2_hilfsstander");}	
 }  // Ende Flagge 4
 
 //Flagge ist fünftes Zeichen	
@@ -134,57 +141,59 @@ else if (textFolge.length === 5) {
 		
 
 document.images.flagge5.src = "images/" + flag5Korr +".png";
+if (flag5Korr.length > 1) {
+document.images.flagge5.classList.add("flaggentext2_hilfsstander");}	
 }  // Ende Flagge 5
 	
 }  // Ende gesamt
+
+
+
 
 
 // ************Alle Flaggen und Zeichen löschen ***************
 
 function clean_flags () {
 	"use strict";
-
-	document.images.flagge1.src = "images/empty.png";
-	document.images.flagge2.src = "images/empty.png";
-	document.images.flagge3.src = "images/empty.png";
-	document.images.flagge4.src = "images/empty.png";
-	document.images.flagge5.src = "images/empty.png";
-	document.getElementById("textinput").value = "";
+	document.getElementById("textinput").innerHTML = "";
+	for (var i=1; i<=5; i++ ) {
+		document.images.namedItem("flagge"+ i).src= "images/empty.png"; 
+		document.images.namedItem("flagge"+ i).classList.remove("flaggentext2_hilfsstander");
+	}
 }
 
 // ************Letzte Flaggen und letztes Zeichen löschen ***************
 
 function delete_flag () {
 "use strict";
-var textinput = document.getElementById("textinput").value; 
 
-	var str = textinput;
-	var i = (textinput.length);
-	if (i===5)
-	{document.images.flagge5.src = "images/empty.png";}
-	if (i===4)
-	{document.images.flagge4.src = "images/empty.png";}
-	if (i===3)
-	{document.images.flagge3.src = "images/empty.png";}
-	if (i===2)
-	{document.images.flagge2.src = "images/empty.png";}
-	if (i===1)
-	{document.images.flagge1.src = "images/empty.png";}
+var textinput = document.getElementById("textinput").innerHTML; 
+var str = textinput;
+var laenge = (textinput.length);
+for (var i=1; i<=5; i++ ) {
+	if (laenge ===i) {
+		document.images.namedItem("flagge"+ i).src= "images/empty.png"; 
+		document.images.namedItem("flagge"+ i).classList.remove("flaggentext2_hilfsstander");
+		}
+	}
 	str = str.substring(0,str.length-1);
 	textinput = str;
-	document.getElementById("textinput").value = textinput;
+	document.getElementById("textinput").innerHTML = textinput;
 }
 
-function keyboard_ausblenden () {
-"use strict";
-	document.getElementById('keyboardpopup').style.display='none';
-	document.getElementById("button_keyboard_schreiben").style.opacity = "1";
-	
-	}
 
+ //Tastatur ein/ausblenden +++++++++++++++
 function keyboard_einblenden () {
 "use strict";
-	document.getElementById('keyboardpopup').style.display='inline';
-	document.getElementById("button_keyboard_schreiben").style.opacity = "0.5";
-	
+if 	(document.getElementById('keyboard').style.display =='inline') {
+	document.getElementById('keyboard').style.display='none';
+	document.getElementById('textinput').style.display='inline';	
 	}
+else {
+	document.getElementById('keyboard').style.display='inline';}	
+}
+
+function keyboard_start () {
+"use strict";
+	document.getElementById('keyboard').style.display='inline';	
+}

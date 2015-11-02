@@ -24,7 +24,7 @@ function help_Flaggen () {
     $("#HelpCarousel2").hide();
 	// Carousel starten
 	$("#HelpCarousel0").carousel(0);
-   	$("#HelpCarousel0").carousel({interval: 2000});
+   	$("#HelpCarousel0").carousel({interval: 1000});
 }
 
 function help_Writing () {
@@ -36,7 +36,7 @@ function help_Writing () {
     $("#HelpCarousel2").hide();
 	// Carousel starten
 	$("#HelpCarousel1").carousel(0);
-  	$("#HelpCarousel1").carousel({interval: 2000});
+  	$("#HelpCarousel1").carousel({interval: 1000});
 }
 
 function help_Reading () {
@@ -48,14 +48,14 @@ function help_Reading () {
     $("#HelpCarousel2").show();
 	// Carousel starten
 	$("#HelpCarousel2").carousel(0);
-  	$("#HelpCarousel2").carousel({interval: 2000});
+  	$("#HelpCarousel2").carousel({interval: 1000});
 }
 
 function slide_Restart () {
 	'use strict';
 	var carouselnum = localStorage.getItem("carousel");
 	$("#HelpCarousel"+carouselnum).carousel(	0);
-	$("#HelpCarousel"+carouselnum).carousel({interval: 2000});
+	$("#HelpCarousel"+carouselnum).carousel({interval: 1000});
 }
 
 function slide_Quit () {
@@ -384,60 +384,7 @@ var titleDE = [
     "   Answer",
 ];
 
-// Morsecode
-var morsecode = [
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "<object data=\"images/morse/dit-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dit.png\"></object>",
-    "<object data=\"images/morse/dah-start.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object><object data=\"images/morse/dah.png\"></object>",
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-    "", 
-];
+
 
 // Flaggentext
 
@@ -624,9 +571,11 @@ var mc = new Hammer(myElement);
 // listen to events...
 mc.on("swipeleft", function(ev) {
     nextFlag();
+	window.scrollTo( 0, 0 );
 });
 
 mc.on("swiperight", function(ev) {
     previousFlag();
+	window.scrollTo( 0, 0 );
 });
 }

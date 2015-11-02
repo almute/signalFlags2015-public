@@ -9,9 +9,9 @@
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap-flags.css">
 <link rel="stylesheet" href="css/bootstrap-flags2.css">
+<script src="js/jquery-1.11.2.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.js" type="text/javascript"></script>
-<script src="js/jquery-1.11.2.min.js"></script> 
 <script src="js/flags_basics.js" type="text/javascript"></script>
 <script src="js/flags.js" type="text/javascript"></script>
 <!--<script src="js/jquery.detect_swipe.js"></script>-->
@@ -30,7 +30,7 @@
   <div class="container-fluid"> 
       <ul class="nav navbar-nav">
 	<a href="#"><img src="images/buttons/search_inaktiv.png" alt="Flgas" class="button_nav" id="button_flags" onClick="javascript:Show_All_flags ()"></a>
-	<a href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" class="button_nav" id="button_writing" onClick="javascript:Show_Writing ()"></a>
+	<a href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" width="30" class="button_nav" id="button_writing" onClick="javascript:Show_Writing ()"></a>
 	<a href="#"><img src="images/buttons/reading_inaktiv.png" alt="Reading" class="button_nav" id="button_reading" onClick="javascript:Show_Reading ()"></a>
 	<a href="#"><img src="images/buttons/info_inaktiv.png" alt="Info" class="button_nav" id="button_info" onClick="javascript:Show_About ()">  </a> 
       </ul>
@@ -286,16 +286,14 @@
 <nav class="navbar-default navbar-fixed-top oben">
   <div class="container-fluid"> 
 	<ul class="nav navbar-nav">
-<output name="eingabe" id="textinput" class="form-control"></output>
-<a href="#"><img src="images/buttons/schreiben.png" class="button_nav" id="button_keyboard_schreiben" alt="" onclick="javascript:keyboard_einblenden ()"></a> 
-<a href="#"><img src="images/buttons/flaggendelete.png" class="button_nav" onClick="javascript:clean_flags ()" alt="" ></a>
+
 	</ul>
   </div>
 </nav>
 
 <!--content-->
 
-<div class="col-md-6 col-sm-6 col-xs-4" id="flaggentext2" >
+<div class="col-md-6 col-sm-6 col-xs-4 flaggentext2" id="flaggentext2">
     <img src="images/empty.png" alt="" name="flagge1"><br>
 	<img src="images/empty.png" alt="" name="flagge2"><br>
 	<img src="images/empty.png" alt="" name="flagge3"><br>
@@ -306,12 +304,12 @@
 
 
  <!--Popup Keyboard-->
-<div class="col-md-6 col-sm-6 col-xs-8" id="keyboardpopup" style="padding: 0px; marign: 0px;" >
-<a><img src="images/buttons/button_close.png" alt="close"  class="button_close"  onclick="javascript:keyboard_ausblenden ()"></a>
+<div class="col-md-6 col-sm-6 col-xs-8 keyboardpopup" id="keyboardpopup"  >
+<div id="textinput" class="textinput" onclick="javascript:keyboard_einblenden ()"></div>
 
-<div class="keyboard" id="keyboard" style="padding-left:5px; padding-top:15px;">	
+	<div class="keyboard" id="keyboard" >	
+	<hr class="hr3">
 
-   
 	<div class="well_keyboard" onClick="javascript:flags('A')">A</div>
 	<div class="well_keyboard" onClick="javascript:flags('B')">B</div>
 	<div class="well_keyboard" onClick="javascript:flags('C')">C</div>
@@ -354,7 +352,8 @@
     
 <!--	<div class="well_taste" onClick="javascript:clean_flags ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
 -->	
-<div class="well_taste" onClick="javascript:delete_flag ()"><img src="images/buttons/backspace.png" width="25" height="25" alt=""/></div>
+<div class="well_taste" onClick="javascript:clean_flags ()"><img src="images/buttons/flaggendelete.png" alt="" width="16"/></div>
+<div class="well_taste" onClick="javascript:delete_flag ()"><img src="images/buttons/backspace.png" alt="" width="23"/></div>
     
 
 </div>
@@ -372,8 +371,8 @@
 <nav class="navbar-default navbar-fixed-top oben">
   <div class="container-fluid"> 
 	<ul class="nav navbar-nav">
-	<a href="#"><img src="images/buttons/schreiben.png" class="button_nav" alt="" id="button_keyboard_reading" onclick="javascript:keyboard_flags_einblenden()"></a> 
-<a href="#"><img src="images/buttons/flaggendelete.png" class="button_nav" onClick="javascript:clean_reading ()" alt="" ></a>
+<!--	<a href="#"><img src="images/buttons/schreiben.png" class="button_nav" alt="" id="button_keyboard_reading" onclick="javascript:keyboard_flags_einblenden()"></a> 
+<a href="#"><img src="images/buttons/flaggendelete.png" class="button_nav" onClick="javascript:clean_reading ()" alt="" ></a>-->
 	</ul>
   </div>
 </nav>
@@ -381,85 +380,85 @@
 <!--content-->
 <div row>
 
-<div class="col-md-4 col-sm-4 col-xs-1" id="flaggentext" >
-    <img src="images/empty.png" alt="" name="lesen1"><br>
-	<img src="images/empty.png" alt="" name="lesen2"><br>
-	<img src="images/empty.png" alt="" name="lesen3"><br>
-	<img src="images/empty.png" alt="" name="lesen4"><br>
-	<img src="images/empty.png" alt="" name="lesen5"><br>
-	<img src="images/empty.png" alt="" name="lesen6"><br>
-	<img src="images/empty.png" alt="" name="lesen7"><br>
-	<img src="images/empty.png" alt="" name="lesen8"><br>
-	<img src="images/empty.png" alt="" name="lesen9"><br>
-	<img src="images/empty.png" alt="" name="lesen10"><br>
-	<img src="images/empty.png" alt="" name="lesen11"><br>
-	<img src="images/empty.png" alt="" name="lesen12"><br>
-    <br><br>
+<div class="col-md-4 col-sm-4 col-xs-1 flaggentext" id="flaggentext">
+	  <img src="images/empty.png" alt="" name="lesen1" ><br>
+      <img src="images/empty.png" alt="" name="lesen2"><br>
+      <img src="images/empty.png" alt="" name="lesen3"><br>
+      <img src="images/empty.png" alt="" name="lesen4"><br>
+      <img src="images/empty.png" alt="" name="lesen5"><br>
+      <img src="images/empty.png" alt="" name="lesen6"><br>
+      <img src="images/empty.png" alt="" name="lesen7"><br>
+      <img src="images/empty.png" alt="" name="lesen8"><br>
+      <img src="images/empty.png" alt="" name="lesen9"><br>
+      <img src="images/empty.png" alt="" name="lesen10"><br>
+      <img src="images/empty.png" alt="" name="lesen11"><br>
+      <img src="images/empty.png" alt="" name="lesen12"><br>
+      <br><br>
 </div>
 
 
-
- <!--Popup Keyboard- Flaggen -->
-<div class="col-md-8 col-sm-8 col-xs-9" id="flagskeyboard-popup">
-<a><img src="images/buttons/button_close.png" alt="close"  class="button_close close_lesen"  onclick="javascript:keyboard_flags_ausblenden ()"></a>
-
-<div class="flagskeyboard" id="flagskeyboard">	
 
    
-	<img src="images/A.png" class="flagstaste" alt="" onClick="javascript:reading('A')">
-	<img src="images/B.png" class="flagstaste" alt="" onClick="javascript:reading('B')">
-	<img src="images/C.png" class="flagstaste" alt="" onClick="javascript:reading('C')">
-	<img src="images/D.png" class="flagstaste" alt="" onClick="javascript:reading('D')">
-	<img src="images/E.png" class="flagstaste" alt="" onClick="javascript:reading('E')">
-	<img src="images/F.png" class="flagstaste" alt="" onClick="javascript:reading('F')">
-	<img src="images/G.png" class="flagstaste" alt="" onClick="javascript:reading('G')">
-	<img src="images/H.png" class="flagstaste" alt="" onClick="javascript:reading('H')">
-	<img src="images/I.png" class="flagstaste" alt="" onClick="javascript:reading('I')">
-	<img src="images/J.png" class="flagstaste" alt="" onClick="javascript:reading('J')">
+   <!--Popup Keyboard- Flaggen -->
+ <div class="col-md-8 col-sm-8 col-xs-9	flagskeyboard-popup" id="flagskeyboard-popup">
+ 
+ <div class="lesen" id="lesen" onClick="javascript:keyboard_flags_einblenden ()"></div>
+   
+  <div class="flagskeyboard" id="flagskeyboard">	
+
+<hr class="hr2">
+	<img src="images/keyboard/A.png" class="flagstaste" alt="" onClick="javascript:reading('A')">
+	<img src="images/keyboard/B.png" class="flagstaste" alt="" onClick="javascript:reading('B')">
+	<img src="images/keyboard/C.png" class="flagstaste" alt="" onClick="jav;ascript:reading('C')">
+	<img src="images/keyboard/D.png" class="flagstaste" alt="" onClick="javascript:reading('D')">
+	<img src="images/keyboard/E.png" class="flagstaste" alt="" onClick="javascript:reading('E')">
+	<img src="images/keyboard/F.png" class="flagstaste" alt="" onClick="javascript:reading('F')">
+	<img src="images/keyboard/G.png" class="flagstaste" alt="" onClick="javascript:reading('G')">
+	<img src="images/keyboard/H.png" class="flagstaste" alt="" onClick="javascript:reading('H')">
+	<img src="images/keyboard/I.png" class="flagstaste" alt="" onClick="javascript:reading('I')">
+	<img src="images/keyboard/J.png" class="flagstaste" alt="" onClick="javascript:reading('J')">
     
-	<img src="images/K.png" class="flagstaste" alt="" onClick="javascript:reading('K')">
-	<img src="images/L.png" class="flagstaste" alt="" onClick="javascript:reading('L')">
-	<img src="images/M.png" class="flagstaste" alt="" onClick="javascript:reading('M')">
-	<img src="images/N.png" class="flagstaste" alt="" onClick="javascript:reading('N')">
-	<img src="images/O.png" class="flagstaste" alt="" onClick="javascript:reading('O')">
-	<img src="images/P.png" class="flagstaste" alt="" onClick="javascript:reading('P')">
-	<img src="images/Q.png" class="flagstaste" alt="" onClick="javascript:reading('Q')">
-	<img src="images/R.png" class="flagstaste" alt="" onClick="javascript:reading('R')">
-	<img src="images/S.png" class="flagstaste" alt="" onClick="javascript:reading('S')">
-	<img src="images/T.png" class="flagstaste" alt="" onClick="javascript:reading('T')">
+	<img src="images/keyboard/K.png" class="flagstaste" alt="" onClick="javascript:reading('K')">
+	<img src="images/keyboard/L.png" class="flagstaste" alt="" onClick="javascript:reading('L')">
+	<img src="images/keyboard/M.png" class="flagstaste" alt="" onClick="javascript:reading('M')">
+	<img src="images/keyboard/N.png" class="flagstaste" alt="" onClick="javascript:reading('N')">
+	<img src="images/keyboard/O.png" class="flagstaste" alt="" onClick="javascript:reading('O')">
+	<img src="images/keyboard/P.png" class="flagstaste" alt="" onClick="javascript:reading('P')">
+	<img src="images/keyboard/Q.png" class="flagstaste" alt="" onClick="javascript:reading('Q')">
+	<img src="images/keyboard/R.png" class="flagstaste" alt="" onClick="javascript:reading('R')">
+	<img src="images/keyboard/S.png" class="flagstaste" alt="" onClick="javascript:reading('S')">
+	<img src="images/keyboard/T.png" class="flagstaste" alt="" onClick="javascript:reading('T')">
     
-	<img src="images/U.png" class="flagstaste" alt="" onClick="javascript:reading('U')">
-	<img src="images/V.png" class="flagstaste" alt="" onClick="javascript:reading('V')">
-	<img src="images/W.png" class="flagstaste" alt="" onClick="javascript:reading('W')">
-	<img src="images/X.png" class="flagstaste" alt="" onClick="javascript:reading('X')">
-	<img src="images/Y.png" class="flagstaste" alt="" onClick="javascript:reading('Y')">
-	<img src="images/Z.png" class="flagstaste" alt="" onClick="javascript:reading('Z')">
+	<img src="images/keyboard/U.png" class="flagstaste" alt="" onClick="javascript:reading('U')">
+	<img src="images/keyboard/V.png" class="flagstaste" alt="" onClick="javascript:reading('V')">
+	<img src="images/keyboard/W.png" class="flagstaste" alt="" onClick="javascript:reading('W')">
+	<img src="images/keyboard/X.png" class="flagstaste" alt="" onClick="javascript:reading('X')">
+	<img src="images/keyboard/Y.png" class="flagstaste" alt="" onClick="javascript:reading('Y')">
+	<img src="images/keyboard/Z.png" class="flagstaste" alt="" onClick="javascript:reading('Z')">
 	
-    <img src="images/1st.png" class="flagtaste_hilfs well_keyboard_next" alt="" onClick="javascript:reading('1st')">
-	<img src="images/2nd.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('2nd')">
-	<img src="images/3rd.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('3rd')">
-	<img src="images/4th.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('4th')">
+    <img src="images/keyboard/1st.png" class="flagtaste_hilfs well_keyboard_next" alt="" onClick="javascript:reading('1st')">
+	<img src="images/keyboard/2nd.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('2nd')">
+	<img src="images/keyboard/3rd.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('3rd')">
+	<img src="images/keyboard/4th.png" class="flagtaste_hilfs" alt="" onClick="javascript:reading('4th')">
 
-	<img src="images/1.png" class="flagstaste_ziffer well_keyboard_next" alt="" onClick="javascript:reading('1')">
-	<img src="images/2.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('2')">
-	<img src="images/3.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('3')">
-	<img src="images/4.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('4')">
-	<img src="images/5.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('5')">
-	<img src="images/6.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('6')">
-	<img src="images/7.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('7')">
-	<img src="images/8.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('8')">
-	<img src="images/9.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('9')">
-	<img src="images/0.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('0')">
-    
-<!--	<div class="well_taste" onClick="javascript:clean_reading ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
--->	<div class="well_taste" onClick="javascript:delete_reading ()"><img src="images/buttons/backspace.png" width="25" height="25" alt=""/></div>
-    
+	<img src="images/keyboard/1.png" class="flagstaste_ziffer well_keyboard_next" alt="" onClick="javascript:reading('1')">
+	<img src="images/keyboard/2.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('2')">
+	<img src="images/keyboard/3.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('3')">
+	<img src="images/keyboard/4.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('4')">
+	<img src="images/keyboard/5.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('5')">
+	<img src="images/keyboard/6.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('6')">
+	<img src="images/keyboard/7.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('7')">
+	<img src="images/keyboard/8.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('8')">
+	<img src="images/keyboard/9.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('9')">
+	<img src="images/keyboard/0.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('0')">
 
-</div>
+<div class="well_taste" onClick="javascript:clean_reading ()"><img src="images/buttons/flaggendelete.png" alt="" width="16"/></div>
+<div class="well_taste" onClick="javascript:delete_reading ()"><img src="images/buttons/backspace.png" alt="" width="23"/></div>
+    
 </div>
 
 
-<div class="lesen" id="lesen"></div>
+</div>
 </div>
 
 
