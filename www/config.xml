@@ -15,8 +15,9 @@
         2K Yachting
 	</author>
 	
-	<preference name="Fullscreen" value="true" />
-<preference name="DisallowOverscroll" value="true"/>
+<!--	<preference name="Fullscreen" value="true" />-->
+	<preference name="fullscreen" value="true" />
+	<preference name="DisallowOverscroll" value="true"/>
 
 
     <!-- Define app icon for each platform. -->
@@ -82,5 +83,7 @@
 -->
 	<gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 
+<!-- ++++++++ Vorübergehend nur für iOs berechen -->
+	<gap:platform name="ios" />
 
 </widget>
