@@ -88,18 +88,16 @@ a:focus {
 .oben {
 	border: 0px solid #333333;
 	text-shadow: 0-1px 1px #000000;
-	background-color: rgba(147,147,147,1.00);
+	background-color: rgba(245,245,245,1.00);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-	height: 42px;
-	background-image: -webkit-linear-gradient(270deg,rgba(234,234,234,1.00) 0%,rgba(0,0,0,1.00) 100%);
-	background-image: linear-gradient(180deg,rgba(234,234,234,1.00) 0%,rgba(0,0,0,1.00) 100%);
+	height: 20px;
 }
 
 .distance{
-	padding-top: 0px;
+	margin-top: 20px;
 	}
 
 /* Infotext zur Flagge */
@@ -123,7 +121,7 @@ a:focus {
 	background-image: url(../images/backgrounds/flaggenleine.png);
 	background-repeat: no-repeat;
 	background-size: auto auto;
-	margin-top: 70px;
+	margin-top: 40px;
 	height: 680px;
 	padding-top: 45px;
 	background-position: 20px 5px;
@@ -147,7 +145,7 @@ a:focus {
 
 .keyboardpopup {
 	width: 220px;
-	top: 80px;
+	top: 55px;
 	background-color: rgba(210,213,220,1.00);
 	-webkit-box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
 	box-shadow: 3px 3px 20px rgba(81,81,81,1.00);
@@ -177,10 +175,9 @@ a:focus {
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 	background-color: rgba(209,212,219,1.00);
 	margin-left: -4px;
-	padding-left:4px;
+	padding-left: 4px;
 	position: fixed;
-	top: 42px;
-
+	top: 0px;
 }
 
 .hr3 {
@@ -686,7 +683,7 @@ a:focus {
 
 
 .flagskeyboard-popup {
-	top: 82px;
+	top: 55px;
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-left: 10px;
@@ -701,11 +698,10 @@ a:focus {
 	color: rgba(0,0,0,1.00);
 	font-size: 18pt;
 	line-height: 36pt;
-	top: 42px;
 	height: 42px;
 	letter-spacing: 0.05em;
 	padding-left: 10px;
-	margin-left:-10px;
+	margin-left: -10px;
 	position: fixed;
 	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
@@ -863,7 +859,7 @@ hr {
 @media (min-width: 900px) {
 	
 .flaggentext {
-	width:250px;
+	width: 250px;
 }
 
 .flagskeyboard-popup, .lesen {
