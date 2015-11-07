@@ -239,6 +239,10 @@ a:focus {
 	padding-bottom: 2px;
 	clear: left;
 }
+
+.well_taste_delete {
+	float: left;
+	}
 	
 
 /* Schließbutton Keyboard */
@@ -384,13 +388,12 @@ a:focus {
 
 .button_close_flaginfo {
 	float: right;
-	width: auto;	
-	padding-right: 1%;
+	width: auto;
+	padding-right: 2%;
 	padding-top: 0px;
 }
 .button_close_flaginfo img {
-	height: 30px;
-	width: 30px;
+	width: 24px;
 }
 
 .scrollleft, .scrollright {
@@ -560,8 +563,7 @@ a:focus {
 	height: 350px;
 }
 .button_close_flaginfo img {
-	height: 40px;
-	width: 40px;
+	width: 28px;
 }
 
 /*.scrollright {

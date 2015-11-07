@@ -25,6 +25,12 @@
 <!-- +++ Gleichbleibende Seitenelemente -->
 <body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText(); activateSwipe ()">
 
+<!--menüleiste oben-->
+
+<nav class="navbar-default navbar-fixed-top oben">
+
+</nav>
+
 <!--menüleiste unten-->
 <nav class="navbar-default navbar-fixed-bottom fuss">
   <div class="container-fluid"> 
@@ -243,11 +249,11 @@
 <!-- +++++  Flaggeninfo +++++++-->
 <div class="flaginfo" id="flaginfo">
     
-<div class="button_close_flaginfo"><a href="#"><img src="images/buttons/button_close.png" onClick="javascript:Show_All_flags()" alt="" ></a></div>
+<div class="button_close_flaginfo"><img src="images/buttons/back-close.png" alt="" onClick="javascript:Show_All_flags()" ></div>
 <div class="scrollleft" id="back" onclick="javascript:previousFlag()"></div>
 <div class="scrollright" id="vor" onClick="javascript:nextFlag()"> </div>
 
-<div class="container-fluid flaggeninfo">
+<div class="container-fluid flaggeninfo distance">
 
 	<!-- veränderliche Inhalte-->
 
@@ -281,15 +287,7 @@
 <!-- +++++  Schreiben +++++++-->
 <div class="writing" id="writing" >
 
-<!--menüleiste oben-->
 
-<nav class="navbar-default navbar-fixed-top oben">
-  <div class="container-fluid"> 
-	<ul class="nav navbar-nav">
-
-	</ul>
-  </div>
-</nav>
 
 <!--content-->
 
@@ -305,7 +303,7 @@
 
  <!--Popup Keyboard-->
 <div class="col-md-6 col-sm-6 col-xs-8 keyboardpopup" id="keyboardpopup"  >
-<div id="textinput" class="textinput" onclick="javascript:keyboard_einblenden ()"></div>
+<div id="textinput" class="textinput distance" onclick="javascript:keyboard_einblenden ()"></div>
 
 	<div class="keyboard" id="keyboard" >	
 	<hr class="hr3">
@@ -352,8 +350,8 @@
     
 <!--	<div class="well_taste" onClick="javascript:clean_flags ()"><img src="images/buttons/flaggendelete.png" width="30" alt=""/></div>
 -->	
-<div class="well_taste" onClick="javascript:clean_flags ()"><img src="images/buttons/flaggendelete.png" alt="" width="16"/></div>
-<div class="well_taste" onClick="javascript:delete_flag ()"><img src="images/buttons/backspace.png" alt="" width="23"/></div>
+<div class="well_taste " onClick="javascript:delete_flag ()"><img src="images/buttons/backspace.png" alt="" width="23"/></div>
+<div class="well_taste well_taste_delete" onClick="javascript:clean_flags ()"><img src="images/buttons/flaggendelete.png" alt="" width="16"/></div>
     
 
 </div>
@@ -366,16 +364,6 @@
 <!-- +++++  Lesen +++++++-->
 <div class="reading" id="reading" >
 
-<!--menüleiste oben-->
-
-<nav class="navbar-default navbar-fixed-top oben">
-  <div class="container-fluid"> 
-	<ul class="nav navbar-nav">
-<!--	<a href="#"><img src="images/buttons/schreiben.png" class="button_nav" alt="" id="button_keyboard_reading" onclick="javascript:keyboard_flags_einblenden()"></a> 
-<a href="#"><img src="images/buttons/flaggendelete.png" class="button_nav" onClick="javascript:clean_reading ()" alt="" ></a>-->
-	</ul>
-  </div>
-</nav>
 
 <!--content-->
 <div row>
@@ -402,7 +390,7 @@
    <!--Popup Keyboard- Flaggen -->
  <div class="col-md-8 col-sm-8 col-xs-9	flagskeyboard-popup" id="flagskeyboard-popup">
  
- <div class="lesen" id="lesen" onClick="javascript:keyboard_flags_einblenden ()"></div>
+ <div class="lesen distance" id="lesen" onClick="javascript:keyboard_flags_einblenden ()"></div>
    
   <div class="flagskeyboard" id="flagskeyboard">	
 
@@ -452,8 +440,8 @@
 	<img src="images/keyboard/9.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('9')">
 	<img src="images/keyboard/0.png" class="flagstaste_ziffer" alt="" onClick="javascript:reading('0')">
 
-<div class="well_taste" onClick="javascript:clean_reading ()"><img src="images/buttons/flaggendelete.png" alt="" width="16"/></div>
 <div class="well_taste" onClick="javascript:delete_reading ()"><img src="images/buttons/backspace.png" alt="" width="23"/></div>
+<div class="well_taste well_taste_delete" onClick="javascript:clean_reading ()"><img src="images/buttons/flaggendelete.png" alt="" width="16"/></div>
     
 </div>
 
