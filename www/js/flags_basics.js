@@ -10,10 +10,10 @@ function Show_All_flags () {
 	$("#reading").hide();
 	$("#about-page").hide();
 	$("#all-flags").show();
-document.getElementById("button_flags").style.opacity = "1";
-document.getElementById("button_writing").style.opacity = "0.5";
-document.getElementById("button_reading").style.opacity = "0.5";
-document.getElementById("button_info").style.opacity = "0.5";
+document.getElementById("button_flags").classList.remove ("reiter_inaktiv");
+document.getElementById("button_writing").classList.add ("reiter_inaktiv");
+document.getElementById("button_reading").classList.add ("reiter_inaktiv");
+document.getElementById("button_info").classList.add ("reiter_inaktiv");
 }
 
 function Show_Reading () {
@@ -26,11 +26,11 @@ function Show_Reading () {
 	$("#help-page").hide();
 	clean_reading ();
 	keyboard_flags_start ();
-document.getElementById("button_flags").style.opacity = "0.5";
-document.getElementById("button_writing").style.opacity = "0.5";
-document.getElementById("button_reading").style.opacity = "1";
-document.getElementById("button_info").style.opacity = "0.5";
-document.getElementById("button_keyboard_reading").style.opacity = "0.5";
+document.getElementById("button_flags").classList.add ( "reiter_inaktiv");
+document.getElementById("button_writing").classList.add ( "reiter_inaktiv");
+document.getElementById("button_reading").classList.remove ( "reiter_inaktiv");
+document.getElementById("button_info").classList.add ( "reiter_inaktiv");
+//document.getElementById("button_keyboard_reading").style.opacity = "0.5";
 }
 
 
@@ -42,13 +42,13 @@ function Show_About () {
 	$("#reading").hide();
 	$("#about-page").show();
 	$("#help-page").hide();
-document.getElementById("button_flags").style.opacity = "0.5";
-document.getElementById("button_writing").style.opacity = "0.5";
-document.getElementById("button_reading").style.opacity = "0.5";
-document.getElementById("button_info").style.opacity = "1";
-document.getElementById("button_info2").style.opacity = "1";
-document.getElementById("button_sprache").style.opacity = "0.5";
-document.getElementById("button_help").style.opacity = "0.5";
+document.getElementById("button_flags").classList.add ( "reiter_inaktiv");
+document.getElementById("button_writing").classList.add ( "reiter_inaktiv");
+document.getElementById("button_reading").classList.add ( "reiter_inaktiv");
+document.getElementById("button_info").classList.remove ( "reiter_inaktiv");
+//document.getElementById("button_info2").style.opacity = "1";
+//document.getElementById("button_sprache").style.opacity = "0.5";
+//document.getElementById("button_help").style.opacity = "0.5";
 }
 
 

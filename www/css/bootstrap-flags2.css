@@ -33,13 +33,13 @@ body {
 /* Hintergrund Allgemein*/
 .bg-flags {
 	color: #fff;
-	background-clip: border-box;
+	/*background-clip: border-box;
 	background-origin: border-box;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-image: -webkit-linear-gradient(270deg,rgba(190,190,190,1.00) 0%,rgba(60,60,60,1.00) 100%);
-	background-image: linear-gradient(180deg,rgba(190,190,190,1.00) 0%,rgba(60,60,60,1.00) 100%);
-	background-color: rgba(60,60,60,1.00);
+	background-image: linear-gradient(180deg,rgba(190,190,190,1.00) 0%,rgba(60,60,60,1.00) 100%);*/
+	background-color: rgba(172,179,189,1.00);
 }
 
 a {
@@ -57,34 +57,39 @@ a:focus {
   outline-offset: -2px;
 }
 
-/*  Feste Elemente Flaggen-App Fupzeile und Kopfzeile*/
-
-.button_nav {
-	display: inline-block;
-	margin-left: 3px;
-	height: 34px;
-	width: auto;
-	margin-top: 4px;
-	vertical-align: middle;
-}
-
-.button_nav_top {
-	padding-right: 10px;
-	padding-left: 10px;
-}
+/* ****************** Feste Elemente Flaggen-App Fupzeile und Kopfzeile ++++++++++++++++++++ */
 
 .fuss {
-	border: 0px solid #333333;
-	text-shadow: 0-1px 1px #000000;
 	background-size: cover;
-	background-color:rgba(1,1,1,1.00);
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
-	box-sizing: border-box;
 	height: 42px;
+	background-color: rgba(210,213,220,1.00);
+	padding-left: 0px;
+	margin-left: 0px;
+	left:0px;
+}
+.menu-fuss {
+	float: left;
 }
 
+.nav-fuss {
+	float: left;
+	width: 100%;
+	padding-left: 0px !important;
+}
+
+.nav-fuss ul{
+	float: left;
+	display: inline-block;
+}
+		
+.hr_fuss{
+	border-top-width: thin;
+	border-top-color: rgba(150,150,150,1.00);
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+	
 .oben {
 	border: 0px solid #333333;
 	text-shadow: 0-1px 1px #000000;
@@ -98,9 +103,79 @@ a:focus {
 
 .distance{
 	margin-top: 20px;
-	}
+}
 
-/* Infotext zur Flagge */
+
+.reiter {
+	width: 73px;
+	height: 38px;
+	border-left: 1px solid rgba(150,150,150,1.00);
+	border-right: 1px solid rgba(150,150,150,1.00);
+	border-bottom: 1px solid rgba(150,150,150,1.00);
+	border-top: 1px solid rgba(172,179,189,1.00);
+	background-color: rgba(172,179,189,1.00);
+	min-width: 73px;
+	min-height: 33px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	float: left;
+	margin-top: 0px;
+	margin-left: 0px;
+	max-width: 120px;	/*	-webkit-box-shadow: 2px 2px 2px rgba(98,98,98,1.00);
+	box-shadow: 2px 2px 2px rgba(98,98,98,1.00);*/
+}
+
+.reiter_inaktiv {
+	background-color: rgba(210,213,220,1.00);
+	border-top: 1px solid rgba(150,150,150,1.00);
+	border-left: 1px solid rgba(178,178,178,1.00);
+	border-right: 1px solid rgba(178,178,178,1.00);
+	border-bottom: 1px solid rgba(178,178,178,1.00);
+/*	-webkit-box-shadow: 1px 1px 1px rgba(98,98,98,1.00);
+	box-shadow: 1px 1px 1px rgba(98,98,98,1.00);
+	padding-left: 1px;
+	padding-right: 1px;*/
+}
+
+.reiter_first {
+/*	margin-left: 1px !important;
+*/}
+
+.reiter_last {
+	margin-right:3px;
+}
+
+.reiter img {
+	height: 36px;
+    margin-left: auto;
+    margin-right: auto ;
+	opacity: 0.7;
+}
+
+.button_nav {
+	display: inline-block;
+	height: 26px;
+	width: auto;
+	margin-top: 8px;
+	vertical-align: middle;
+	text-align: center;
+	margin-left: 30px;
+	padding-left: 0px;
+}
+
+.button_nav img{
+	opacity: 0.5;
+}
+
+
+.button_nav_top {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++ Infotext zur Flagge ++++++++++++++++++++++++++++ */
 	
 #popup-text {
 	line-height: 1.3em;
@@ -263,8 +338,8 @@ a:focus {
 	height: auto;
 }*/
 .fuss {
-	margin-left:-5px;
-	maring-right:-5px;
+/*	margin-left:-5px;
+	maring-right:-5px;*/
 }
 
  .flaggentext2 img{
@@ -940,14 +1015,15 @@ hr {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 .radio label {
-  min-height: 20px;
-  padding-left: 20px;
-  margin-bottom: 0;
-  font-size: 16px;
-  font-weight: normal;
-  cursor: pointer;
-  letter-spacing: 0.03em;
+	min-height: 20px;
+	padding-left: 25px;
+	margin-bottom: 0;
+	font-size: 16px;
+	font-weight: normal;
+	cursor: pointer;
+	letter-spacing: 0.03em;
 }
 
 .button_help {
@@ -957,10 +1033,28 @@ hr {
 
 label {
   	font-size: 16px;
-	padding-left: 5px;
+	padding-left: 8px;
 	font-weight: normal;
 	cursor: pointer;
 	letter-spacing: 0.03em;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+	position: absolute;
+	margin-top: 4px \9;
+	margin-left: -25px;
+	height: 20px;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 10px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 /* -- Help-Seiten -- */

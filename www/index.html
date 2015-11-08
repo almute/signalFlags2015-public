@@ -33,17 +33,37 @@
 
 <!--menüleiste unten-->
 <nav class="navbar-default navbar-fixed-bottom fuss">
+<!--<div class="menu-fuss"> 
+-->
+<ul class="nav-fuss">
+	<div class="reiter reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags">
+    <img src="images/buttons/button-flaggen.png" alt="Flags">
+    </div>
+	<div class="reiter" onClick="javascript:Show_Writing ()" id="button_writing" >
+    <img src="images/buttons/button-schreiben.png" alt="Writing">
+        </div>
+	<div class="reiter" onClick="javascript:Show_Reading ()" id="button_reading">
+    <img src="images/buttons/button-lesen.png" alt="Reading">
+    </div>
+	<div class="reiter reiter_last" onClick="javascript:Show_About ()" id="button_info">
+    <img src="images/buttons/button-info.png" alt="Info">
+    </div> 
+</ul>
+ <hr class="hr_fuss">
+<!-- </div>
+--></nav>
+
+<!--<nav class="navbar-default navbar-fixed-bottom fuss">
   <div class="container-fluid"> 
       <ul class="nav navbar-nav">
-	<a href="#"><img src="images/buttons/search_inaktiv.png" alt="Flgas" class="button_nav" id="button_flags" onClick="javascript:Show_All_flags ()"></a>
+	<a href="#"><img src="images/buttons/flags.png" alt="Flags" class="button_nav" id="button_flags" onClick="javascript:Show_All_flags ()"></a>
 	<a href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" width="30" class="button_nav" id="button_writing" onClick="javascript:Show_Writing ()"></a>
 	<a href="#"><img src="images/buttons/reading_inaktiv.png" alt="Reading" class="button_nav" id="button_reading" onClick="javascript:Show_Reading ()"></a>
 	<a href="#"><img src="images/buttons/info_inaktiv.png" alt="Info" class="button_nav" id="button_info" onClick="javascript:Show_About ()">  </a> 
       </ul>
   </div>
 </nav>
-
-
+-->
 <!-- +++++  Alle Flaggen +++++++-->
 <div class="all-flags" id="all-flags">
 

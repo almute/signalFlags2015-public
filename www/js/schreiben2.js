@@ -21,11 +21,11 @@ function Show_Writing () {
 	$("#about-page").hide();
 	 clean_flags ();
 	keyboard_start ();
-document.getElementById("button_flags").style.opacity = "0.5";
-document.getElementById("button_writing").style.opacity = "1";
-document.getElementById("button_reading").style.opacity = "0.5";
-document.getElementById("button_info").style.opacity = "0.5";
-document.getElementById("button_keyboard_schreiben").style.opacity = "0.5";
+document.getElementById("button_flags").classList.add( "reiter_inaktiv");
+document.getElementById("button_writing").classList.remove ( "reiter_inaktiv");
+document.getElementById("button_reading").classList.add ("reiter_inaktiv");
+document.getElementById("button_info").classList.add ("reiter_inaktiv");
+// document.getElementById("button_keyboard_schreiben").style.opacity = "0.5";
 }
 
 // ************Zeichen in Textfeld einfügen ***************
