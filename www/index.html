@@ -28,14 +28,7 @@
 <!--menüleiste oben-->
 
 <nav class="navbar-default navbar-fixed-top oben">
-
-</nav>
-
-<!--menüleiste unten-->
-<nav class="navbar-default navbar-fixed-bottom fuss">
-<!--<div class="menu-fuss"> 
--->
-<ul class="nav-fuss">
+<ul class="nav-top">
 	<div class="reiter reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags">
     <img src="images/buttons/button-flaggen.png" alt="Flags">
     </div>
@@ -49,10 +42,31 @@
     <img src="images/buttons/button-info.png" alt="Info">
     </div> 
 </ul>
- <hr class="hr_fuss">
-<!-- </div>
+<!-- <hr class="hr_fuss">
 --></nav>
 
+<!--menüleiste unten-->
+<!--<nav class="navbar-default navbar-fixed-bottom fuss">
+--><!--<div class="menu-fuss"> 
+-->
+<!--<ul class="nav-fuss">
+	<div class="reiter reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags">
+    <img src="images/buttons/button-flaggen.png" alt="Flags">
+    </div>
+	<div class="reiter" onClick="javascript:Show_Writing ()" id="button_writing" >
+    <img src="images/buttons/button-schreiben.png" alt="Writing">
+        </div>
+	<div class="reiter" onClick="javascript:Show_Reading ()" id="button_reading">
+    <img src="images/buttons/button-lesen.png" alt="Reading">
+    </div>
+	<div class="reiter reiter_last" onClick="javascript:Show_About ()" id="button_info">
+    <img src="images/buttons/button-info.png" alt="Info">
+    </div> 
+</ul>
+ <hr class="hr_fuss">-->
+<!-- </div>
+</nav>
+-->
 <!--<nav class="navbar-default navbar-fixed-bottom fuss">
   <div class="container-fluid"> 
       <ul class="nav navbar-nav">
@@ -382,7 +396,7 @@
 
 
 <!-- +++++  Lesen +++++++-->
-<div class="reading" id="reading" >
+<div class="reading distance" id="reading" >
 
 
 <!--content-->
@@ -410,7 +424,7 @@
    <!--Popup Keyboard- Flaggen -->
  <div class="col-md-8 col-sm-8 col-xs-9	flagskeyboard-popup" id="flagskeyboard-popup">
  
- <div class="lesen distance" id="lesen" onClick="javascript:keyboard_flags_einblenden ()"></div>
+ <div class="lesen" id="lesen" onClick="javascript:keyboard_flags_einblenden ()"></div>
    
   <div class="flagskeyboard" id="flagskeyboard">	
 
@@ -477,7 +491,7 @@
 <div class="about-page" id="about-page">
 
 <!--content-->
-<div class="container about-page-container">
+<div class="container about-page-container distance">
 <h1 class="titel">Signal Flags</h1>
 </div>
     <!-- - About-->

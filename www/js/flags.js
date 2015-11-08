@@ -214,6 +214,7 @@ function insertHtml(flag) {
     // andere Seitenbereiche ausblenden
 
     //$("#startpage").hide();
+	
     $("#all-flags").hide();
     $("#flaginfo").show();
     $("#writing").hide();
@@ -221,10 +222,11 @@ function insertHtml(flag) {
     $("#about-page").hide();
 	$("#help-page").hide();
 
-    document.getElementById("button_flags").style.opacity = "1";
-    document.getElementById("button_writing").style.opacity = "0.5";
-    document.getElementById("button_reading").style.opacity = "0.5";
-    document.getElementById("button_info").style.opacity = "0.5";
+/*document.getElementById("button_flags").classList.remove ("reiter_inaktiv");
+document.getElementById("button_writing").classList.add ("reiter_inaktiv");
+document.getElementById("button_reading").classList.add ("reiter_inaktiv");
+document.getElementById("button_info").classList.add ("reiter_inaktiv");
+*/
 
     //Sprache setzen
 
