@@ -1,5 +1,9 @@
 // JavaScript Document
 
+function Show_Top () {
+"use strict";
+	window.scroll( 0, 0 );
+}
 
 function Show_All_flags () {
 "use strict";
@@ -9,11 +13,13 @@ function Show_All_flags () {
 	$("#writing").hide();
 	$("#reading").hide();
 	$("#about-page").hide();
-	$("#all-flags").show();
 document.getElementById("button_flags").classList.remove ("reiter_inaktiv");
 document.getElementById("button_writing").classList.add ("reiter_inaktiv");
 document.getElementById("button_reading").classList.add ("reiter_inaktiv");
+//document.getElementById("button_gala").classList.add ("reiter_inaktiv");
 document.getElementById("button_info").classList.add ("reiter_inaktiv");
+		$("#all-flags").show();
+	window.scrollTo( 0, 0 );
 }
 
 function Show_Reading () {
@@ -26,11 +32,13 @@ function Show_Reading () {
 	$("#help-page").hide();
 	clean_reading ();
 	keyboard_flags_start ();
-document.getElementById("button_flags").classList.add ( "reiter_inaktiv");
-document.getElementById("button_writing").classList.add ( "reiter_inaktiv");
-document.getElementById("button_reading").classList.remove ( "reiter_inaktiv");
-document.getElementById("button_info").classList.add ( "reiter_inaktiv");
+document.getElementById("button_flags").classList.add ("reiter_inaktiv");
+document.getElementById("button_writing").classList.add ("reiter_inaktiv");
+document.getElementById("button_reading").classList.remove ("reiter_inaktiv");
+//document.getElementById("button_gala").classList.add ("reiter_inaktiv");
+document.getElementById("button_info").classList.add ("reiter_inaktiv");
 //document.getElementById("button_keyboard_reading").style.opacity = "0.5";
+	window.scrollTo( 0, 0 );
 }
 
 
@@ -42,13 +50,15 @@ function Show_About () {
 	$("#reading").hide();
 	$("#about-page").show();
 	$("#help-page").hide();
-document.getElementById("button_flags").classList.add ( "reiter_inaktiv");
-document.getElementById("button_writing").classList.add ( "reiter_inaktiv");
-document.getElementById("button_reading").classList.add ( "reiter_inaktiv");
-document.getElementById("button_info").classList.remove ( "reiter_inaktiv");
+document.getElementById("button_flags").classList.add ("reiter_inaktiv");
+document.getElementById("button_writing").classList.add ("reiter_inaktiv");
+document.getElementById("button_reading").classList.add ("reiter_inaktiv");
+//document.getElementById("button_gala").classList.add ("reiter_inaktiv");
+document.getElementById("button_info").classList.remove ("reiter_inaktiv");
 //document.getElementById("button_info2").style.opacity = "1";
 //document.getElementById("button_sprache").style.opacity = "0.5";
 //document.getElementById("button_help").style.opacity = "0.5";
+	window.scrollTo( 0, 0 );
 }
 
 
@@ -70,7 +80,7 @@ for (var i=0; i<=textlaenge; i++ )
 	var zeile = (i+1);
 	{document.images.namedItem("lesen"+ zeile).src= "images/" + flagLetter +".png"; 
 	if (zeichentyp !== 1) {
-		document.images.namedItem("lesen"+ zeile).classList.add ("flaggentext_hilfsstander");}
+		document.images.namedItem("lesen"+ zeile).classList.add ("readingFlags_hilfsstander");}
 	}
 	}}
 
@@ -116,7 +126,7 @@ function clean_reading () {
 	document.getElementById("lesen").innerHTML = "";
 	for (var i=1; i<=12; i++ ) {
 		document.images.namedItem("lesen"+ i).src= "images/empty.png"; 
-		document.images.namedItem("lesen"+ i).classList.remove("flaggentext_hilfsstander");
+		document.images.namedItem("lesen"+ i).classList.remove("readingFlags_hilfsstander");
 	}
 }		
 
@@ -133,7 +143,7 @@ var str = text;
 for (var i=1; i<=12; i++ ) {
 	if (laenge ===i)
 		{document.images.namedItem("lesen"+ i).src= "images/empty.png"; 
-		document.images.namedItem("lesen"+ i).classList.remove("flaggentext_hilfsstander");
+		document.images.namedItem("lesen"+ i).classList.remove("readingFlags_hilfsstander");
 		}
 	}
 	str = str.substring(0,str.length-1);
@@ -142,43 +152,43 @@ for (var i=1; i<=12; i++ ) {
 
 //************
 
-function delete_flag () {
+/*function delete_flag () {
 "use strict";
 
-var textinput = document.getElementById("textinput").innerHTML; 
-var str = textinput;
-var laenge = (textinput.length);
+var textinputTextfield = document.getElementById("textinputTextfield").innerHTML; 
+var str = textinputTextfield;
+var laenge = (textinputTextfield.length);
 for (var i=1; i<=5; i++ ) {
 	if (laenge ===i) {
 		document.images.namedItem("flagge"+ i).src= "images/empty.png"; 
-		document.images.namedItem("flagge"+ i).classList.remove("flaggentext2_hilfsstander");
+		document.images.namedItem("flagge"+ i).classList.remove("readingFlags_hilfsstander");
 		}
 	}
 	str = str.substring(0,str.length-1);
-	textinput = str;
-	document.getElementById("textinput").innerHTML = textinput;
+	textinputTextfield = str;
+	document.getElementById("textinputTextfield").innerHTML = textinputTextfield;
 }
-
+*/
 
 //********* Tastatur aus und einblenden
 
 
 function keyboard_flags_einblenden () {
 "use strict";
-if ( document.getElementById("flagskeyboard").style.display == 'inline')
+if ( document.getElementById("readingKeyboard").style.display == 'inline')
 	{
-	document.getElementById("flagskeyboard").style.display='none';
+	document.getElementById("readingKeyboard").style.display='none';
 	document.getElementById("lesen").style.display='inline';
 	}
 else {
-	document.getElementById("flagskeyboard").style.display='inline';
+	document.getElementById("readingKeyboard").style.display='inline';
 }
 }
 
 
 function keyboard_flags_start () {
 "use strict";
-	document.getElementById("flagskeyboard").style.display='inline';
+	document.getElementById("readingKeyboard").style.display='inline';
 }
 // ********************** Hilfe anzeigen ***********************
 

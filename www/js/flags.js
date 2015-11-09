@@ -221,7 +221,10 @@ function insertHtml(flag) {
     $("#reading").hide();
     $("#about-page").hide();
 	$("#help-page").hide();
+	window.scrollTo( 0, 0 );
 
+/*	$("#gala").hide();
+*/
 /*document.getElementById("button_flags").classList.remove ("reiter_inaktiv");
 document.getElementById("button_writing").classList.add ("reiter_inaktiv");
 document.getElementById("button_reading").classList.add ("reiter_inaktiv");
@@ -390,7 +393,7 @@ var titleDE = [
 
 // Flaggentext
 
-var flagtext = [ 
+var flaginfoText = [ 
     "<ul><li>I have a diver down; keep well clear at slow speed.</li><li>I am undergoing a speed trial.</li><li> With three numerals:<br>azimuth or bearing.<br><br><object data=\"images/A.png\"></object></object><object data=\"images/1.png\"></object><object data=\"images/2.png\"></object><object data=\"images/0.png\"></object><br><span>(Azimuth 120 degrees)</span></li></ul><hr><strong>AC</strong><object data=\"images/A.png\"></object><object data=\"images/C.png\"></object><br>I am abandoning my vessel.<br><hr><strong>AN</strong><object data=\"images/A.png\"></object><object data=\"images/N.png\"></object><br>I need a doctor.<br><hr><strong>AN1</strong><object data=\"images/A.png\"></object><object data=\"images/N.png\"></object><object data=\"images/1.png\"></object><br>I need a doctor; I have severe burns.<br><hr><strong> AQ </strong><object data=\"images/A.png\"></object><object data=\"images/Q.png\"></object><br> I have injured/sick person to be taken off urgently. <br><br><br><br>",
     "<ul><li>I am taking in, or discharging, or carrying dangerous goods.</li></ul><hr><strong>BR</strong><object data=\"images/B.png\"></object><object data=\"images/R.png\"></object><br>I require a helicopter.<br><br><br><br>",
     "<ul><li>Affirmative.</li><li> With three numerals:<br>course in degrees magnetic.<br><br><object data=\"images/C.png\"></object></object><object data=\"images/1.png\"></object><object data=\"images/2.png\"></object><object data=\"images/0.png\"></object><br><span>(Course 120 degrees)</span></li></ul><hr><strong>CB</strong><object data=\"images/C.png\"></object><object data=\"images/B.png\"></object><br>I require immediate assistance.<br><hr><strong> CG </strong><object data=\"images/C.png\"></object><object data=\"images/G.png\"></object><br> Stand by to assist me. <br><hr><strong> CV </strong><object data=\"images/C.png\"></object><object data=\"images/V.png\"></object><br> I am unable to give assistance. <br><br><br><br>",
@@ -434,7 +437,7 @@ var flagtext = [
     "Code and answering pennant", 
 ];
 
-var flagtextDE = [
+var flaginfoTextDE = [
      "<ul><li>Ich habe Taucher unten; halten Sie sich bei langsamer Fahrt gut frei von mir.</li><li>Ich mache einen Geschwindigkeitstest.</li><li> Mit drei Ziffernwimpeln:<br> Azimut oder Peilung.<br><br><object data=\"images/A.png\"></object></object><object data=\"images/1.png\"></object><object data=\"images/2.png\"></object><object data=\"images/0.png\"></object><br><span>(Azimut 120 Grad)</span></li></ul><hr><strong>   AC  </strong><object data=\"images/A.png\"></object><object data=\"images/C.png\"></object><br>Ich gebe mein Schiff auf.<br><hr><strong>AN</strong><object data=\"images/A.png\"></object><object data=\"images/N.png\"></object><br>Ich benötige einen Arzt.<br><hr><strong>AN1    </strong><object data=\"images/A.png\"></object><object data=\"images/N.png\"></object><object data=\"images/1.png\"></object><br>Ich benötige einen Arzt; I have severe burns.<br><hr><strong> AQ </strong><object data=\"images/A.png\"></object><object data=\"images/Q.png\"></object><br> Ich habe einen Verletzten, der übernommen werden muss. <br><br><br><br>",
      "<ul><li>Ich lade/lösche/befördere gefährliche Güter.</li></ul><hr><strong>    BR  </strong><object data=\"images/B.png\"></object><object data=\"images/R.png\"></object><br>Ich benötige einen Helicopter.<br><br><br><br>",
      "<ul><li>Ja.</li><li> Mit drei Ziffernwimpeln:<br> Kompasskurs in Grad.<br><br><object data=\"images/C.png\"></object></object><object data=\"images/1.png\"></object><object data=\"images/2.png\"></object><object data=\"images/0.png\"></object><br><span>(Kompasskurs 120 Grad)</span></li></ul><hr><strong> CB  </strong><object data=\"images/C.png\"></object><object data=\"images/B.png\"></object><br>Ich brauche sofortige Hilfe.<br><hr><strong> CG </strong><object data=\"images/C.png\"></object><object data=\"images/G.png\"></object><br> Halten Sie sich bereit, mir zu helfen. <br><hr><strong> CV </strong><object data=\"images/C.png\"></object><object data=\"images/V.png\"></object><br> Ich bin nicht in der Lage, Hilfe zu leisten. <br><br><br><br>",
@@ -484,9 +487,9 @@ var flagtextDE = [
 // ++++++++Inhalte in Seite eintragen
     
 // Bild und Morsecode - unabhängig von Sprache
-    document.getElementById("flagimage").innerHTML = "<object data=\"images/" + image[flag] + ".png\"></object>";
+    document.getElementById("flaginfoImage").innerHTML = "<object data=\"images/" + image[flag] + ".png\"></object>";
 //    document.getElementById("morse").innerHTML = morsecode[flag];
-	document.getElementById("licht").innerHTML = "<object type=\"text/html\" width=\"140\" height=\"80\" data-dw-widget=\"Edge\" data=\"edgeanimate_assets/" + image[flag] + ".html\"></object>";
+	document.getElementById("flaginfoMorse").innerHTML = "<object type=\"text/html\" width=\"200\" height=\"80\" data-dw-widget=\"Edge\" data=\"edgeanimate_assets/" + image[flag] + ".html\"></object>";
    
    
 //   <object id="EdgeID36" type="text/html" width="140" height="80" data-dw-widget="Edge" data="edgeanimate_assets/A/Assets/A.html">
@@ -495,21 +498,21 @@ var flagtextDE = [
 
 // deutsch manuell gewählt oder Systemsprache deutsch
     if (sprache_aktiv === "de1" || sprache_aktiv === "de") 
-        {document.getElementById("flagtitle").innerHTML = titleDE[flag];
-        document.getElementById("flagtext").innerHTML = flagtextDE[flag];
+        {document.getElementById("flaginfoTitle").innerHTML = titleDE[flag];
+        document.getElementById("flaginfoText").innerHTML = flaginfoTextDE[flag];
         }
     
 // andere Systemsprache oder englisch gewählt
     else 
-        {document.getElementById("flagtitle").innerHTML = title[flag];
-        document.getElementById("flagtext").innerHTML = flagtext[flag];
+        {document.getElementById("flaginfoTitle").innerHTML = title[flag];
+        document.getElementById("flaginfoText").innerHTML = flaginfoText[flag];
         } 
     
 // Flagggennummer speichern auf Seite
     document.getElementById("flagnummer").innerHTML = flag;
    
 // Kein Strich wenn kein Morsecode
-    if 	(document.getElementById("licht").innerHTML=== "" ||document.getElementById("flagtext").innerHTML=== "" || flag === "40" )
+    if 	(document.getElementById("flaginfoMorse").innerHTML=== "" ||document.getElementById("flaginfoText").innerHTML=== "" || flag === "40" )
         {	$("#hr1").hide();	
         }
     else 

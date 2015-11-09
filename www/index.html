@@ -14,7 +14,7 @@
 <script src="js/index.js" type="text/javascript"></script>
 <script src="js/flags_basics.js" type="text/javascript"></script>
 <script src="js/flags.js" type="text/javascript"></script>
-<!--<script src="js/jquery.detect_swipe.js"></script>-->
+<script src="js/schreiben2.js" type="text/javascript"></script>
 <script src="js/hammer.js"></script>
 <script>
 
@@ -22,14 +22,13 @@
 
 </head>
 
-<!-- +++ Gleichbleibende Seitenelemente -->
-<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText(); activateSwipe ()">
-
-<!--menüleiste oben-->
+<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText(); activateSwipe();">
+ 
+<!---------------Menüleiste mit Reitern oben------------------->
 
 <nav class="navbar-default navbar-fixed-top oben">
 <ul class="nav-top">
-	<div class="reiter reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags">
+	<div class="reiter  reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags">
     <img src="images/buttons/button-flaggen.png" alt="Flags">
     </div>
 	<div class="reiter" onClick="javascript:Show_Writing ()" id="button_writing" >
@@ -38,50 +37,21 @@
 	<div class="reiter" onClick="javascript:Show_Reading ()" id="button_reading">
     <img src="images/buttons/button-lesen.png" alt="Reading">
     </div>
-	<div class="reiter reiter_last" onClick="javascript:Show_About ()" id="button_info">
+	<!--<div class="reiter reiter_klein" onClick="javascript:Show_Gala ()" id="button_gala">
+    <img src="images/buttons/button-info.png" alt="Info">
+    </div> -->
+    <div class="reiter reiter_last" onClick="javascript:Show_About ()" id="button_info">
     <img src="images/buttons/button-info.png" alt="Info">
     </div> 
 </ul>
-<!-- <hr class="hr_fuss">
---></nav>
+</nav>
 
-<!--menüleiste unten-->
-<!--<nav class="navbar-default navbar-fixed-bottom fuss">
---><!--<div class="menu-fuss"> 
--->
-<!--<ul class="nav-fuss">
-	<div class="reiter reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags">
-    <img src="images/buttons/button-flaggen.png" alt="Flags">
-    </div>
-	<div class="reiter" onClick="javascript:Show_Writing ()" id="button_writing" >
-    <img src="images/buttons/button-schreiben.png" alt="Writing">
-        </div>
-	<div class="reiter" onClick="javascript:Show_Reading ()" id="button_reading">
-    <img src="images/buttons/button-lesen.png" alt="Reading">
-    </div>
-	<div class="reiter reiter_last" onClick="javascript:Show_About ()" id="button_info">
-    <img src="images/buttons/button-info.png" alt="Info">
-    </div> 
-</ul>
- <hr class="hr_fuss">-->
-<!-- </div>
-</nav>
--->
-<!--<nav class="navbar-default navbar-fixed-bottom fuss">
-  <div class="container-fluid"> 
-      <ul class="nav navbar-nav">
-	<a href="#"><img src="images/buttons/flags.png" alt="Flags" class="button_nav" id="button_flags" onClick="javascript:Show_All_flags ()"></a>
-	<a href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" width="30" class="button_nav" id="button_writing" onClick="javascript:Show_Writing ()"></a>
-	<a href="#"><img src="images/buttons/reading_inaktiv.png" alt="Reading" class="button_nav" id="button_reading" onClick="javascript:Show_Reading ()"></a>
-	<a href="#"><img src="images/buttons/info_inaktiv.png" alt="Info" class="button_nav" id="button_info" onClick="javascript:Show_About ()">  </a> 
-      </ul>
-  </div>
-</nav>
--->
-<!-- +++++  Alle Flaggen +++++++-->
+
+<!-- +++++++++++++++++++++++++++++++++++++++++  Alle Flaggen +++++++++++++++++++++++++++++++++++++++++++++-->
+
 <div class="all-flags" id="all-flags">
 
-<!--flaggen-->
+<!--Buchstabenflaggen-->
 
 <div class="container-fluid" style="marign-bottom:100px;">
 
@@ -198,7 +168,7 @@
 </div>
 
 
-<!-- Ziffern -->
+<!-- Ziffernflaggen -->
 <div class="row text-center">
   
 <div class="col-sm-ziffer col-md-ziffer col-xs-ziffer">
@@ -280,9 +250,11 @@
 
 </div>  <!--ende all flags -->
 
-<!-- +++++  Flaggeninfo +++++++-->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++   Flaggeninfo +++++++++++++++++++++++++++++++++++++++++ +-->
 <div class="flaginfo" id="flaginfo">
-    
+  
+  <!--  +++++++ feste Elemente   +++++++++ -->  
 <div class="button_close_flaginfo"><img src="images/buttons/back-close.png" alt="" onClick="javascript:Show_All_flags()" ></div>
 <div class="scrollleft" id="back" onclick="javascript:previousFlag()"></div>
 <div class="scrollright" id="vor" onClick="javascript:nextFlag()"> </div>
@@ -292,22 +264,18 @@
 	<!-- veränderliche Inhalte-->
 
 <div class="row">
-<div class="flagtitle" id="flagtitle" ></div>
-
-
+<div class="flaginfoTitle" id="flaginfoTitle" ></div>
 <hr style="border:0px">
 
 <div class="col-xs-flagge col-sm-flagge" >
-	<div class="flagimage img-responsive" id="flagimage"></div>
+	<div class="flaginfoImage img-responsive" id="flaginfoImage"></div>
 </div>
 
 <div class="col-xs-flaggentext col-sm-flaggentext" >
-<!--	<div id="morse"></div>
--->	
-	<div id="licht"></div>
+	<div id="flaginfoMorse"></div>
 	<hr id="hr1" style="margin-top: 0px;">
 	<div id="flagnummer"></div>
-	<div id="flagtext"></div>         
+	<div id="flaginfoText"></div>         
 </div>    
 
 </div>   <!--Ende row-->
@@ -318,14 +286,14 @@
 </div>
 
 
-<!-- +++++  Schreiben +++++++-->
+<!-- +++++++++++++++++++++++++++++++++++++++++   Schreiben +++++++++++++++++++++++++++++++++++++++++  -->
 <div class="writing" id="writing" >
 
 
 
 <!--content-->
 
-<div class="col-md-6 col-sm-6 col-xs-4 flaggentext2" id="flaggentext2">
+<div class="col-md-4 col-sm-4 col-xs-4 writingFlags" id="writingFlags">
     <img src="images/empty.png" alt="" name="flagge1"><br>
 	<img src="images/empty.png" alt="" name="flagge2"><br>
 	<img src="images/empty.png" alt="" name="flagge3"><br>
@@ -336,8 +304,8 @@
 
 
  <!--Popup Keyboard-->
-<div class="col-md-6 col-sm-6 col-xs-8 keyboardpopup" id="keyboardpopup"  >
-<div id="textinput" class="textinput distance" onclick="javascript:keyboard_einblenden ()"></div>
+<div class="col-md-6 col-sm-8 col-xs-8 writingKeyboardArea" id="writingKeyboardArea"  >
+<div id="writingTextfield" class="writingTextfield distance" onclick="javascript:keyboard_einblenden ()"></div>
 
 	<div class="keyboard" id="keyboard" >	
 	<hr class="hr3">
@@ -395,14 +363,14 @@
 </div>
 
 
-<!-- +++++  Lesen +++++++-->
+<!-- +++++++++++++++++++++++++++++++++++++++++     Lesen +++++++++++++++++++++++++++++++++++++++++  -->
 <div class="reading distance" id="reading" >
 
 
 <!--content-->
 <div row>
 
-<div class="col-md-4 col-sm-4 col-xs-1 flaggentext" id="flaggentext">
+<div class="col-md-4 col-sm-4 col-xs-1 readingFlags" id="readingFlags">
 	  <img src="images/empty.png" alt="" name="lesen1" ><br>
       <img src="images/empty.png" alt="" name="lesen2"><br>
       <img src="images/empty.png" alt="" name="lesen3"><br>
@@ -422,16 +390,16 @@
 
    
    <!--Popup Keyboard- Flaggen -->
- <div class="col-md-8 col-sm-8 col-xs-9	flagskeyboard-popup" id="flagskeyboard-popup">
+ <div class="col-md-8 col-sm-8 col-xs-9	readingKeyboardArea" id="readingKeyboardArea">
  
  <div class="lesen" id="lesen" onClick="javascript:keyboard_flags_einblenden ()"></div>
    
-  <div class="flagskeyboard" id="flagskeyboard">	
+  <div class="readingKeyboard" id="readingKeyboard">	
 
 <hr class="hr2">
 	<img src="images/keyboard/A.png" class="flagstaste" alt="" onClick="javascript:reading('A')">
 	<img src="images/keyboard/B.png" class="flagstaste" alt="" onClick="javascript:reading('B')">
-	<img src="images/keyboard/C.png" class="flagstaste" alt="" onClick="jav;ascript:reading('C')">
+	<img src="images/keyboard/C.png" class="flagstaste" alt="" onClick="javascript:reading('C')">
 	<img src="images/keyboard/D.png" class="flagstaste" alt="" onClick="javascript:reading('D')">
 	<img src="images/keyboard/E.png" class="flagstaste" alt="" onClick="javascript:reading('E')">
 	<img src="images/keyboard/F.png" class="flagstaste" alt="" onClick="javascript:reading('F')">
@@ -642,7 +610,6 @@
 
 <!-- +
 ++++  Auflistung der Scripts +++++++-->
-<script src="js/schreiben2.js" type="text/javascript"></script>
 </body>
 
 </html>

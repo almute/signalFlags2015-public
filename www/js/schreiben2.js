@@ -1,4 +1,4 @@
-function onLoad() 
+/*function onLoad() 
 { 
 "use strict";
 document.addEventListener("deviceready", isDeviceReady, false); 
@@ -7,7 +7,7 @@ function isDeviceReady()
 { 
 "use strict";
 navigator.notification.alert('device ready'); 
-} 
+} */
 
 // ************Fenster Schreiben einblenden ***************
 
@@ -21,9 +21,11 @@ function Show_Writing () {
 	$("#about-page").hide();
 	 clean_flags ();
 	keyboard_start ();
-document.getElementById("button_flags").classList.add( "reiter_inaktiv");
-document.getElementById("button_writing").classList.remove ( "reiter_inaktiv");
+	window.scrollTo( 0, 0 );
+document.getElementById("button_flags").classList.add("reiter_inaktiv");
+document.getElementById("button_writing").classList.remove ("reiter_inaktiv");
 document.getElementById("button_reading").classList.add ("reiter_inaktiv");
+document.getElementById("button_gala").classList.add ("reiter_inaktiv");
 document.getElementById("button_info").classList.add ("reiter_inaktiv");
 // document.getElementById("button_keyboard_schreiben").style.opacity = "0.5";
 }
@@ -32,12 +34,12 @@ document.getElementById("button_info").classList.add ("reiter_inaktiv");
 
 function flags (flagLetter) {
 "use strict";
-var textinput = document.getElementById("textinput").innerHTML; 
-if (textinput.length < 5)
-	{textinput = textinput + flagLetter;}
+var writingTextfield = document.getElementById("writingTextfield").innerHTML; 
+if (writingTextfield.length < 5)
+	{writingTextfield = writingTextfield + flagLetter;}
 	
-	var textFolge = textinput;
-	document.getElementById("textinput").innerHTML = textFolge;
+	var textFolge = writingTextfield;
+	document.getElementById("writingTextfield").innerHTML = textFolge;
 
 //Alle Zeichen auslesen
 var flag1 = textFolge.charAt(0);
@@ -57,7 +59,7 @@ else if (textFolge.length === 2) {
 var flag2Korr = flag2;
 	if (flag2 === flag1 ){
 		flag2Korr = "1st";
-	document.images.flagge2.classList.add("flaggentext2_hilfsstander");	
+	document.images.flagge2.classList.add("writingFlags_hilfsstander");	
 }
 
 document.images.flagge2.src = "images/" + flag2Korr +".png";
@@ -78,7 +80,7 @@ var flag3Korr = flag3;
 	
 document.images.flagge3.src = "images/" + flag3Korr +".png";
 if (flag3Korr.length > 1) {
-document.images.flagge3.classList.add("flaggentext2_hilfsstander");}	
+document.images.flagge3.classList.add("writingFlags_hilfsstander");}	
 
 }  // Ende Flagge 3
 
@@ -105,7 +107,7 @@ var flag4Korr = flag4;
 
 document.images.flagge4.src = "images/" + flag4Korr +".png";
 if (flag4Korr.length > 1) {
-document.images.flagge4.classList.add("flaggentext2_hilfsstander");}	
+document.images.flagge4.classList.add("writingFlags_hilfsstander");}	
 }  // Ende Flagge 4
 
 //Flagge ist fünftes Zeichen	
@@ -142,7 +144,7 @@ else if (textFolge.length === 5) {
 
 document.images.flagge5.src = "images/" + flag5Korr +".png";
 if (flag5Korr.length > 1) {
-document.images.flagge5.classList.add("flaggentext2_hilfsstander");}	
+document.images.flagge5.classList.add("writingFlags_hilfsstander");}	
 }  // Ende Flagge 5
 	
 }  // Ende gesamt
@@ -155,10 +157,10 @@ document.images.flagge5.classList.add("flaggentext2_hilfsstander");}
 
 function clean_flags () {
 	"use strict";
-	document.getElementById("textinput").innerHTML = "";
+	document.getElementById("writingTextfield").innerHTML = "";
 	for (var i=1; i<=5; i++ ) {
 		document.images.namedItem("flagge"+ i).src= "images/empty.png"; 
-		document.images.namedItem("flagge"+ i).classList.remove("flaggentext2_hilfsstander");
+		document.images.namedItem("flagge"+ i).classList.remove("writingFlags_hilfsstander");
 	}
 }
 
@@ -167,18 +169,18 @@ function clean_flags () {
 function delete_flag () {
 "use strict";
 
-var textinput = document.getElementById("textinput").innerHTML; 
-var str = textinput;
-var laenge = (textinput.length);
+var writingTextfield = document.getElementById("writingTextfield").innerHTML; 
+var str = writingTextfield;
+var laenge = (writingTextfield.length);
 for (var i=1; i<=5; i++ ) {
 	if (laenge ===i) {
 		document.images.namedItem("flagge"+ i).src= "images/empty.png"; 
-		document.images.namedItem("flagge"+ i).classList.remove("flaggentext2_hilfsstander");
+		document.images.namedItem("flagge"+ i).classList.remove("writingFlags_hilfsstander");
 		}
 	}
 	str = str.substring(0,str.length-1);
-	textinput = str;
-	document.getElementById("textinput").innerHTML = textinput;
+	writingTextfield = str;
+	document.getElementById("writingTextfield").innerHTML = writingTextfield;
 }
 
 
@@ -187,7 +189,7 @@ function keyboard_einblenden () {
 "use strict";
 if 	(document.getElementById('keyboard').style.display =='inline') {
 	document.getElementById('keyboard').style.display='none';
-	document.getElementById('textinput').style.display='inline';	
+	document.getElementById('writingTextfield').style.display='inline';	
 	}
 else {
 	document.getElementById('keyboard').style.display='inline';}	
