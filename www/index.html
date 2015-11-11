@@ -22,27 +22,47 @@
 
 </head>
 
-<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText(); activateSwipe();">
+<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText(); activateSwipe(); activateSwipeGala()">
  
-<!---------------Menüleiste mit Reitern oben------------------->
+<!---------------------------------------------  Menüleiste mit Reitern oben  ------------------------------------------->
 
 <nav class="navbar-default navbar-fixed-top oben">
-<ul class="nav-top">
-	<div class="reiter  reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags">
+
+<!----------------------------  Normale Menüleiste -->
+
+<ul class="nav-top" id="menu1">
+	<div class="reiter reiter_klein reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags">
     <img src="images/buttons/button-flaggen.png" alt="Flags">
     </div>
-	<div class="reiter" onClick="javascript:Show_Writing ()" id="button_writing" >
+	<div class="reiter" onClick="javascript:Show_Writing ()" id="button_writing">
     <img src="images/buttons/button-schreiben.png" alt="Writing">
-        </div>
+	</div>
 	<div class="reiter" onClick="javascript:Show_Reading ()" id="button_reading">
     <img src="images/buttons/button-lesen.png" alt="Reading">
     </div>
-	<!--<div class="reiter reiter_klein" onClick="javascript:Show_Gala ()" id="button_gala">
-    <img src="images/buttons/button-info.png" alt="Info">
-    </div> -->
-    <div class="reiter reiter_last" onClick="javascript:Show_About ()" id="button_info">
+	<div class="reiter reiter_klein" onClick="javascript:Show_Gala ()" id="button_gala">
+    <img src="images/buttons/button-gala.png" alt="Info">
+    </div>
+    <div class="reiter reiter_klein reiter_last" onClick="javascript:Show_About ()" id="button_info">
+    <img src="images/buttons/button-more.png" alt="Info">
+    </div> 
+</ul>
+
+<!----------------------------   Menüleiste Info/Hilfe  --------------->
+<ul class="nav-top" id="menu2">
+	<div class="reiter reiter_klein reiter_first" onClick="javascript:Show_All_flags ()" id="button_flags2">
+    <img src="images/buttons/button-flaggen.png" alt="Flags">
+    </div>
+	<div class="reiter" onClick="javascript:Show_About ()" id="button_info2">
     <img src="images/buttons/button-info.png" alt="Info">
     </div> 
+    <div class="reiter" onClick="javascript:Show_Settings ()" id="button_settings">
+    <img src="images/buttons/button-settings.png" alt="Info">
+    </div>    
+    <div class="reiter reiter_last" onClick="javascript:Show_Help()" id="button_help">
+    <img src="images/buttons/button-help.png" alt="Info">
+    </div>
+
 </ul>
 </nav>
 
@@ -251,7 +271,7 @@
 </div>  <!--ende all flags -->
 
 
-<!-- ++++++++++++++++++++++++++++++++++++++++++   Flaggeninfo +++++++++++++++++++++++++++++++++++++++++ +-->
+<!-- ++++++++++++++++++++++++++++++++++++++++++   Flaggeninfo    +++++++++++++++++++++++++++++++++++++++++ +-->
 <div class="flaginfo" id="flaginfo">
   
   <!--  +++++++ feste Elemente   +++++++++ -->  
@@ -286,7 +306,7 @@
 </div>
 
 
-<!-- +++++++++++++++++++++++++++++++++++++++++   Schreiben +++++++++++++++++++++++++++++++++++++++++  -->
+<!-- +++++++++++++++++++++++++++++++++++++++++   Schreiben    +++++++++++++++++++++++++++++++++++++++++  -->
 <div class="writing" id="writing" >
 
 
@@ -363,13 +383,11 @@
 </div>
 
 
-<!-- +++++++++++++++++++++++++++++++++++++++++     Lesen +++++++++++++++++++++++++++++++++++++++++  -->
+<!-- +++++++++++++++++++++++++++++++++++++++++     Lesen     +++++++++++++++++++++++++++++++++++++++++  -->
 <div class="reading distance" id="reading" >
 
 
 <!--content-->
-<div row>
-
 <div class="col-md-4 col-sm-4 col-xs-1 readingFlags" id="readingFlags">
 	  <img src="images/empty.png" alt="" name="lesen1" ><br>
       <img src="images/empty.png" alt="" name="lesen2"><br>
@@ -389,12 +407,11 @@
 
 
    
-   <!--Popup Keyboard- Flaggen -->
+   <!--Popup Keyboard-Flaggen -->
  <div class="col-md-8 col-sm-8 col-xs-9	readingKeyboardArea" id="readingKeyboardArea">
  
- <div class="lesen" id="lesen" onClick="javascript:keyboard_flags_einblenden ()"></div>
-   
-  <div class="readingKeyboard" id="readingKeyboard">	
+<div class="lesen" id="lesen" onClick="javascript:keyboard_flags_einblenden ()"></div>
+<div class="readingKeyboard" id="readingKeyboard">	
 
 <hr class="hr2">
 	<img src="images/keyboard/A.png" class="flagstaste" alt="" onClick="javascript:reading('A')">
@@ -446,15 +463,43 @@
 <div class="well_taste well_taste_delete" onClick="javascript:clean_reading ()"><img src="images/buttons/flaggendelete.png" alt="" width="16"/></div>
     
 </div>
-
-
 </div>
-</div>
-
 
 </div>
 
-<!-- +++++  About +++++++-->
+
+<!-- +++++++++++++++++++++++++++++++++++++++++   Gala     +++++++++++++++++++++++++++++++++++++++++  -->
+
+<div class="gala" id="gala" >
+
+<div class="scrollleft" id="gala_back" onclick="javascript:previousGala()"></div>
+<div class="scrollright" id="gala_vor" onClick="javascript:nextGala()"> </div>
+
+
+<div class="container-fluid distance container-gala">
+
+<div id="gala1">
+ <div class="img-responsive galaImage"><img src="images/Flaggengala1.png" alt=""/></div>
+ <div class="galaText">A – B – C – 1 – D – E – F – 2 – G – H – I – 3 – J – K – L – 4 – M – N – O – 5 – P – Q – R – 6 – S – T – U – 7 – V – W – X – 8 – Y – Z – 9 – 0</div>
+</div>  <!--Ende gala1-->
+
+<div id="gala2">
+ <div class="img-responsive galaImage"><img src="images/Flaggengala2.png" alt=""/></div>
+ <div class="galaText">E – Q – 3 – G – 8 – Z – 4 – W – 6 – P – 1 – I – Answer – T – Y – B – X – 1st Sub – H – 3rd Sub <br><br> D – F – 2nd Sub – U – A – O – M – R – 2 – J – 0 – N – 9 – K – 7 – V – 5 – L – C – S </div>
+</div>  <!--Ende gala2-->
+
+<div id="gala3">
+ <div class="img-responsive galaImage"><img src="images/Flaggengala3.png" alt=""/></div>
+ <div class="galaText">A – B – 2  –  U – J – 1  –  K – E – 3  –  G – H – 6  –  I – V – 5  –  F – L – 4  –  D – M – 7  –  P – O – 3rd Sub  –  R – N – 1st Sub  –  S – T – 0  –  C – X – 9  –  W – Q – 8  –  Z – Y – 2nd Sub</div>
+</div>  <!--Ende gala3-->
+
+
+</div>  <!--Ende Container-->
+
+</div>  <!--Ende Gala-->
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++  About    +++++++++++++++++++++++++++++++++++++++++   -->
 
 <div class="about-page" id="about-page">
 
@@ -463,7 +508,7 @@
 <h1 class="titel">Signal Flags</h1>
 </div>
     <!-- - About-->
-<div class="container about-page-container">
+<div class="caption"><div class="container about-page-container">
 	<div class="col-xs-3 col-md-1 col-sm-2" style="padding-left:0px;" >
 	<img src="images/2K-Yachting-Flaggen-RGB.png"  class="img-responsive"  alt=""/>
 	</div>
@@ -487,62 +532,48 @@
 <br>
 <div class="container about-page-container">
 <p class="text-impressum">No part of the material protected by this copyright notice may be reproduced in any form without written permission of the copyright owner. While reasonable care has been exercised in the preparation of this publication, the author assumes no responsibility for errors or omissions, or for damages resulting from the use of the information contained herein.</p>
-<hr>
+</div>
+</div>
 </div>
 
+<!-- ++++++++++++++++++++++++++++++++++++++  Settings    +++++++++++++++++++++++++++++++++++++++++   -->
 
-<section>  <!-- Einstellungen und Hilfe -->
+<div class="about-page" id="settings">
 
-<div class="container">
-<div class="row">
 
-<div class="col-md-3 col-sm-4 col-xs-4">  <!--1. Bereich Sprache-->
+<div class="container-fluid distance" style="padding-left:10%; padding-top:15px;">
+
 <h4 id="Sprachauswahl_Titel"></h4>
 <div class="radio"><label><input type="radio" name="optradio" id="auto" onClick="javascript:button_auto()">Auto</label></div>
 <div class="radio"><label><input type="radio" name="optradio" id="deutsch" onClick="javascript:button_de()">Deutsch</label></div>
 <div class="radio"><label><input type="radio" name="optradio" id="englisch" onClick="javascript:button_en()">English</label></div>
 <br><br>
-</div>
-
-<div class="col-md-4 col-sm-5 col-xs-5">  <!--2. Bereich Hilfe-->
-<h4 id="Help_Titel"></h4>
-
-<a onClick="javascript:help_anzeigen(); javascript:help_Flaggen()" href="#"><img src="images/buttons/search_inaktiv.png" alt="Info" class="button_help" ><label id="help_info"></label></a> <br>
-<a onClick="javascript:help_anzeigen(); javascript:help_Writing()" href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" class="button_help" ><label id="help_schreiben"></label></a><br>
-<a onClick="javascript:help_anzeigen(); javascript:help_Reading ()" href="#"><img src="images/buttons/reading_inaktiv.png" alt="Reading" class="button_help" ><label id="help_lesen"></label></a><br>
-<br><br><br>
-</div>
-</div>  <!--Ende row-->
-</div>   <!--Ende container-->
-</section>
-
-</div>
+</div>  <!--Ende container-->
 
 
-<!-- +++++  Help +++++++-->
+</div>    <!--Ende Settings-->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++  Help ++++++++++++++++++++++++++++++++++++++++++++++-->
 
 <div class="help-page" id="help-page">
 
-<!--menüleiste help oben-->
+<!--------------zusätzliche menüleiste help oben-------------------->
 
-<nav class="navbar-default navbar-fixed-top oben" id="nav-help">
-  <div class="container-fluid"> 
-	<ul class="nav navbar-nav">
-<a href="#"><img src="images/buttons/search_inaktiv.png" alt="Flgas" class="button_nav" id="" onClick="javascript:help_Flaggen()"></a>
-<a href="#"><img src="images/buttons/schreiben_inaktiv.png" alt="Writing" class="button_nav" id="" onClick="javascript:help_Writing()"></a>
-<a href="#"><img src="images/buttons/reading_inaktiv.png" alt="Reading" class="button_nav" id="" onClick="javascript:help_Reading()"></a>	
-<a><img src="images/buttons/button_close.png" alt="close"  class="button_nav"  onclick="javascript:slide_Quit()"></a>
-<a><img src="images/buttons/flaggendelete.png" class="button_nav" id="slide_restart" alt="" onclick="javascript:slide_Restart()" ></a>
-	</ul>
-  </div>
-</nav>
+<div class="nav-help">  
+
+<a onClick="javascript:help_Flaggen()" href="#"><img src="images/buttons/button-flaggen.png" alt="Flags" class="button_nav" id=""></a>
+<a onClick="javascript:help_Writing()" href="#"><img src="images/buttons/button-schreiben.png" alt="Writing" class="button_nav" id=""></a>
+<a onClick="javascript:help_Reading()" href="#"><img src="images/buttons/button-lesen.png" alt="Reading" class="button_nav" id="" ></a>	
+
+<a onclick="javascript:slide_Restart()" href="#"><img src="images/buttons/reload.png" class="button_nav" id="" alt="" style="height:18px; margin-left:20%;"></a>
+</div>
+
 
 <!--content-->
-<div class="container about-page-container">
-<!--content-->
+<div class="container-fluid help-container">
 
  <!-- Flaggeninfo -->
-<div id="HelpCarousel0" class="carousel" data-wrap="false" >
+<div id="HelpCarousel0" class="carousel" data-wrap="false" data-interval="1000">
   <div class="carousel-inner" role="listbox" id="carousel-flaggen">
     <div class="item active">
       <img src="images/help/help_flags1.png" alt="Help1">
@@ -563,7 +594,7 @@
    </div>
  
  <!-- Schreiben -->
-<div id="HelpCarousel1" class="carousel" data-wrap="false" >
+<div id="HelpCarousel1" class="carousel" data-wrap="false" data-interval="1000" style="top:120px">
   <div class="carousel-inner" role="listbox" id="carousel-writing">
     <div class="item active">
       <img src="images/help/help_writing1.png" alt="Help">
@@ -584,7 +615,7 @@
   </div>
 
  <!-- Lesen -->
-<div id="HelpCarousel2" class="carousel" data-wrap="false" >
+<div id="HelpCarousel2" class="carousel" data-wrap="false" data-interval="1000">
   <div class="carousel-inner" role="listbox" id="carousel-reading">
     <div class="item active">
       <img src="images/help/help_writing1.png" alt="Help">
@@ -603,13 +634,12 @@
     </div>
   </div>
    </div>
- 
   </div>
+  
 <!--Ende content-->
 </div>
 
-<!-- +
-++++  Auflistung der Scripts +++++++-->
+
 </body>
 
 </html>

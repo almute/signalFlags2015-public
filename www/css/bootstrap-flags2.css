@@ -23,11 +23,11 @@ body {
 .reading,
 .about-page,
 .help-page,
-/*.gala,
-*/
-#nav-help
+.gala,
+#nav-help,
+#menu2
 {
-	display:none;
+	display: none;
 }
 
 
@@ -94,17 +94,17 @@ a:focus {
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-	height: 70px;
+	height: 66px;
 }
 
 .distance{
-	margin-top: 70px;
+	margin-top: 66px;
 }
 
 
 .reiter {
 	width: 21%;
-	height: 38px;
+	height: 34px;
 	border-bottom: 1px dotted rgba(65,65,65,1.00);
 	border-left: 1px solid rgba(112,112,112,1.00);
 	border-right: 1px solid rgba(112,112,112,1.00);
@@ -121,10 +121,9 @@ a:focus {
 }
 
 .reiter_klein {
-	width: 14%;
-	min-width: 46px;
+	width: 15%;
+	min-width: 35px;
 	max-width: 80px;	
-
 }
 
 .reiter_inaktiv {
@@ -145,41 +144,17 @@ a:focus {
 	height: 36px;
     margin-left: auto;
     margin-right: auto ;
+	opacity: 0.8;
+}
+
+.reiter_inaktiv img {
 	opacity: 0.5;
 }
-
-.button_nav {                       /*nur noch bei Help verwendet!*/
-	display: inline-block;
-	height: 26px;
-	width: auto;
-	margin-top: 8px;
-	vertical-align: middle;
-	text-align: center;
-	margin-left: 30px;
-	padding-left: 0px;
-}
-
-.button_nav img{
-	opacity: 0.5;
-}
-
-
-.button_nav_top {
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
 
 
 /* +++++++++++++++++++++++++++++++++++++++++ Infos zur Flagge ++++++++++++++++++++++++++++ */
 	
-/*#popup-text {
-	line-height: 1.3em;
-	padding: 0px;
-	overflow: hidden;
-	letter-spacing: 0.03em;
-}	
-*/	
+
 #flaginfoText ul{
 	padding-left: 17px;
 	padding-top:0px;
@@ -240,12 +215,6 @@ a:focus {
 	background-image: url(../images/buttons/pfeil_rechts.png);
 }
 
-/*.scrollleft img, .scrollright img {
-	width: 20px;
-	padding-top: 30px;
-	vertical-align:middle;
- 	height: 100px;
-}*/
 
 /* Inhalte im Fenster */
 .flaggeninfo {
@@ -320,8 +289,8 @@ a:focus {
 	letter-spacing:0.5em;
 }
 #flaginfoText object{
-	height:40px;
-	padding-top: 5px;
+	height:48px;
+/*	padding-top: 5px;*/
 	display:block;
 }	
 	
@@ -499,19 +468,6 @@ a:focus {
 	}
 	
 
-/* Schließbutton Keyboard */
-	
-/*.button_close {
-	display:inline-block;
-	height: 40px;
-	width: 40px;
-	position:absolute; 
-	left:200px; 
-	top:-20px;
-}
-
-*/
-
 /* +++++++ Flaggenanzeige und Keyboard an kleine Größen anpassen ++++++++*/
 
 /*iPhone 4, 5*/
@@ -529,14 +485,6 @@ a:focus {
 	width: 146px;
 }
 
-
-/*.button_close {
-	height: 30px;
-	width: 30px;
-	left: 131px; 
-	top: -15px;
-}
-*/
 .well_taste_next{
 	clear: left;
 	}
@@ -567,12 +515,7 @@ a:focus {
 	width: 178px;
 	top: 105px;
 }
-/*.button_close {
-	height: 36px;
-	width: 36px;
-	left: 159px; 
-	top: -18px;
-}*/
+
 .writingFlags_hilfsstander{
 	height: 96px !important;
 }
@@ -609,9 +552,6 @@ a:focus {
 	width: 220px;
 }
 
-/*.button_close {
-	left:202px; 
-}*/
 }
 
 
@@ -753,16 +693,7 @@ a:focus {
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 	background-color: rgba(209,212,219,1.00);
 }
-/*.readingKeyboard {
-	margin-top: 100px;
-}*/
 
-
-/*.close_lesen {
-	height: 40px;
-	width: 40px;
-}
-*/
 
 .flagstaste, .flagstaste_ziffer, .flagtaste_hilfs {
 	margin-bottom: 15px;
@@ -950,6 +881,37 @@ hr {
 	opacity: 1;
 }
 
+/* +++++++++++++++++++++++++++++++++++++++++ Flaggengala ++++++++++++++++++++++++++++ */
+
+.container-gala {
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+.galaImage {
+	margin-top: 30px;
+	margin-bottom:30px;
+	}
+	
+.galaImage img {
+		width: 100%;
+		max-height: 482px;
+		max-width:395px;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+}
+
+.galaText {
+	text-align: center;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 16px;
+	max-width:395px;
+
+}
+
 /*++++++++++++++++++++++++++++++++++++++   About-Seite+++++++++++++++++++++++++++++++++++++++*/
 
 .about-page-container {
@@ -1026,6 +988,45 @@ input[type="checkbox"]:focus {
   outline-offset: -2px;
 }
 
+/*  ---------------- Hilfe -------------------------*/
+
+.nav-help {
+	top: 66px;
+	position: fixed;
+	height: 40px;
+	display: block;
+	float: left;
+	min-height: 40px;
+	width: 100%;
+	left: 0px;
+	border-bottom-width: thin;
+	border-bottom-style: dotted;
+	z-index: 1040;
+	bottom: 0px;
+	background-color: rgba(96,96,96,1.00);
+}
+
+.button_nav {                     
+	display: inline-block;
+	height: 30px;
+	width: auto;
+	margin-top: 8px;
+	vertical-align: middle;
+	text-align: center;
+	margin-left: 4%;
+	margin-right: 3%;
+}
+
+
+.help-container{
+	
+	
+	}
+
+
+
+
+
 /* -- Help-Seiten -- */
 
 .carousel-inner > .item > img,
@@ -1037,13 +1038,6 @@ input[type="checkbox"]:focus {
 }
 
 #HelpCarousel0, #HelpCarousel1, #HelpCarousel2 {
-	padding-top:80px;
+	padding-top:0px;
 	padding-bottom:50px;
 }
-
-.button_close_help {
-	top:20px;
-	left:0px;
-	padding-left:3%;
-	text-align:left;
-	}

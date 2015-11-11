@@ -4276,6 +4276,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 	float: left;
 	margin: 0;
 	min-height: 40px;
+	height: 40px;
   }
   .navbar-nav > li {
     float: left;

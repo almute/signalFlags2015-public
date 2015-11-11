@@ -5,20 +5,29 @@ function Show_Top () {
 	window.scroll( 0, 0 );
 }
 
+function More_hide () {
+	$("#help-page").hide();
+	$("#about-page").hide();
+	$("#settings").hide();
+	$("#menu1").show();
+	$("#menu2").hide();
+}
+
 function Show_All_flags () {
 "use strict";
 	$("#nav-help").hide();
-	$("#help-page").hide();
 	$("#flaginfo").hide();
 	$("#writing").hide();
 	$("#reading").hide();
-	$("#about-page").hide();
+	$("#gala").hide();
+	$("#all-flags").show();
 document.getElementById("button_flags").classList.remove ("reiter_inaktiv");
 document.getElementById("button_writing").classList.add ("reiter_inaktiv");
 document.getElementById("button_reading").classList.add ("reiter_inaktiv");
-//document.getElementById("button_gala").classList.add ("reiter_inaktiv");
+document.getElementById("button_gala").classList.add ("reiter_inaktiv");
 document.getElementById("button_info").classList.add ("reiter_inaktiv");
-		$("#all-flags").show();
+document.getElementById("button_help").classList.add ("reiter_inaktiv");
+	More_hide (); 
 	window.scrollTo( 0, 0 );
 }
 
@@ -30,14 +39,16 @@ function Show_Reading () {
 	$("#reading").show();
 	$("#about-page").hide();
 	$("#help-page").hide();
+	$("#gala").hide();
+	$("#settings").hide();
 	clean_reading ();
 	keyboard_flags_start ();
 document.getElementById("button_flags").classList.add ("reiter_inaktiv");
 document.getElementById("button_writing").classList.add ("reiter_inaktiv");
 document.getElementById("button_reading").classList.remove ("reiter_inaktiv");
-//document.getElementById("button_gala").classList.add ("reiter_inaktiv");
+document.getElementById("button_gala").classList.add ("reiter_inaktiv");
 document.getElementById("button_info").classList.add ("reiter_inaktiv");
-//document.getElementById("button_keyboard_reading").style.opacity = "0.5";
+document.getElementById("button_help").classList.add ("reiter_inaktiv");
 	window.scrollTo( 0, 0 );
 }
 
@@ -48,21 +59,137 @@ function Show_About () {
 	$("#flaginfo").hide();
 	$("#writing").hide();
 	$("#reading").hide();
-	$("#about-page").show();
+	$("#gala").hide();
 	$("#help-page").hide();
-document.getElementById("button_flags").classList.add ("reiter_inaktiv");
-document.getElementById("button_writing").classList.add ("reiter_inaktiv");
-document.getElementById("button_reading").classList.add ("reiter_inaktiv");
-//document.getElementById("button_gala").classList.add ("reiter_inaktiv");
-document.getElementById("button_info").classList.remove ("reiter_inaktiv");
-//document.getElementById("button_info2").style.opacity = "1";
-//document.getElementById("button_sprache").style.opacity = "0.5";
-//document.getElementById("button_help").style.opacity = "0.5";
+
+	$("#about-page").show();
+	$("#settings").hide();
+	$("#menu1").hide();
+	$("#menu2").show();
+
+	
+document.getElementById("button_flags2").classList.add ("reiter_inaktiv");
+document.getElementById("button_settings").classList.add ("reiter_inaktiv");
+document.getElementById("button_info2").classList.remove ("reiter_inaktiv");
+document.getElementById("button_help").classList.add ("reiter_inaktiv");
 	window.scrollTo( 0, 0 );
 }
 
+function Show_Settings () {
+"use strict";
+	$("#all-flags").hide();
+	$("#flaginfo").hide();
+	$("#writing").hide();
+	$("#reading").hide();
+	$("#gala").hide();
+	$("#help-page").hide();
 
-// +++++++++++++ Flaggen lesen ---------------
+	$("#about-page").hide();
+	$("#settings").show();
+	$("#menu1").hide();
+	$("#menu2").show();
+
+	
+document.getElementById("button_flags2").classList.add ("reiter_inaktiv");
+document.getElementById("button_settings").classList.remove ("reiter_inaktiv");
+document.getElementById("button_info2").classList.add ("reiter_inaktiv");
+document.getElementById("button_help").classList.add ("reiter_inaktiv");
+	window.scrollTo( 0, 0 );
+}
+
+// +++++++++++++++++++++++++++++++++++++++++++ Gala ----------+++++++++++++++++++++-----
+
+function Show_Gala () {
+"use strict";
+	$("#all-flags").hide();
+	$("#flaginfo").hide();
+	$("#writing").hide();
+	$("#reading").hide();
+	$("#about-page").hide();
+	$("#help-page").hide();
+	$("#gala").show();
+document.getElementById("button_flags").classList.add ("reiter_inaktiv");
+document.getElementById("button_writing").classList.add ("reiter_inaktiv");
+document.getElementById("button_reading").classList.add ("reiter_inaktiv");
+document.getElementById("button_gala").classList.remove ("reiter_inaktiv");
+document.getElementById("button_info").classList.add ("reiter_inaktiv");
+document.getElementById("button_help").classList.add ("reiter_inaktiv");
+	window.scrollTo( 0, 0 );
+	
+// Starteinstellung für Gala
+	$("#gala2").hide();
+	$("#gala3").hide();
+	document.getElementById("gala_back").style.opacity = "0.3";
+	document.getElementById("gala_vor").style.opacity = "1";
+    localStorage.setItem("galanummer", "1");
+
+}
+
+
+// ++++++++++ Gala blätern ++++++++++++++++++++++++++
+
+//nächste Gala anzeigen
+function nextGala() {
+    'use strict';
+    var galanummer_alt = localStorage.getItem("galanummer");
+    if (galanummer_alt < 3) 
+	{
+	var galanummer_neu = (Number(galanummer_alt) +1);
+	$("#gala"+galanummer_alt).hide();
+	$("#gala"+galanummer_neu).show();  
+	localStorage.setItem("galanummer", galanummer_neu);
+	document.getElementById("gala_back").style.opacity = "1";
+
+// Button Vor ausgrauen
+    if (galanummer_neu === "3" || galanummer_neu === 3) {
+        document.getElementById("gala_vor").style.opacity = "0.3";
+	} else {
+        document.getElementById("gala_vor").style.opacity = "1";
+	}
+	}
+}  // ++++++  Ende function nextGala 
+
+//vorherige Gala anzeigen
+function previousGala() {
+    'use strict';
+    var galanummer_alt = localStorage.getItem("galanummer");
+    if (galanummer_alt > 1) 
+	{
+	var galanummer_neu = (Number(galanummer_alt) -1);
+	$("#gala"+galanummer_alt).hide();
+	$("#gala"+galanummer_neu).show();  
+	localStorage.setItem("galanummer", galanummer_neu);	
+	document.getElementById("gala_vor").style.opacity = "1";
+
+// Button Zurück ausgrauen
+    if (galanummer_neu === "1" || Number (galanummer_neu) === 1) {
+        document.getElementById("gala_back").style.opacity = "0.3";
+    } else {
+        document.getElementById("gala_back").style.opacity = "1";
+    }
+	}
+}  // ++++++  Ende function previousGala
+
+
+
+// ++++++++++   Swipe für Gala
+
+function activateSwipeGala () {
+var myElementGala = document.getElementById('gala');
+var mc = new Hammer(myElementGala);
+
+mc.on("swipeleft", function(ev) {
+    nextGala();
+	window.scrollTo( 0, 0 );
+});
+
+mc.on("swiperight", function(ev) {
+    previousGala();
+	window.scrollTo( 0, 0 );
+});
+}
+
+// +++++++++++++++++++++++++++++++++++++++++++ Flaggen lesen +++++++++++++++++++++++---------------
 
 
 function reading (flagLetter) {
@@ -150,25 +277,7 @@ for (var i=1; i<=12; i++ ) {
 	document.getElementById("lesen").innerHTML = str;
 	}
 
-//************
 
-/*function delete_flag () {
-"use strict";
-
-var textinputTextfield = document.getElementById("textinputTextfield").innerHTML; 
-var str = textinputTextfield;
-var laenge = (textinputTextfield.length);
-for (var i=1; i<=5; i++ ) {
-	if (laenge ===i) {
-		document.images.namedItem("flagge"+ i).src= "images/empty.png"; 
-		document.images.namedItem("flagge"+ i).classList.remove("readingFlags_hilfsstander");
-		}
-	}
-	str = str.substring(0,str.length-1);
-	textinputTextfield = str;
-	document.getElementById("textinputTextfield").innerHTML = textinputTextfield;
-}
-*/
 
 //********* Tastatur aus und einblenden
 

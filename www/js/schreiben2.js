@@ -19,7 +19,8 @@ function Show_Writing () {
 	$("#writing").show();
 	$("#reading").hide();
 	$("#about-page").hide();
-	 clean_flags ();
+	$("#gala").hide();
+	clean_flags ();
 	keyboard_start ();
 	window.scrollTo( 0, 0 );
 document.getElementById("button_flags").classList.add("reiter_inaktiv");
@@ -27,7 +28,7 @@ document.getElementById("button_writing").classList.remove ("reiter_inaktiv");
 document.getElementById("button_reading").classList.add ("reiter_inaktiv");
 document.getElementById("button_gala").classList.add ("reiter_inaktiv");
 document.getElementById("button_info").classList.add ("reiter_inaktiv");
-// document.getElementById("button_keyboard_schreiben").style.opacity = "0.5";
+document.getElementById("button_help").classList.add ("reiter_inaktiv");
 }
 
 // ************Zeichen in Textfeld einfügen ***************
