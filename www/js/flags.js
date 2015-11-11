@@ -542,8 +542,6 @@ function previousFlag() {
 function activateSwipe () {
 var myElement = document.getElementById('flaginfo');
 
-// create a simple instance
-// by default, it only adds horizontal recognizers
 var mc = new Hammer(myElement);
 
 // listen to events...

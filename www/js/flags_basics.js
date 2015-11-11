@@ -176,14 +176,14 @@ function previousGala() {
 
 function activateSwipeGala () {
 var myElementGala = document.getElementById('gala');
-var mc = new Hammer(myElementGala);
+var mcGala = new Hammer(myElementGala);
 
-mc.on("swipeleft", function(ev) {
+mcGala.on("swipeleft", function(ev) {
     nextGala();
 	window.scrollTo( 0, 0 );
 });
 
-mc.on("swiperight", function(ev) {
+mcGala.on("swiperight", function(ev) {
     previousGala();
 	window.scrollTo( 0, 0 );
 });
