@@ -93,11 +93,13 @@
 <!--<preference name="SplashScreen" value="foo" />-->
 <preference name="SplashScreenDelay" value="10000" />
 
-
-<gap:plugin name="com.phonegap.plugin.statusbar"  />
+<gap:plugin name="org.apache.cordova.statusbar" />
+<!--<gap:plugin name="com.phonegap.plugin.statusbar"  />-->
 <preference name="StatusBarOverlaysWebView" value="true" />
 <preference name="StatusBarBackgroundColor" value="#F0F0F0" />
 
+	
+	
 	<!--<gap:config-file platform="ios" parent="UIStatusBarHidden">
     <true/>
 	</gap:config-file>-->
