@@ -85,5 +85,13 @@
 
 <!-- ++++++++ Vorübergehend nur für iOs berechen -->
 	<gap:platform name="ios" />
+	
+<!-- ++++++++ Plugins verwenden -->
+
+<!--<gap:plugin name="org.apache.cordova.statusbar" />-->
+<gap:plugin name="br.com.paveisitemas.splashscreen" />
+<!--<preference name="SplashScreen" value="foo" />-->
+<preference name="SplashScreenDelay" value="10000" />
+
 
 </widget>
