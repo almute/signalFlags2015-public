@@ -14,13 +14,13 @@ html {
 @font-face {
   font-family: 'SourceSans';
   src: url('../fonts/SourceSansPro-Regular.eot');
-  src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-Regular.oft.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
+  src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-Regular.ttf.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'SourceSans';
   src: url('../fonts/SourceSansPro-Semibold.eot');
-  src: url('../fonts/SourceSansPro-Semibold.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-Semibold.oft.woff') format('woff'), url('../fonts/SourceSansPro-Semibold.ttf') format('truetype'); 
+  src: url('../fonts/SourceSansPro-Semibold.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-Semibold.ttf.woff') format('woff'), url('../fonts/SourceSansPro-Semibold.ttf') format('truetype'); 
   font-weight: bold;
 }
 

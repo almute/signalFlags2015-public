@@ -6,25 +6,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flags</title>
 
-<!-- Bootstrap -->
+<!-- css und js laden -->
 <link rel="stylesheet" href="css/bootstrap-flags.css">
 <link rel="stylesheet" href="css/bootstrap-flags2.css">
 <script src="js/jquery-1.11.2.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.js" type="text/javascript"></script>
+<script src="js/hammer.js"></script>
 <script src="js/flags_basics.js" type="text/javascript"></script>
 <script src="js/flags.js" type="text/javascript"></script>
 <script src="js/schreiben2.js" type="text/javascript"></script>
-<script src="js/hammer.js"></script>
 <script>
 
 </script>
 
 </head>
 
-<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText(); activateSwipe(); ">
+<body class="bg-flags" onload="Show_All_flags(); spracheSystem(); buttonActive(); spracheText(); activateSwipe(); activateSwipeGala()">
  
- <!--activateSwipeGala()-->
+ <!---->
 <!---------------------------------------------  Menüleiste mit Reitern oben  ------------------------------------------->
 
 <nav class="navbar-default navbar-fixed-top oben">
@@ -486,12 +486,12 @@
 
 <div id="gala2">
  <div class="img-responsive galaImage"><img src="images/Flaggengala2.png" alt=""/></div>
- <div class="galaText">E – Q – 3 – G – 8 – Z – 4 – W – 6 – P – 1 – I – Answer – T – Y – B – X – 1st Sub – H – 3rd Sub <br><br> D – F – 2nd Sub – U – A – O – M – R – 2 – J – 0 – N – 9 – K – 7 – V – 5 – L – C – S </div>
+ <div class="galaText">E – Q – 3 – G – 8 – Z – 4 – W – 6 – P – 1 – I – Answer – T – Y – B – X – 1st – H – 3rd<br><br> D – F – 2nd – U – A – O – M – R – 2 – J – 0 – N – 9 – K – 7 – V – 5 – L – C – S </div>
 </div>  <!--Ende gala2-->
 
 <div id="gala3">
  <div class="img-responsive galaImage"><img src="images/Flaggengala3.png" alt=""/></div>
- <div class="galaText">A – B – 2  –  U – J – 1  –  K – E – 3  –  G – H – 6  –  I – V – 5  –  F – L – 4  –  D – M – 7  –  P – O – 3rd Sub  –  R – N – 1st Sub  –  S – T – 0  –  C – X – 9  –  W – Q – 8  –  Z – Y – 2nd Sub</div>
+ <div class="galaText">A – B – 2  –  U – J – 1  –  K – E – 3  –  G – H – 6  –  I – V – 5  –  F – L – 4  –  D – M – 7  –  P – O – 3rd  –  R – N – 1st  –  S – T – 0  –  C – X – 9  –  W – Q – 8  –  Z – Y – 2nd</div>
 </div>  <!--Ende gala3-->
 
 
@@ -575,7 +575,7 @@
 
  <!-- Flaggeninfo -->
 <div id="HelpCarousel0" class="carousel" data-wrap="false" data-interval="1000">
-  <div class="carousel-inner" role="listbox" id="carousel-flaggen">
+<!--  <div class="carousel-inner" role="listbox" id="carousel-flaggen">
     <div class="item active">
       <img src="images/help/help_flags1.png" alt="Help1">
     </div>
@@ -592,7 +592,7 @@
       <img src="images/help/help_flags5.png" alt="Help5">
     </div>
   </div>
-   </div>
+-->   </div>
  
  <!-- Schreiben -->
 <div id="HelpCarousel1" class="carousel" data-wrap="false" data-interval="1000" style="top:120px">

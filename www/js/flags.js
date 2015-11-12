@@ -140,16 +140,16 @@ function spracheTexte(sprache) {
     'use strict';
 	
 	var Sprachauswahl_Titel = ["Language", "Sprache"];
-	var Help_Titel = ["Help", "Hilfe"];
-	var help_info = ["Flags", "Flaggen"];
-	var help_schreiben = ["Writing", "Schreiben"];
-	var help_lesen = ["Reading", "Lesen"];
+	//var Help_Titel = ["Help", "Hilfe"];
+	//var help_info = ["Flags", "Flaggen"];
+	//var help_schreiben = ["Writing", "Schreiben"];
+	//var help_lesen = ["Reading", "Lesen"];
 	
 	document.getElementById("Sprachauswahl_Titel").innerHTML = Sprachauswahl_Titel[sprache];
-	document.getElementById("Help_Titel").innerHTML = Help_Titel[sprache];
-	document.getElementById("help_info").innerHTML = help_info[sprache];
-	document.getElementById("help_schreiben").innerHTML = help_schreiben[sprache];
-	document.getElementById("help_lesen").innerHTML = help_lesen[sprache];
+	//document.getElementById("Help_Titel").innerHTML = Help_Titel[sprache];
+	//document.getElementById("help_info").innerHTML = help_info[sprache];
+	//document.getElementById("help_schreiben").innerHTML = help_schreiben[sprache];
+	//document.getElementById("help_lesen").innerHTML = help_lesen[sprache];
 
 }
 
@@ -211,7 +211,7 @@ function sprache() {
 
 
 
-// ***************************** Infos für Flaggen anzeigen ****************************
+// ******************************************************** Infos für Flaggen anzeigen ******************************************
 
 function insertHtml(flag) {
 
@@ -226,27 +226,26 @@ function insertHtml(flag) {
     $("#writing").hide();
     $("#reading").hide();
     $("#about-page").hide();
-	$("#help-page").hide();
 	$("#gala").hide();
 	window.scrollTo( 0, 0 );
 
-    //Sprache setzen
+//Sprache setzen
 
     sprache();
     var sprache_aktiv = localStorage.getItem("sprache");
     document.getElementById("sprache_aktiv").innerHTML = sprache_aktiv;
 
 
-    // Button Zurück ausgrauen
+// Button Zurück ausgrauen
     if (flag === "0" || Number (flag) === 0) {
-        document.getElementById("back").style.opacity = "0.3";
+        document.getElementById("back").style.opacity = "0.0";
     } else {
         document.getElementById("back").style.opacity = "1";
     }
 
-    // Button Vor ausgrauen
+// Button Vor ausgrauen
     if (flag === "40" || flag === 40) {
-        document.getElementById("vor").style.opacity = "0.3";
+        document.getElementById("vor").style.opacity = "0.0";
 		} else {
         document.getElementById("vor").style.opacity = "1";
     }
@@ -525,7 +524,8 @@ function nextFlag() {
         {flag = (Number(flag) +1);
         document.getElementById("flagnummer").innerHTML = flag;
 		insertHtml(flag);
-        }
+		window.scrollTo( 0, 0 );
+	}
 }  // ++++++  Ende function nextFlag 
 
 //vorherige Flagge anzeigen
@@ -535,23 +535,26 @@ function previousFlag() {
     if (Number(flag) > 0) 
         { flag = (Number(flag) -1);document.getElementById("flagnummer").innerHTML = flag;
         insertHtml(flag);	
-        }
+		window.scrollTo( 0, 0 );
+	}
 }  // ++++++  Ende function previousFlag
 
 
-function activateSwipe () {
+function activateSwipe() {
+    'use strict';
 var myElement = document.getElementById('flaginfo');
 
 var mc = new Hammer(myElement);
 
 // listen to events...
-mc.on("swipeleft", function(ev) {
-    nextFlag();
-	window.scrollTo( 0, 0 );
+mc.on("swipeleft", function(event) {
+  event.preventDefault(); 
+	nextFlag();
 });
 
-mc.on("swiperight", function(ev) {
+mc.on("swiperight", function(event) {
+  event.preventDefault(); 
     previousFlag();
-	window.scrollTo( 0, 0 );
 });
 }
+

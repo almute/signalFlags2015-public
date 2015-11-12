@@ -119,7 +119,7 @@ document.getElementById("button_help").classList.add ("reiter_inaktiv");
 // Starteinstellung für Gala
 	$("#gala2").hide();
 	$("#gala3").hide();
-	document.getElementById("gala_back").style.opacity = "0.3";
+	document.getElementById("gala_back").style.opacity = "0.0";
 	document.getElementById("gala_vor").style.opacity = "1";
     localStorage.setItem("galanummer", "1");
 
@@ -142,7 +142,7 @@ function nextGala() {
 
 // Button Vor ausgrauen
     if (galanummer_neu === "3" || galanummer_neu === 3) {
-        document.getElementById("gala_vor").style.opacity = "0.3";
+        document.getElementById("gala_vor").style.opacity = "0.0";
 	} else {
         document.getElementById("gala_vor").style.opacity = "1";
 	}
@@ -163,7 +163,7 @@ function previousGala() {
 
 // Button Zurück ausgrauen
     if (galanummer_neu === "1" || Number (galanummer_neu) === 1) {
-        document.getElementById("gala_back").style.opacity = "0.3";
+        document.getElementById("gala_back").style.opacity = "0.0";
     } else {
         document.getElementById("gala_back").style.opacity = "1";
     }
@@ -178,13 +178,15 @@ function activateSwipeGala () {
 var myElementGala = document.getElementById('gala');
 var mcGala = new Hammer(myElementGala);
 
-mcGala.on("swipeleft", function(ev) {
-    nextGala();
+mcGala.on("swipeleft", function(event) {
+     event.preventDefault(); 
+	 nextGala();
 	window.scrollTo( 0, 0 );
 });
 
-mcGala.on("swiperight", function(ev) {
-    previousGala();
+mcGala.on("swiperight", function(event) {
+      event.preventDefault(); 
+	previousGala();
 	window.scrollTo( 0, 0 );
 });
 }
