@@ -272,7 +272,7 @@ var image = [
 var title = [
     "   A   &nbsp;&nbsp;&nbsp;&nbsp;Alfa    &nbsp;&nbsp;&nbsp;[al•fah]", 
     "   B   &nbsp;&nbsp;&nbsp;&nbsp;Bravo   &nbsp;&nbsp;&nbsp;[brah•voh]", 
-    "   C   &nbsp;&nbsp;&nbsp;&nbsp;Charlie &nbsp;&nbsp;&nbsp;[har•lee]", 
+    "   C   &nbsp;&nbsp;&nbsp;&nbsp;Charlie &nbsp;&nbsp;&nbsp;[char•lee]", 
     "   D   &nbsp;&nbsp;&nbsp;&nbsp;Delta   &nbsp;&nbsp;&nbsp;[dell•tah]", 
     "   E   &nbsp;&nbsp;&nbsp;&nbsp;Echo    &nbsp;&nbsp;&nbsp;[eck•oh]", 
     "   F   &nbsp;&nbsp;&nbsp;&nbsp;Foxtrot &nbsp;&nbsp;&nbsp;[foks•trot]", 
