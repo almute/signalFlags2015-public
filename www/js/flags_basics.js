@@ -252,6 +252,7 @@ if (textlaenge < 12)
 
 function clean_reading () {
 	"use strict";
+	window.scrollTo( 0, 0 );
 	document.getElementById("lesen").innerHTML = "";
 	for (var i=1; i<=12; i++ ) {
 		document.images.namedItem("lesen"+ i).src= "images/empty.png"; 
@@ -264,7 +265,8 @@ function clean_reading () {
 
 function delete_reading () {
 "use strict";
-	
+	window.scrollTo( 0, 0 );
+
 var text = document.getElementById("lesen").innerHTML;
 var str = text;
 	var laenge = (text.length);
@@ -277,7 +279,7 @@ for (var i=1; i<=12; i++ ) {
 	}
 	str = str.substring(0,str.length-1);
 	document.getElementById("lesen").innerHTML = str;
-	}
+}
 
 
 
@@ -286,6 +288,7 @@ for (var i=1; i<=12; i++ ) {
 
 function keyboard_flags_einblenden () {
 "use strict";
+	window.scrollTo( 0, 0 );
 if ( document.getElementById("readingKeyboard").style.display == 'inline')
 	{
 	document.getElementById("readingKeyboard").style.display='none';
@@ -301,8 +304,3 @@ function keyboard_flags_start () {
 "use strict";
 	document.getElementById("readingKeyboard").style.display='inline';
 }
-// ********************** Hilfe anzeigen ***********************
-
-function help_Flaggen () {}
-function help_Schreiben () {}
-function help_Lesen () {}

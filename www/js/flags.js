@@ -17,60 +17,41 @@ document.getElementById("button_flags2").classList.add ("reiter_inaktiv");
 document.getElementById("button_settings").classList.add ("reiter_inaktiv");
 document.getElementById("button_info2").classList.add ("reiter_inaktiv");
 document.getElementById("button_help").classList.remove ("reiter_inaktiv");
-	window.scrollTo( 0, 0 );
-help_Flaggen ()
+	//window.scrollTo( 0, 0 );
+	Show_help_animation(0);
+
 }
 
-function help_Flaggen () {
+function Show_help_animation(help_no) {
 	'use strict';
-	// Carousels ein-/ausblenden
-	localStorage.setItem("carousel", 0);
-	$("#HelpCarousel0").show();
-	$("#HelpCarousel1").hide();
-    $("#HelpCarousel2").hide();
-	// Carousel starten
-	$("#HelpCarousel0").carousel(0);
-   	$("#HelpCarousel0").carousel({interval: 1000});
+document.getElementById("button_help0").classList.add ("reiter_inaktiv");
+document.getElementById("button_help1").classList.add ("reiter_inaktiv");
+document.getElementById("button_help2").classList.add ("reiter_inaktiv");
+
+document.getElementById("button_help"+[help_no]).classList.remove ("reiter_inaktiv");
+localStorage.setItem("help_no",[help_no]);
+	Show_help_ani(help_no) ;
+
 }
 
-function help_Writing () {
+function Show_help_ani(help_no) {
 	'use strict';
-	// Carousels ein-/ausblenden
-	localStorage.setItem("carousel", 1);
-	$("#HelpCarousel0").hide(); 
-	$("#HelpCarousel1").show();
-    $("#HelpCarousel2").hide();
-	// Carousel starten
-	$("#HelpCarousel1").carousel(0);
-  	$("#HelpCarousel1").carousel({interval: 1000});
+	document.getElementById("help_animation").innerHTML = "<object type=\"text/html\" width=\"375\" height=\"667\" data-dw-widget=\"Edge\" data=\"edgeanimate_assets/help" + [help_no] + ".html\"></object>";
 }
 
-function help_Reading () {
+// ------------------------
+
+
+function animation_Restart () {
 	'use strict';
-	// Carousels ein-/ausblenden
-	localStorage.setItem("carousel", 2);
-	$("#HelpCarousel0").hide();
-	$("#HelpCarousel1").hide();
-    $("#HelpCarousel2").show();
-	// Carousel starten
-	$("#HelpCarousel2").carousel(0);
-  	$("#HelpCarousel2").carousel({interval: 1000});
+var help = Number(localStorage.getItem("help_no"));
+	Show_help_ani(help);
 }
 
-function slide_Restart () {
-	'use strict';
-	var carouselnum = localStorage.getItem("carousel");
-	$("#HelpCarousel"+carouselnum).carousel(	0);
-	$("#HelpCarousel"+carouselnum).carousel({interval: 1000});
-}
 
-function slide_Quit () {
-	'use strict';
-	$("#about-page").show();
-	$("#help-page").hide();
-}
 
-// *************** Systemsprache bestimmen, speichern unter "sprache_system" *******************************************************
+
+// *************** Systemsprache bestimmen, speichern unter "sprache_system" **************************** ***************************
 
 function spracheSystem() {
     'use strict';
@@ -93,7 +74,7 @@ function spracheSystem() {
 
 
 
-// *************** richtigen Button für Sprache auf Aktiv setzen *******************************************************
+// *************** richtigen Button für Sprache auf Aktiv setzen ********************************** *********************
 
 function buttonActive() {
     //
@@ -116,7 +97,7 @@ function buttonActive() {
 }  // +++++++++  Ende function buttonActive
 
 
-// *************** Texte abhängig von Sprache setzen *******************************************************
+// *************** Texte abhängig von Sprache setzen ************************ *******************************
 function spracheText() {
     'use strict';
     var usersprache = localStorage.getItem("sprache");
@@ -140,17 +121,7 @@ function spracheTexte(sprache) {
     'use strict';
 	
 	var Sprachauswahl_Titel = ["Language", "Sprache"];
-	//var Help_Titel = ["Help", "Hilfe"];
-	//var help_info = ["Flags", "Flaggen"];
-	//var help_schreiben = ["Writing", "Schreiben"];
-	//var help_lesen = ["Reading", "Lesen"];
-	
 	document.getElementById("Sprachauswahl_Titel").innerHTML = Sprachauswahl_Titel[sprache];
-	//document.getElementById("Help_Titel").innerHTML = Help_Titel[sprache];
-	//document.getElementById("help_info").innerHTML = help_info[sprache];
-	//document.getElementById("help_schreiben").innerHTML = help_schreiben[sprache];
-	//document.getElementById("help_lesen").innerHTML = help_lesen[sprache];
-
 }
 
 // *************** Buttons drücken, aktive Sprache festlegen *******************************************************

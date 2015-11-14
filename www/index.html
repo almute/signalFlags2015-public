@@ -561,83 +561,31 @@
 <!--------------zusätzliche menüleiste help oben-------------------->
 
 <div class="nav-help">  
-
-<a onClick="javascript:help_Flaggen()" href="#"><img src="images/buttons/button-flaggen.png" alt="Flags" class="button_nav" id=""></a>
-<a onClick="javascript:help_Writing()" href="#"><img src="images/buttons/button-schreiben.png" alt="Writing" class="button_nav" id=""></a>
-<a onClick="javascript:help_Reading()" href="#"><img src="images/buttons/button-lesen.png" alt="Reading" class="button_nav" id="" ></a>	
-
-<a onclick="javascript:slide_Restart()" href="#"><img src="images/buttons/reload.png" class="button_nav" id="" alt="" style="height:18px; margin-left:20%;"></a>
+<div class="reiter reiter_help" onClick="javascript:Show_help_animation(0)" id="button_help0">
+<img src="images/buttons/button-flaggen.png" alt="help all flags">
+</div>
+<div class="reiter reiter_help" onClick="javascript:Show_help_animation(1)" id="button_help1">
+<img src="images/buttons/button-schreiben.png" alt="help writing">
+</div>
+<div class="reiter reiter_help" onClick="javascript:Show_help_animation(2)" id="button_help2">
+<img src="images/buttons/button-lesen.png" alt="help reading">
+</div>
+<a onclick="javascript:animation_Restart()" href="#"><img src="images/buttons/reload.png" class="button_restart" id="" alt="" ></a>
 </div>
 
 
 <!--content-->
+
 <div class="container-fluid help-container">
 
- <!-- Flaggeninfo -->
-<div id="HelpCarousel0" class="carousel" data-wrap="false" data-interval="1000">
-<!--  <div class="carousel-inner" role="listbox" id="carousel-flaggen">
-    <div class="item active">
-      <img src="images/help/help_flags1.png" alt="Help1">
-    </div>
-    <div class="item">
-      <img src="images/help/help_flags2.png" alt="Help2">
-    </div>
-	<div class="item">
-      <img src="images/help/help_flags3.png" alt="Help3">
-    </div>
-	<div class="item">
-      <img src="images/help/help_flags4.png" alt="Help4">
-    </div>	
-    <div class="item">
-      <img src="images/help/help_flags5.png" alt="Help5">
-    </div>
-  </div>
--->   </div>
  
- <!-- Schreiben -->
-<div id="HelpCarousel1" class="carousel" data-wrap="false" data-interval="1000" style="top:120px">
-  <div class="carousel-inner" role="listbox" id="carousel-writing">
-    <div class="item active">
-      <img src="images/help/help_writing1.png" alt="Help">
-    </div>
-    <div class="item">
-      <img src="images/help/help_writing2.png" alt="Help">
-    </div>
-	<div class="item">
-      <img src="images/help/help_writing3.png" alt="Help">
-    </div>
-	<div class="item">
-      <img src="images/help/help_writing4.png" alt="Help">
-    </div>	
-    <div class="item">
-      <img src="images/help/help_writing5.png" alt="Help">
-    </div>
-  </div>
-  </div>
+ <div class="help_animation"  id="help_animation">
 
- <!-- Lesen -->
-<div id="HelpCarousel2" class="carousel" data-wrap="false" data-interval="1000">
-  <div class="carousel-inner" role="listbox" id="carousel-reading">
-    <div class="item active">
-      <img src="images/help/help_writing1.png" alt="Help">
-    </div>
-    <div class="item">
-      <img src="images/help/help_writing2.png" alt="Help">
-    </div>
-	<div class="item">
-      <img src="images/help/help_writing3.png" alt="Help">
-    </div>
-	<div class="item">
-      <img src="images/help/help_writing4.png" alt="Help">
-    </div>	
-    <div class="item">
-      <img src="images/help/help_writing5.png" alt="Help">
-    </div>
-  </div>
-   </div>
-  </div>
-  
+</div>
+
+ </div>
 <!--Ende content-->
+
 </div>
 
 
