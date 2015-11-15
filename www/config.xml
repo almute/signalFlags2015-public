@@ -3,7 +3,7 @@
 
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "de.2k-yachting.signalflags"
-        version     = "1.0.0"
+        version     = "1.0.1"
         versionCode = "10" >
 
         <!-- versionCode is optional and Android only -->
