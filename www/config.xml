@@ -2,14 +2,14 @@
    <widget xmlns = "http://www.w3.org/ns/widgets"
 
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "2KYachting.SignalFlagsTool"
-        version     = "1.0.0"
+        id          = "de.kkyachting.signalflags"
+        version     = "1.0.3"
         versionCode = "10" >
 
         <!-- versionCode is optional and Android only -->
-	<name>SignalFlags Tool</name>
+	<name>SignalFlags</name>
 
-	<description>SignalFlags Tool – get to know and use the international signal flags</description>
+	<description>SignalFlags mit PhoneGap.</description>
 
 	<author href="http://2k-yachting.de" email="info@2k-yachting.de">
         2K Yachting
@@ -98,6 +98,8 @@
 <!--<gap:plugin name="com.phonegap.plugin.statusbar"  />-->
 <preference name="StatusBarOverlaysWebView" value="true" />
 <preference name="StatusBarBackgroundColor" value="#F0F0F0" />
+
+<preference name="permissions" value="none" />
 
 
 </widget>
