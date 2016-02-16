@@ -16,6 +16,7 @@
 	</author>
 	
 <!--	<preference name="Fullscreen" value="true" />-->
+	<preference name="phonegap-version" value="cli-6.0.0" />
 	<preference name="fullscreen" value="true" />
 	<preference name="DisallowOverscroll" value="true"/>
 
