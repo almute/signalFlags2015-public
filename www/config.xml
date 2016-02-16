@@ -2,21 +2,20 @@
    <widget xmlns = "http://www.w3.org/ns/widgets"
 
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "2KYachting.SignalFlagsTool"
-        version     = "1.0.0"
-        versionCode = "10" >
+        id          = "de.kkyachting.signalflags"
+        version     = "1.0.3"
+        versionCode = "11" >
 
         <!-- versionCode is optional and Android only -->
-	<name>SignalFlags Tool</name>
+	<name>SignalFlags</name>
 
-	<description>SignalFlags Tool – get to know and use the international signal flags</description>
+	<description>SignalFlags mit PhoneGap.</description>
 
 	<author href="http://2k-yachting.de" email="info@2k-yachting.de">
         2K Yachting
 	</author>
 	
 <!--	<preference name="Fullscreen" value="true" />-->
-    <preference name="phonegap-version" value="cli-6.0.0"/>
 	<preference name="fullscreen" value="true" />
 	<preference name="DisallowOverscroll" value="true"/>
 
@@ -85,12 +84,9 @@
 	<!-- Windows -->
 	<gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 
-<!-- ++++++++ Vorübergehend nur für iOs berechen -->
-<!--	<gap:platform name="ios" />-->
-
-<!-- ++++++++ Vorübergehend nur für winphone berechen -->
-    <gap:platform name="winphone" />
-
+<!-- ++++++++  nur für android berechen -->
+	<gap:platform name="android" />
+	
 <!-- ++++++++ Plugins verwenden -->
 
 <!--<gap:plugin name="org.apache.cordova.statusbar" />-->
@@ -102,8 +98,6 @@
 <!--<gap:plugin name="com.phonegap.plugin.statusbar"  />-->
 <preference name="StatusBarOverlaysWebView" value="true" />
 <preference name="StatusBarBackgroundColor" value="#F0F0F0" />
-
-<preference name="permissions" value="none" />
 
 
 </widget>
