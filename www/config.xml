@@ -4,7 +4,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "de.kkyachting.signalflags"
         version     = "1.0.3"
-        versionCode = "11" >
+        versionCode = "12" >
 
         <!-- versionCode is optional and Android only -->
 	<name>SignalFlags</name>
