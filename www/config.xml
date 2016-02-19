@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+ 
+ <!--    <das hier ist die Version for Windows />-->
 
-<!--   Das ist die Version für Android -->
+  <widget xmlns = "http://www.w3.org/ns/widgets"
 
-   <widget xmlns = "http://www.w3.org/ns/widgets"
 
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "de.kkyachting.signalflags"
-        version     = "1.0.4"
-        versionCode = "14" >
+        id          = "2KYachting.SignalFlagsTool"
+        version     = "1.0.0"
+        versionCode = "10" >
+
+
 
         <!-- versionCode is optional and Android only -->
-	<name>SignalFlags</name>
+	<name>SignalFlags Tool</name>
 
-	<description>SignalFlags mit PhoneGap.</description>
+	<description>SignalFlags Tool – get to know and use the international signal flags</description>
 
 	<author href="http://2k-yachting.de" email="info@2k-yachting.de">
         2K Yachting
 	</author>
 	
 <!--	<preference name="Fullscreen" value="true" />-->
+    <preference name="phonegap-version" value="cli-6.0.0"/>
 	<preference name="fullscreen" value="true" />
 	<preference name="DisallowOverscroll" value="true"/>
 
@@ -87,17 +91,12 @@
 	<!-- Windows -->
 	<gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 
-<!-- ++++++++  nur für android berechen -->
-	<gap:platform name="android" />
+<!-- ++++++++ Vorübergehend nur für iOs berechen -->
+<!--	<gap:platform name="ios" />-->
 
-  <!-- Android
-      If you do not want any permissions to be added to your app, add the
-      following tag to your config.xml; you will still have the INTERNET
-      permission on your app, which PhoneGap requires.
-    -->
-<preference name="permissions" value="none"/>
-   
-	
+<!-- ++++++++ Vorübergehend nur für winphone berechen -->
+    <gap:platform name="winphone" />
+
 <!-- ++++++++ Plugins verwenden -->
 
 <!--<gap:plugin name="org.apache.cordova.statusbar" />-->
@@ -109,6 +108,8 @@
 <!--<gap:plugin name="com.phonegap.plugin.statusbar"  />-->
 <preference name="StatusBarOverlaysWebView" value="true" />
 <preference name="StatusBarBackgroundColor" value="#F0F0F0" />
+
+<preference name="permissions" value="none" />
 
 
 </widget>
